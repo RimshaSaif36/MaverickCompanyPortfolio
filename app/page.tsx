@@ -5,105 +5,105 @@ import { useState, useEffect } from "react";
 // Social icons as inline SVGs
 const FacebookIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
   </svg>
 );
 const TwitterIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
   </svg>
 );
 const InstagramIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-    <circle cx="12" cy="12" r="4"/>
-    <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+    <circle cx="12" cy="12" r="4" />
+    <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
   </svg>
 );
 
 // ── Service card icons ──
 const DigitalProductsIcon = () => (
   <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="10" y="6" width="16" height="26" rx="2"/>
-    <line x1="10" y1="10" x2="26" y2="10"/>
-    <line x1="10" y1="28" x2="26" y2="28"/>
-    <circle cx="18" cy="31" r="1" fill="currentColor" stroke="none"/>
-    <circle cx="35" cy="13" r="6" strokeDasharray="2 1"/>
-    <line x1="35" y1="10" x2="35" y2="16"/>
-    <line x1="32" y1="13" x2="38" y2="13"/>
-    <circle cx="39" cy="22" r="4"/>
-    <line x1="39" y1="20" x2="39" y2="24"/>
-    <line x1="37" y1="22" x2="41" y2="22"/>
+    <rect x="10" y="6" width="16" height="26" rx="2" />
+    <line x1="10" y1="10" x2="26" y2="10" />
+    <line x1="10" y1="28" x2="26" y2="28" />
+    <circle cx="18" cy="31" r="1" fill="currentColor" stroke="none" />
+    <circle cx="35" cy="13" r="6" strokeDasharray="2 1" />
+    <line x1="35" y1="10" x2="35" y2="16" />
+    <line x1="32" y1="13" x2="38" y2="13" />
+    <circle cx="39" cy="22" r="4" />
+    <line x1="39" y1="20" x2="39" y2="24" />
+    <line x1="37" y1="22" x2="41" y2="22" />
   </svg>
 );
 
 const OnlineMarketingIcon = () => (
   <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <polyline points="8,38 18,24 26,30 36,16 44,10"/>
-    <polyline points="38,10 44,10 44,16"/>
-    <line x1="8" y1="42" x2="44" y2="42"/>
-    <line x1="8" y1="10" x2="8" y2="42"/>
-    <rect x="10" y="30" width="4" height="12"/>
-    <rect x="18" y="26" width="4" height="16"/>
-    <rect x="26" y="22" width="4" height="20"/>
+    <polyline points="8,38 18,24 26,30 36,16 44,10" />
+    <polyline points="38,10 44,10 44,16" />
+    <line x1="8" y1="42" x2="44" y2="42" />
+    <line x1="8" y1="10" x2="8" y2="42" />
+    <rect x="10" y="30" width="4" height="12" />
+    <rect x="18" y="26" width="4" height="16" />
+    <rect x="26" y="22" width="4" height="20" />
   </svg>
 );
 
 const GraphicDesignIcon = () => (
   <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="10" cy="24" r="3"/>
-    <circle cx="24" cy="10" r="3"/>
-    <circle cx="38" cy="24" r="3"/>
-    <circle cx="24" cy="38" r="3"/>
-    <path d="M13 24 C13 17 18 13 24 13"/>
-    <path d="M24 13 C30 13 35 18 35 24"/>
-    <path d="M35 24 C35 31 30 35 24 35"/>
-    <path d="M24 35 C18 35 13 31 13 24"/>
-    <circle cx="24" cy="24" r="3"/>
-    <line x1="24" y1="21" x2="24" y2="21"/>
+    <circle cx="10" cy="24" r="3" />
+    <circle cx="24" cy="10" r="3" />
+    <circle cx="38" cy="24" r="3" />
+    <circle cx="24" cy="38" r="3" />
+    <path d="M13 24 C13 17 18 13 24 13" />
+    <path d="M24 13 C30 13 35 18 35 24" />
+    <path d="M35 24 C35 31 30 35 24 35" />
+    <path d="M24 35 C18 35 13 31 13 24" />
+    <circle cx="24" cy="24" r="3" />
+    <line x1="24" y1="21" x2="24" y2="21" />
   </svg>
 );
 
 const AppDevIcon = () => (
   <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="6" y="10" width="36" height="24" rx="2"/>
-    <line x1="6" y1="18" x2="42" y2="18"/>
-    <line x1="20" y1="34" x2="28" y2="34"/>
-    <line x1="24" y1="34" x2="24" y2="40"/>
-    <line x1="18" y1="40" x2="30" y2="40"/>
-    <circle cx="30" cy="28" r="5"/>
-    <circle cx="30" cy="28" r="2" fill="currentColor" stroke="none"/>
-    <line x1="30" y1="21" x2="30" y2="23"/>
-    <line x1="30" y1="33" x2="30" y2="35"/>
-    <line x1="23" y1="28" x2="25" y2="28"/>
-    <line x1="35" y1="28" x2="37" y2="28"/>
+    <rect x="6" y="10" width="36" height="24" rx="2" />
+    <line x1="6" y1="18" x2="42" y2="18" />
+    <line x1="20" y1="34" x2="28" y2="34" />
+    <line x1="24" y1="34" x2="24" y2="40" />
+    <line x1="18" y1="40" x2="30" y2="40" />
+    <circle cx="30" cy="28" r="5" />
+    <circle cx="30" cy="28" r="2" fill="currentColor" stroke="none" />
+    <line x1="30" y1="21" x2="30" y2="23" />
+    <line x1="30" y1="33" x2="30" y2="35" />
+    <line x1="23" y1="28" x2="25" y2="28" />
+    <line x1="35" y1="28" x2="37" y2="28" />
   </svg>
 );
 
 const WebDevIcon = () => (
   <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="6" y="8" width="36" height="28" rx="2"/>
-    <line x1="6" y1="16" x2="42" y2="16"/>
-    <circle cx="11" cy="12" r="1.5" fill="currentColor" stroke="none"/>
-    <circle cx="17" cy="12" r="1.5" fill="currentColor" stroke="none"/>
-    <circle cx="23" cy="12" r="1.5" fill="currentColor" stroke="none"/>
-    <polyline points="18,24 14,28 18,32"/>
-    <polyline points="30,24 34,28 30,32"/>
-    <line x1="22" y1="34" x2="26" y2="22"/>
+    <rect x="6" y="8" width="36" height="28" rx="2" />
+    <line x1="6" y1="16" x2="42" y2="16" />
+    <circle cx="11" cy="12" r="1.5" fill="currentColor" stroke="none" />
+    <circle cx="17" cy="12" r="1.5" fill="currentColor" stroke="none" />
+    <circle cx="23" cy="12" r="1.5" fill="currentColor" stroke="none" />
+    <polyline points="18,24 14,28 18,32" />
+    <polyline points="30,24 34,28 30,32" />
+    <line x1="22" y1="34" x2="26" y2="22" />
   </svg>
 );
 
 const UxUiIcon = () => (
   <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="6" y="6" width="14" height="14" rx="1"/>
-    <rect x="28" y="6" width="14" height="14" rx="1"/>
-    <rect x="6" y="28" width="14" height="14" rx="1"/>
-    <rect x="28" y="28" width="14" height="14" rx="1"/>
-    <line x1="20" y1="13" x2="28" y2="13"/>
-    <line x1="13" y1="20" x2="13" y2="28"/>
-    <line x1="35" y1="20" x2="35" y2="28"/>
-    <line x1="20" y1="35" x2="28" y2="35"/>
-    <circle cx="24" cy="24" r="2" fill="currentColor" stroke="none"/>
+    <rect x="6" y="6" width="14" height="14" rx="1" />
+    <rect x="28" y="6" width="14" height="14" rx="1" />
+    <rect x="6" y="28" width="14" height="14" rx="1" />
+    <rect x="28" y="28" width="14" height="14" rx="1" />
+    <line x1="20" y1="13" x2="28" y2="13" />
+    <line x1="13" y1="20" x2="13" y2="28" />
+    <line x1="35" y1="20" x2="35" y2="28" />
+    <line x1="20" y1="35" x2="28" y2="35" />
+    <circle cx="24" cy="24" r="2" fill="currentColor" stroke="none" />
   </svg>
 );
 
@@ -130,7 +130,7 @@ const slides = [
     description:
       "Our creative team crafts visually stunning designs that captivate your audience.",
   },
-  
+
 ];
 
 export default function Home() {
@@ -198,11 +198,10 @@ export default function Home() {
                   <li key={link}>
                     <a
                       href={`#${link.toLowerCase()}`}
-                      className={`text-sm font-semibold tracking-wide transition-colors ${
-                        link === "Home"
+                      className={`text-sm font-semibold tracking-wide transition-colors ${link === "Home"
                           ? "text-[#EDE0C4] border-b-2 border-[#EDE0C4] pb-0.5"
                           : "text-white hover:text-[#EDE0C4]"
-                      }`}
+                        }`}
                     >
                       {link}
                     </a>
@@ -227,9 +226,8 @@ export default function Home() {
                       <a
                         href={`#${link.toLowerCase()}`}
                         onClick={() => setMenuOpen(false)}
-                        className={`text-sm font-semibold tracking-wide transition-colors ${
-                          link === "Home" ? "text-[#EDE0C4]" : "text-white hover:text-[#EDE0C4]"
-                        }`}
+                        className={`text-sm font-semibold tracking-wide transition-colors ${link === "Home" ? "text-[#EDE0C4]" : "text-white hover:text-[#EDE0C4]"
+                          }`}
                       >
                         {link}
                       </a>
@@ -268,141 +266,141 @@ export default function Home() {
       </section>
 
       {/* ── Services Section ── */}
-<section className="relative py-20">
+      <section className="relative py-20">
 
-  {/* Background Image */}
-<div className="absolute inset-0 bg-[url('/bg1.jpg')] bg-cover bg-center bg-no-repeat bg-fixed"></div>
+        {/* Background Image */}
+        <div className="absolute inset-0 bg-[url('/bg1.jpg')] bg-cover bg-center bg-no-repeat bg-fixed"></div>
 
-  {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-black/75"></div>
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/75"></div>
 
-  {/* Content */}
-  <div className="relative max-w-7xl mx-auto px-8">
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {/* Content */}
+        <div className="relative max-w-7xl mx-auto px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
 
-      {/* Text block */}
-      <div className="col-span-2 flex flex-col justify-center py-6">
-        <h2 className="text-3xl md:text-4xl font-black text-white uppercase leading-tight mb-5">
-          We Shape The<br />Perfect Solutions
-        </h2>
-        <p className="text-gray-300 text-sm leading-relaxed max-w-sm">
-          A small river named Duden flows by their place and supplies it with
-          the necessary regelialia. It is a paradisematic country, in which
-          roasted parts of sentences fly into your mouth.
-        </p>
-      </div>
+            {/* Text block */}
+            <div className="col-span-2 flex flex-col justify-center py-6">
+              <h2 className="text-3xl md:text-4xl font-black text-white uppercase leading-tight mb-5">
+                We Shape The<br />Perfect Solutions
+              </h2>
+              <p className="text-gray-300 text-sm leading-relaxed max-w-sm">
+                A small river named Duden flows by their place and supplies it with
+                the necessary regelialia. It is a paradisematic country, in which
+                roasted parts of sentences fly into your mouth.
+              </p>
+            </div>
 
-      {/* Digital Products */}
-      <div className="group bg-[#252525]/90 backdrop-blur-sm p-8 flex flex-col justify-between min-h-[220px] relative overflow-hidden cursor-pointer transition-all duration-300 hover:bg-[#EDE0C4]">
-        <div className="text-[#EDE0C4] group-hover:text-black transition-colors duration-300">
-          <DigitalProductsIcon />
+            {/* Digital Products */}
+            <div className="group bg-[#252525]/90 backdrop-blur-sm p-8 flex flex-col justify-between min-h-[220px] relative overflow-hidden cursor-pointer transition-all duration-300 hover:bg-[#EDE0C4]">
+              <div className="text-[#EDE0C4] group-hover:text-black transition-colors duration-300">
+                <DigitalProductsIcon />
+              </div>
+              <h3 className="text-white group-hover:text-black text-sm font-black uppercase tracking-wider leading-snug mt-6 transition-colors duration-300">
+                Digital<br />Products
+              </h3>
+              <span className="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-black/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </span>
+            </div>
+
+            {/* Online Marketing */}
+            <div className="group bg-[#252525]/90 backdrop-blur-sm p-8 flex flex-col justify-between min-h-[220px] relative overflow-hidden cursor-pointer transition-all duration-300 hover:bg-[#EDE0C4]">
+              <div className="text-[#EDE0C4] group-hover:text-black transition-colors duration-300">
+                <OnlineMarketingIcon />
+              </div>
+              <h3 className="text-white group-hover:text-black text-sm font-black uppercase tracking-wider leading-snug mt-6 transition-colors duration-300">
+                Online<br />Marketing
+              </h3>
+              <span className="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-black/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </span>
+            </div>
+
+            {/* Graphic Design (Highlighted) */}
+            <div className="group bg-[#EDE0C4] p-8 flex flex-col justify-between min-h-[220px] relative overflow-hidden cursor-pointer">
+              <div className="text-black">
+                <GraphicDesignIcon />
+              </div>
+              <h3 className="text-black text-sm font-black uppercase tracking-wider leading-snug mt-6">
+                Graphic<br />Design
+              </h3>
+              <span className="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-black/80 flex items-center justify-center">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </span>
+            </div>
+
+            {/* Application Development */}
+            <div className="group bg-[#252525]/90 backdrop-blur-sm p-8 flex flex-col justify-between min-h-[220px] relative overflow-hidden cursor-pointer transition-all duration-300 hover:bg-[#EDE0C4]">
+              <div className="text-[#EDE0C4] group-hover:text-black transition-colors duration-300">
+                <AppDevIcon />
+              </div>
+              <h3 className="text-white group-hover:text-black text-sm font-black uppercase tracking-wider leading-snug mt-6 transition-colors duration-300">
+                Application<br />Development
+              </h3>
+              <span className="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-black/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </span>
+            </div>
+
+            {/* Web Development */}
+            <div className="group bg-[#252525]/90 backdrop-blur-sm p-8 flex flex-col justify-between min-h-[220px] relative overflow-hidden cursor-pointer transition-all duration-300 hover:bg-[#EDE0C4]">
+              <div className="text-[#EDE0C4] group-hover:text-black transition-colors duration-300">
+                <WebDevIcon />
+              </div>
+              <h3 className="text-white group-hover:text-black text-sm font-black uppercase tracking-wider leading-snug mt-6 transition-colors duration-300">
+                Web<br />Development
+              </h3>
+              <span className="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-black/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </span>
+            </div>
+
+            {/* UX/UI Design */}
+            <div className="group bg-[#252525]/90 backdrop-blur-sm p-8 flex flex-col justify-between min-h-[220px] relative overflow-hidden cursor-pointer transition-all duration-300 hover:bg-[#EDE0C4]">
+              <div className="text-[#EDE0C4] group-hover:text-black transition-colors duration-300">
+                <UxUiIcon />
+              </div>
+              <h3 className="text-white group-hover:text-black text-sm font-black uppercase tracking-wider leading-snug mt-6 transition-colors duration-300">
+                UX/UI<br />Design
+              </h3>
+              <span className="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-black/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </span>
+            </div>
+
+          </div>
         </div>
-        <h3 className="text-white group-hover:text-black text-sm font-black uppercase tracking-wider leading-snug mt-6 transition-colors duration-300">
-          Digital<br />Products
-        </h3>
-        <span className="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-black/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"/>
-            <polyline points="12 5 19 12 12 19"/>
-          </svg>
-        </span>
-      </div>
-
-      {/* Online Marketing */}
-      <div className="group bg-[#252525]/90 backdrop-blur-sm p-8 flex flex-col justify-between min-h-[220px] relative overflow-hidden cursor-pointer transition-all duration-300 hover:bg-[#EDE0C4]">
-        <div className="text-[#EDE0C4] group-hover:text-black transition-colors duration-300">
-          <OnlineMarketingIcon />
-        </div>
-        <h3 className="text-white group-hover:text-black text-sm font-black uppercase tracking-wider leading-snug mt-6 transition-colors duration-300">
-          Online<br />Marketing
-        </h3>
-        <span className="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-black/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"/>
-            <polyline points="12 5 19 12 12 19"/>
-          </svg>
-        </span>
-      </div>
-
-      {/* Graphic Design (Highlighted) */}
-      <div className="group bg-[#EDE0C4] p-8 flex flex-col justify-between min-h-[220px] relative overflow-hidden cursor-pointer">
-        <div className="text-black">
-          <GraphicDesignIcon />
-        </div>
-        <h3 className="text-black text-sm font-black uppercase tracking-wider leading-snug mt-6">
-          Graphic<br />Design
-        </h3>
-        <span className="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-black/80 flex items-center justify-center">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"/>
-            <polyline points="12 5 19 12 12 19"/>
-          </svg>
-        </span>
-      </div>
-
-      {/* Application Development */}
-      <div className="group bg-[#252525]/90 backdrop-blur-sm p-8 flex flex-col justify-between min-h-[220px] relative overflow-hidden cursor-pointer transition-all duration-300 hover:bg-[#EDE0C4]">
-        <div className="text-[#EDE0C4] group-hover:text-black transition-colors duration-300">
-          <AppDevIcon />
-        </div>
-        <h3 className="text-white group-hover:text-black text-sm font-black uppercase tracking-wider leading-snug mt-6 transition-colors duration-300">
-          Application<br />Development
-        </h3>
-        <span className="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-black/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"/>
-            <polyline points="12 5 19 12 12 19"/>
-          </svg>
-        </span>
-      </div>
-
-      {/* Web Development */}
-      <div className="group bg-[#252525]/90 backdrop-blur-sm p-8 flex flex-col justify-between min-h-[220px] relative overflow-hidden cursor-pointer transition-all duration-300 hover:bg-[#EDE0C4]">
-        <div className="text-[#EDE0C4] group-hover:text-black transition-colors duration-300">
-          <WebDevIcon />
-        </div>
-        <h3 className="text-white group-hover:text-black text-sm font-black uppercase tracking-wider leading-snug mt-6 transition-colors duration-300">
-          Web<br />Development
-        </h3>
-        <span className="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-black/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"/>
-            <polyline points="12 5 19 12 12 19"/>
-          </svg>
-        </span>
-      </div>
-
-      {/* UX/UI Design */}
-      <div className="group bg-[#252525]/90 backdrop-blur-sm p-8 flex flex-col justify-between min-h-[220px] relative overflow-hidden cursor-pointer transition-all duration-300 hover:bg-[#EDE0C4]">
-        <div className="text-[#EDE0C4] group-hover:text-black transition-colors duration-300">
-          <UxUiIcon />
-        </div>
-        <h3 className="text-white group-hover:text-black text-sm font-black uppercase tracking-wider leading-snug mt-6 transition-colors duration-300">
-          UX/UI<br />Design
-        </h3>
-        <span className="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-black/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"/>
-            <polyline points="12 5 19 12 12 19"/>
-          </svg>
-        </span>
-      </div>
-
-    </div>
-  </div>
-</section>
+      </section>
       {/* ── About Section ── */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-8">
           <div className="flex flex-col md:flex-row gap-12 items-center">
             {/* Left: image + badge */}
-           <div className="relative flex-shrink-0 w-full md:w-[420px]">
-  <img 
-    src="/1.jpg" 
-    alt="Team meeting" 
-    className="w-full h-[480px] object-cover" 
-  />
-</div>
+            <div className="relative flex-shrink-0 w-full md:w-[420px]">
+              <img
+                src="/1.jpg"
+                alt="Team meeting"
+                className="w-full h-[480px] object-cover"
+              />
+            </div>
             {/* Right: text */}
             <div className="flex-1">
               <p className="text-[#EDE0C4] text-xs font-bold uppercase tracking-widest mb-3">Welcome To Maverick</p>
@@ -425,53 +423,53 @@ export default function Home() {
         </div>
       </section>
 
-{/* ── Stats Section ── */}
-<section className="relative py-26 md:py-28 bg-[url('/bg.jpg')] bg-cover bg-center bg-no-repeat bg-fixed">
+      {/* ── Stats Section ── */}
+      <section className="relative py-26 md:py-28 bg-[url('/bg.jpg')] bg-cover bg-center bg-no-repeat bg-fixed">
 
-  {/* Overlay */}
-  <div className="absolute inset-0 bg-black/60"></div>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/60"></div>
 
-  <div className="relative z-10 max-w-7xl mx-auto px-8">
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+        <div className="relative z-10 max-w-7xl mx-auto px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
 
-      {[
-        { icon: "M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m-6 9l2 2 4-4", num: "4,800", label: "Project Completed" },
-        { icon: "M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z", num: "1,000", label: "Our Staff" },
-        { icon: "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z", num: "350", label: "Services Provide" },
-        { icon: "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z", num: "7,650", label: "Happy Customers" },
-      ].map(({ icon, num, label }) => (
-        <div key={label} className="flex items-center gap-5">
-          
-          <span className="w-16 h-16 flex-shrink-0 bg-[#EDE0C4] flex items-center justify-center rounded">
-            <svg
-              width="28"
-              height="28"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="white"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d={icon} />
-            </svg>
-          </span>
+            {[
+              { icon: "M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m-6 9l2 2 4-4", num: "4,800", label: "Project Completed" },
+              { icon: "M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z", num: "1,000", label: "Our Staff" },
+              { icon: "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z", num: "350", label: "Services Provide" },
+              { icon: "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z", num: "7,650", label: "Happy Customers" },
+            ].map(({ icon, num, label }) => (
+              <div key={label} className="flex items-center gap-5">
 
-          <div>
-            <p className="text-4xl font-black text-white leading-none">
-              {num}
-            </p>
-            <p className="text-xs font-bold uppercase tracking-wider text-white/70 mt-2">
-              {label}
-            </p>
+                <span className="w-16 h-16 flex-shrink-0 bg-[#EDE0C4] flex items-center justify-center rounded">
+                  <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d={icon} />
+                  </svg>
+                </span>
+
+                <div>
+                  <p className="text-4xl font-black text-white leading-none">
+                    {num}
+                  </p>
+                  <p className="text-xs font-bold uppercase tracking-wider text-white/70 mt-2">
+                    {label}
+                  </p>
+                </div>
+
+              </div>
+            ))}
+
           </div>
-
         </div>
-      ))}
-
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* ── FAQ + Skills Section ── */}
       <section className="bg-gray-100 py-20">
@@ -493,7 +491,7 @@ export default function Home() {
                   <details key={q} open={open} className="group">
                     <summary className={`flex items-center justify-between px-5 py-4 cursor-pointer text-xs font-black uppercase tracking-wider list-none ${open ? "bg-[#EDE0C4] text-white" : "bg-white text-black border border-gray-200"}`}>
                       {q}
-                      <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                      <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="6 9 12 15 18 9" /></svg>
                     </summary>
                     {items && (
                       <ol className="bg-white px-6 py-4 text-sm text-gray-600 space-y-2 list-decimal list-inside border border-t-0 border-gray-200">
@@ -545,7 +543,7 @@ export default function Home() {
             </div>
             <button className="border border-[#EDE0C4] text-[#EDE0C4] hover:bg-[#EDE0C4] hover:text-black text-xs font-bold uppercase tracking-widest px-6 py-3 transition flex items-center gap-2">
               View All Members
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
             </button>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
@@ -565,10 +563,10 @@ export default function Home() {
                       {["twitter", "facebook", "google", "instagram"].map((s) => (
                         <a key={s} href="#" className="w-8 h-8 rounded-full bg-white/20 hover:bg-white/40 flex items-center justify-center transition">
                           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            {s === "twitter" && <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>}
-                            {s === "facebook" && <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>}
-                            {s === "google" && <><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></>}
-                            {s === "instagram" && <><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="white" stroke="none"/></>}
+                            {s === "twitter" && <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />}
+                            {s === "facebook" && <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />}
+                            {s === "google" && <><circle cx="12" cy="12" r="10" /><path d="M12 8v4l3 3" /></>}
+                            {s === "instagram" && <><rect x="2" y="2" width="20" height="20" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="0.5" fill="white" stroke="none" /></>}
                           </svg>
                         </a>
                       ))}
@@ -583,10 +581,10 @@ export default function Home() {
                       {["twitter", "facebook", "google", "instagram"].map((s) => (
                         <a key={s} href="#" className="w-8 h-8 rounded-full bg-white/20 hover:bg-white/40 flex items-center justify-center transition">
                           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            {s === "twitter" && <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>}
-                            {s === "facebook" && <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>}
-                            {s === "google" && <><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></>}
-                            {s === "instagram" && <><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="white" stroke="none"/></>}
+                            {s === "twitter" && <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />}
+                            {s === "facebook" && <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />}
+                            {s === "google" && <><circle cx="12" cy="12" r="10" /><path d="M12 8v4l3 3" /></>}
+                            {s === "instagram" && <><rect x="2" y="2" width="20" height="20" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="0.5" fill="white" stroke="none" /></>}
                           </svg>
                         </a>
                       ))}
@@ -611,7 +609,7 @@ export default function Home() {
             </div>
             <button className="border border-[#EDE0C4] text-[#EDE0C4] hover:bg-[#EDE0C4] hover:text-black text-xs font-bold uppercase tracking-widest px-6 py-3 transition flex items-center gap-2">
               View All Projects
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
             </button>
           </div>
         </div>
@@ -621,7 +619,7 @@ export default function Home() {
               <img src={src} alt={`Portfolio ${i + 1}`} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
                 <span className="w-10 h-10 rounded-full bg-[#EDE0C4] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></svg>
                 </span>
               </div>
             </div>
@@ -697,9 +695,9 @@ export default function Home() {
                 {["twitter", "facebook", "instagram"].map((s) => (
                   <a key={s} href="#" className="w-9 h-9 rounded-full bg-[#EDE0C4] flex items-center justify-center hover:bg-[#EDE0C4] transition">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      {s === "twitter" && <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>}
-                      {s === "facebook" && <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>}
-                      {s === "instagram" && <><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="white" stroke="none"/></>}
+                      {s === "twitter" && <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />}
+                      {s === "facebook" && <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />}
+                      {s === "instagram" && <><rect x="2" y="2" width="20" height="20" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="0.5" fill="white" stroke="none" /></>}
                     </svg>
                   </a>
                 ))}
@@ -738,19 +736,19 @@ export default function Home() {
               <ul className="space-y-4 text-gray-400 text-sm">
                 <li className="flex gap-3">
                   <span className="text-[#EDE0C4] mt-0.5">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
                   </span>
                   <span>203 Fake St. Mountain View, San Francisco, California, USA</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#EDE0C4] mt-0.5">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
                   </span>
                   <span>+2 392 3929 210</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#EDE0C4] mt-0.5">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="22" y1="2" x2="11" y2="13" /><polygon points="22 2 15 22 11 13 2 9 22 2" /></svg>
                   </span>
                   <span>info@yourdomain.com</span>
                 </li>
