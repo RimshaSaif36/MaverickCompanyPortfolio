@@ -136,6 +136,7 @@ const slides = [
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [openFaq, setOpenFaq] = useState<number>(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -492,43 +493,110 @@ export default function Home() {
 </section>
 
       {/* ── FAQ + Skills Section ── */}
-      <section className="bg-gray-100 py-20">
+      <section className="bg-gray-100 py-24">
         <div className="max-w-7xl mx-auto px-8">
-          <div className="flex flex-col md:flex-row gap-16">
+          <div className="flex flex-col md:flex-row gap-20">
+
             {/* Left: FAQ */}
             <div className="flex-1">
-              <p className="text-[#998100] text-xs font-bold uppercase tracking-widest mb-2">Frequently Ask Question</p>
-              <h2 className="text-4xl font-black text-black uppercase leading-tight mb-8">
+              <p className="text-[#998100] text-[11px] font-extrabold uppercase tracking-[0.2em] mb-3">
+                Frequently Ask Question
+              </p>
+              <h2 className="text-[2.6rem] font-black text-black uppercase leading-[1.15] mb-10 tracking-tight">
                 Frequently<br />Ask Question
               </h2>
-              <div className="space-y-3">
+
+              <div className="space-y-2">
                 {[
-                  { q: "How To Fixed A Problem?", open: true, items: ["Far far away, behind the word mountains", "Consonantia, there live the blind texts", "When she reached the first hills of the Italic Mountains", "Bookmarksgrove, the headline of Alphabet Village", "Separated they live in Bookmarksgrove right"] },
-                  { q: "How To Manage Your Website?", open: false },
-                  { q: "How To Grow Your Investments Funds?", open: false },
-                  { q: "What Are Those Requirements For Businesses?", open: false },
-                ].map(({ q, open, items }) => (
-                  <details key={q} open={open} className="group">
-                    <summary className={`flex items-center justify-between px-5 py-4 cursor-pointer text-xs font-black uppercase tracking-wider list-none ${open ? "bg-[#998100] text-white" : "bg-white text-black border border-gray-200"}`}>
-                      {q}
-                      <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="6 9 12 15 18 9" /></svg>
-                    </summary>
-                    {items && (
-                      <ol className="bg-white px-6 py-4 text-sm text-gray-600 space-y-2 list-decimal list-inside border border-t-0 border-gray-200">
-                        {items.map((item) => <li key={item}>{item}</li>)}
-                      </ol>
-                    )}
-                  </details>
-                ))}
+                  {
+                    q: "How To Fixed A Problem?",
+                    items: [
+                      "Far far away, behind the word mountains",
+                      "Consonantia, there live the blind texts",
+                      "When she reached the first hills of the Italic Mountains",
+                      "Bookmarksgrove, the headline of Alphabet Village",
+                      "Separated they live in Bookmarksgrove right",
+                    ],
+                  },
+                  {
+                    q: "How To Manage Your Website?",
+                    items: [
+                      "Far far away, behind the word mountains",
+                      "Consonantia, there live the blind texts",
+                      "When she reached the first hills of the Italic Mountains",
+                      "Bookmarksgrove, the headline of Alphabet Village",
+                      "Separated they live in Bookmarksgrove right",
+                    ],
+                  },
+                  {
+                    q: "How To Grow Your Investments Funds?",
+                    items: [
+                      "Far far away, behind the word mountains",
+                      "Consonantia, there live the blind texts",
+                      "When she reached the first hills of the Italic Mountains",
+                      "Bookmarksgrove, the headline of Alphabet Village",
+                      "Separated they live in Bookmarksgrove right",
+                    ],
+                  },
+                  {
+                    q: "What Are Those Requirements For Businesses?",
+                    items: [
+                      "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+                      "Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
+                    ],
+                  },
+                ].map(({ q, items }, idx) => {
+                  const isOpen = openFaq === idx;
+                  return (
+                    <div key={q} className="overflow-hidden">
+                      <button
+                        onClick={() => setOpenFaq(isOpen ? -1 : idx)}
+                        className={`w-full flex items-center justify-between px-6 py-4 text-left transition-colors duration-200 ${
+                          isOpen
+                            ? "bg-[#998100] text-white"
+                            : "bg-white text-black border border-gray-200 hover:border-[#998100]"
+                        }`}
+                      >
+                        <span className="text-[11px] font-black uppercase tracking-[0.12em] leading-relaxed pr-4">
+                          {q}
+                        </span>
+                        <svg
+                          className={`w-4 h-4 flex-shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : "rotate-0"}`}
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2.5"
+                        >
+                          <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                      </button>
+
+                      {isOpen && items && items.length > 0 && (
+                        <ol className="bg-white border border-t-0 border-gray-200 px-7 py-5 space-y-2.5 list-decimal list-inside">
+                          {items.map((item) => (
+                            <li key={item} className="text-[13px] text-gray-500 leading-relaxed">
+                              {item}
+                            </li>
+                          ))}
+                        </ol>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             </div>
+
             {/* Right: image + skills */}
             <div className="flex-1">
-              <img src="/fqa.jpg" alt="Team working" className="w-full h-96 object-cover mb-8" />
-              <h3 className="text-2xl font-black text-black uppercase leading-tight mb-6">
+              <img
+                src="/fqa.jpg"
+                alt="Team working"
+                className="w-full h-[340px] object-cover mb-9"
+              />
+              <h3 className="text-[1.65rem] font-black text-black uppercase leading-tight tracking-tight mb-7">
                 We Are Very<br />Experienced &amp; Professionals
               </h3>
-              <div className="space-y-4">
+              <div className="space-y-5">
                 {[
                   { label: "Creative Design", pct: 95 },
                   { label: "Product Engineering", pct: 85 },
@@ -536,17 +604,23 @@ export default function Home() {
                   { label: "Support Tips", pct: 90 },
                 ].map(({ label, pct }) => (
                   <div key={label}>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-xs font-black uppercase tracking-wider text-black">{label}</span>
-                      <span className="text-xs font-black text-[#998100]">{pct}%</span>
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-[11px] font-black uppercase tracking-[0.12em] text-black">
+                        {label}
+                      </span>
+                      <span className="text-[12px] font-black text-[#998100]">{pct}%</span>
                     </div>
-                    <div className="h-1.5 bg-gray-300 w-full">
-                      <div className="h-full bg-[#998100]" style={{ width: `${pct}%` }} />
+                    <div className="h-[5px] bg-gray-300 w-full rounded-sm overflow-hidden">
+                      <div
+                        className="h-full bg-[#998100] rounded-sm"
+                        style={{ width: `${pct}%` }}
+                      />
                     </div>
                   </div>
                 ))}
               </div>
             </div>
+
           </div>
         </div>
       </section>
