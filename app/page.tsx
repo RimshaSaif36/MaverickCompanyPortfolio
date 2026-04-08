@@ -168,76 +168,78 @@ export default function Home() {
 
         {/* Navbars overlay */}
         <div className="absolute top-0 left-0 right-0 z-20">
-          {/* Top info bar */}
-          <div className="bg-transparent text-gray-200 text-sm py-2">
-            <div className="max-w-7xl mx-auto px-8 flex items-center">
-              <div className="flex-1">
-                Phone no:{" "}
-                <a href="tel:+001234567" className="text-white font-semibold hover:text-yellow-400 transition-colors">
-                  +92 123 4567
-                </a>{" "}
-                or email us:{" "}
-                <a href="mailto:maverick@email.com" className="text-white font-semibold hover:text-yellow-400 transition-colors">
-                  maverick@email.com
-                </a>
-              </div>
-              <div className="flex items-center gap-4 text-white">
-                <a href="#" aria-label="Facebook" className="hover:text-yellow-400 transition-colors"><FacebookIcon /></a>
-                <a href="#" aria-label="Twitter" className="hover:text-yellow-400 transition-colors"><TwitterIcon /></a>
-                <a href="#" aria-label="Instagram" className="hover:text-yellow-400 transition-colors"><InstagramIcon /></a>
-              </div>
-            </div>
-          </div>
+  {/* Top info bar */}
+  <div className="bg-transparent text-gray-200 text-sm py-2">
+    <div className="max-w-7xl mx-auto px-8 flex items-center">
+      <div className="flex-1">
+        Phone no:{" "}
+        <a href="tel:+921234567" className="text-white font-semibold hover:text-[#998100] transition-colors">
+          +92 123 4567
+        </a>{" "}
+        or email us:{" "}
+        <a href="mailto:maverick@email.com" className="text-white font-semibold hover:text-[#998100] transition-colors">
+          maverick@email.com
+        </a>
+      </div>
+      <div className="flex items-center gap-4 text-white">
+        <a href="#" aria-label="Facebook" className="hover:text-[#998100] transition-colors"><FacebookIcon /></a>
+        <a href="#" aria-label="Twitter" className="hover:text-[#998100] transition-colors"><TwitterIcon /></a>
+        <a href="#" aria-label="Instagram" className="hover:text-[#998100] transition-colors"><InstagramIcon /></a>
+      </div>
+    </div>
+  </div>
 
-          {/* Main navbar */}
-          <nav className="bg-white/10">
-            <div className="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
-              <span className="text-2xl font-bold tracking-widest text-white">Maverick Engineers</span>
-              <ul className="hidden md:flex items-center gap-8">
-                {navLinks.map((link) => (
-                  <li key={link}>
-                    <a
-                      href={`#${link.toLowerCase()}`}
-                      className={`text-sm font-semibold tracking-wide transition-colors ${link === "Home"
-                          ? "text-yellow-400 border-b-2 border-yellow-400 pb-0.5"
-                          : "text-white hover:text-yellow-400"
-                        }`}
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-              <button
-                className="md:hidden flex flex-col gap-1.5 p-2"
-                onClick={() => setMenuOpen((o) => !o)}
-                aria-label="Toggle menu"
+  {/* Main navbar */}
+  <nav className="bg-white/10">
+    <div className="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
+      <span className="text-2xl font-bold tracking-widest text-white">Maverick Engineers</span>
+      
+      {/* Desktop Menu */}
+      <ul className="hidden md:flex items-center gap-8">
+        {navLinks.map((link) => (
+          <li key={link}>
+            <a
+              href={`#${link.toLowerCase()}`}
+              className="text-sm font-semibold tracking-wide text-white hover:text-[#998100] transition-colors"
+            >
+              {link}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      {/* Mobile Menu Toggle */}
+      <button
+        className="md:hidden flex flex-col gap-1.5 p-2"
+        onClick={() => setMenuOpen((o) => !o)}
+        aria-label="Toggle menu"
+      >
+        <span className={`block w-6 h-0.5 bg-white transition-transform ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
+        <span className={`block w-6 h-0.5 bg-white transition-opacity ${menuOpen ? "opacity-0" : ""}`} />
+        <span className={`block w-6 h-0.5 bg-white transition-transform ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+      </button>
+    </div>
+
+    {/* Mobile Menu Dropdown */}
+    {menuOpen && (
+      <div className="md:hidden bg-black/80 px-8 pb-4">
+        <ul className="flex flex-col gap-3 pt-3">
+          {navLinks.map((link) => (
+            <li key={link}>
+              <a
+                href={`#${link.toLowerCase()}`}
+                onClick={() => setMenuOpen(false)}
+                className="text-sm font-semibold tracking-wide text-white hover:text-[#998100] transition-colors"
               >
-                <span className={`block w-6 h-0.5 bg-white transition-transform ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
-                <span className={`block w-6 h-0.5 bg-white transition-opacity ${menuOpen ? "opacity-0" : ""}`} />
-                <span className={`block w-6 h-0.5 bg-white transition-transform ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
-              </button>
-            </div>
-            {menuOpen && (
-              <div className="md:hidden bg-black/60 px-8 pb-4">
-                <ul className="flex flex-col gap-3 pt-3">
-                  {navLinks.map((link) => (
-                    <li key={link}>
-                      <a
-                        href={`#${link.toLowerCase()}`}
-                        onClick={() => setMenuOpen(false)}
-                        className={`text-sm font-semibold tracking-wide transition-colors ${link === "Home" ? "text-white" : "text-white hover:text-yellow-400"
-                          }`}
-                      >
-                        {link}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </nav>
-        </div>
+                {link}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+  </nav>
+</div>
 
         {/* Hero content */}
         <div className="relative z-10 flex flex-col justify-center h-full">
@@ -253,7 +255,7 @@ export default function Home() {
                 {slides[currentSlide].description}
               </p>
               <div className="flex gap-4">
-                <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-3 uppercase tracking-widest text-sm rounded-sm transition">
+                <button className="bg-[#998100] hover:bg-[#7a6700] text-black font-semibold px-6 py-3 uppercase tracking-widest text-sm rounded-sm transition">
                   Get Started
                 </button>
                 <button className="bg-transparent border border-white hover:bg-white hover:text-black text-white font-semibold px-6 py-3 uppercase tracking-widest text-sm rounded-sm transition">
@@ -291,8 +293,8 @@ export default function Home() {
             </div>
 
             {/* Digital Products */}
-            <div className="group bg-[#252525]/90 backdrop-blur-sm p-8 flex flex-col justify-between min-h-[220px] relative overflow-hidden cursor-pointer transition-all duration-300 hover:bg-yellow-400">
-              <div className="text-yellow-400 group-hover:text-black transition-colors duration-300">
+            <div className="group bg-[#252525]/90 backdrop-blur-sm p-8 flex flex-col justify-between min-h-[220px] relative overflow-hidden cursor-pointer transition-all duration-300 hover:bg-[#998100]">
+              <div className="text-[#998100] group-hover:text-black transition-colors duration-300">
                 <DigitalProductsIcon />
               </div>
               <h3 className="text-white group-hover:text-black text-sm font-black uppercase tracking-wider leading-snug mt-6 transition-colors duration-300">
@@ -307,8 +309,8 @@ export default function Home() {
             </div>
 
             {/* Online Marketing */}
-            <div className="group bg-[#252525]/90 backdrop-blur-sm p-8 flex flex-col justify-between min-h-[220px] relative overflow-hidden cursor-pointer transition-all duration-300 hover:bg-yellow-400">
-              <div className="text-yellow-400 group-hover:text-black transition-colors duration-300">
+            <div className="group bg-[#252525]/90 backdrop-blur-sm p-8 flex flex-col justify-between min-h-[220px] relative overflow-hidden cursor-pointer transition-all duration-300 hover:bg-[#998100]">
+              <div className="text-[#998100] group-hover:text-black transition-colors duration-300">
                 <OnlineMarketingIcon />
               </div>
               <h3 className="text-white group-hover:text-black text-sm font-black uppercase tracking-wider leading-snug mt-6 transition-colors duration-300">
@@ -339,8 +341,8 @@ export default function Home() {
 </div>
 
             {/* Application Development */}
-            <div className="group bg-[#252525]/90 backdrop-blur-sm p-8 flex flex-col justify-between min-h-[220px] relative overflow-hidden cursor-pointer transition-all duration-300 hover:bg-yellow-400">
-              <div className="text-yellow-400 group-hover:text-black transition-colors duration-300">
+            <div className="group bg-[#252525]/90 backdrop-blur-sm p-8 flex flex-col justify-between min-h-[220px] relative overflow-hidden cursor-pointer transition-all duration-300 hover:bg-[#998100]">
+              <div className="text-[#998100] group-hover:text-black transition-colors duration-300">
                 <AppDevIcon />
               </div>
               <h3 className="text-white group-hover:text-black text-sm font-black uppercase tracking-wider leading-snug mt-6 transition-colors duration-300">
@@ -355,8 +357,8 @@ export default function Home() {
             </div>
 
             {/* Web Development */}
-            <div className="group bg-[#252525]/90 backdrop-blur-sm p-8 flex flex-col justify-between min-h-[220px] relative overflow-hidden cursor-pointer transition-all duration-300 hover:bg-yellow-400">
-              <div className="text-yellow-400 group-hover:text-black transition-colors duration-300">
+            <div className="group bg-[#252525]/90 backdrop-blur-sm p-8 flex flex-col justify-between min-h-[220px] relative overflow-hidden cursor-pointer transition-all duration-300 hover:bg-[#998100]">
+              <div className="text-[#998100] group-hover:text-black transition-colors duration-300">
                 <WebDevIcon />
               </div>
               <h3 className="text-white group-hover:text-black text-sm font-black uppercase tracking-wider leading-snug mt-6 transition-colors duration-300">
@@ -371,8 +373,8 @@ export default function Home() {
             </div>
 
             {/* UX/UI Design */}
-            <div className="group bg-[#252525]/90 backdrop-blur-sm p-8 flex flex-col justify-between min-h-[220px] relative overflow-hidden cursor-pointer transition-all duration-300 hover:bg-yellow-400">
-              <div className="text-yellow-400 group-hover:text-black transition-colors duration-300">
+            <div className="group bg-[#252525]/90 backdrop-blur-sm p-8 flex flex-col justify-between min-h-[220px] relative overflow-hidden cursor-pointer transition-all duration-300 hover:bg-[#998100]">
+              <div className="text-[#998100] group-hover:text-black transition-colors duration-300">
                 <UxUiIcon />
               </div>
               <h3 className="text-white group-hover:text-black text-sm font-black uppercase tracking-wider leading-snug mt-6 transition-colors duration-300">
@@ -403,18 +405,18 @@ export default function Home() {
             </div>
             {/* Right: text */}
             <div className="flex-1">
-              <p className="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-3">Welcome To Maverick</p>
-              <h2 className="text-4xl md:text-5xl font-black text-black uppercase leading-tight mb-6">
-                Highest<br />Creative Standards
-              </h2>
+              <p className="text-[#998100] text-xs font-bold uppercase tracking-widest mb-3">Welcome To Maverick</p>
+             <h2 className="text-4xl md:text-5xl font-medium text-black uppercase leading-tight mb-6">
+  Highest<br />Creative Standards
+</h2>
               <p className="text-gray-500 text-sm leading-relaxed mb-8">
                 Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.
               </p>
               <div className="flex gap-4">
-                <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-8 py-3 uppercase tracking-widest text-xs transition">
+                <button className="bg-[#998100] hover:bg-[#7a6700] text-black font-bold px-8 py-3 uppercase tracking-widest text-xs transition">
                   Read More
                 </button>
-                <button className="border border-gray-300 hover:border-yellow-500 text-black font-bold px-8 py-3 uppercase tracking-widest text-xs transition">
+                <button className="border border-gray-300 hover:border-[#998100] text-black font-bold px-8 py-3 uppercase tracking-widest text-xs transition">
                   Our Work
                 </button>
               </div>
@@ -457,7 +459,7 @@ export default function Home() {
         <div key={label} className="flex items-center gap-5">
 
           {/* Icon */}
-          <span className="w-16 h-16 flex-shrink-0 bg-yellow-500 flex items-center justify-center rounded">
+          <span className="w-16 h-16 flex-shrink-0 bg-[#998100] flex items-center justify-center rounded">
             <svg
               width="28"
               height="28"
@@ -495,7 +497,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row gap-16">
             {/* Left: FAQ */}
             <div className="flex-1">
-              <p className="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Frequently Ask Question</p>
+              <p className="text-[#998100] text-xs font-bold uppercase tracking-widest mb-2">Frequently Ask Question</p>
               <h2 className="text-4xl font-black text-black uppercase leading-tight mb-8">
                 Frequently<br />Ask Question
               </h2>
@@ -507,7 +509,7 @@ export default function Home() {
                   { q: "What Are Those Requirements For Businesses?", open: false },
                 ].map(({ q, open, items }) => (
                   <details key={q} open={open} className="group">
-                    <summary className={`flex items-center justify-between px-5 py-4 cursor-pointer text-xs font-black uppercase tracking-wider list-none ${open ? "bg-yellow-500 text-white" : "bg-white text-black border border-gray-200"}`}>
+                    <summary className={`flex items-center justify-between px-5 py-4 cursor-pointer text-xs font-black uppercase tracking-wider list-none ${open ? "bg-[#998100] text-white" : "bg-white text-black border border-gray-200"}`}>
                       {q}
                       <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="6 9 12 15 18 9" /></svg>
                     </summary>
@@ -522,7 +524,7 @@ export default function Home() {
             </div>
             {/* Right: image + skills */}
             <div className="flex-1">
-              <img src="/team.jpg" alt="Team working" className="w-full h-56 object-cover mb-8" />
+              <img src="/fqa.jpg" alt="Team working" className="w-full h-96 object-cover mb-8" />
               <h3 className="text-2xl font-black text-black uppercase leading-tight mb-6">
                 We Are Very<br />Experienced &amp; Professionals
               </h3>
@@ -536,10 +538,10 @@ export default function Home() {
                   <div key={label}>
                     <div className="flex justify-between mb-1">
                       <span className="text-xs font-black uppercase tracking-wider text-black">{label}</span>
-                      <span className="text-xs font-black text-yellow-500">{pct}%</span>
+                      <span className="text-xs font-black text-[#998100]">{pct}%</span>
                     </div>
                     <div className="h-1.5 bg-gray-300 w-full">
-                      <div className="h-full bg-yellow-500" style={{ width: `${pct}%` }} />
+                      <div className="h-full bg-[#998100]" style={{ width: `${pct}%` }} />
                     </div>
                   </div>
                 ))}
@@ -554,12 +556,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-8">
           <div className="flex items-end justify-between mb-10">
             <div>
-              <p className="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Meet The Team</p>
+              <p className="text-[#998100] text-xs font-bold uppercase tracking-widest mb-2">Meet The Team</p>
               <h2 className="text-4xl font-black text-black uppercase leading-tight">
                 Professional<br />Creative Team Members
               </h2>
             </div>
-            <button className="border border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black text-xs font-bold uppercase tracking-widest px-6 py-3 transition flex items-center gap-2">
+            <button className="border border-[#998100] text-[#998100] hover:bg-[#998100] hover:text-black text-xs font-bold uppercase tracking-widest px-6 py-3 transition flex items-center gap-2">
               View All Members
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
             </button>
@@ -574,7 +576,7 @@ export default function Home() {
               <div key={name} className="relative group overflow-hidden">
                 <img src={img} alt={name} className="w-full h-72 object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
                 {active && (
-                  <div className="absolute inset-0 bg-yellow-500/80 flex flex-col items-center justify-center">
+                  <div className="absolute inset-0 bg-[#998100]/80 flex flex-col items-center justify-center">
                     <p className="text-white font-black uppercase tracking-wider text-sm">{name}</p>
                     <p className="text-white/80 text-xs uppercase tracking-widest mt-1">{role}</p>
                     <div className="flex gap-3 mt-4">
@@ -592,7 +594,7 @@ export default function Home() {
                   </div>
                 )}
                 {!active && (
-                  <div className="absolute inset-0 bg-yellow-500/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute inset-0 bg-[#998100]/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <p className="text-white font-black uppercase tracking-wider text-sm">{name}</p>
                     <p className="text-white/80 text-xs uppercase tracking-widest mt-1">{role}</p>
                     <div className="flex gap-3 mt-4">
@@ -620,12 +622,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-8 mb-12">
           <div className="flex items-end justify-between">
             <div>
-              <p className="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Recent Portfolio</p>
+              <p className="text-[#998100] text-xs font-bold uppercase tracking-widest mb-2">Recent Portfolio</p>
               <h2 className="text-4xl font-black text-white uppercase leading-tight">
                 We Have Done<br />Many Latest Projects
               </h2>
             </div>
-            <button className="border border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black text-xs font-bold uppercase tracking-widest px-6 py-3 transition flex items-center gap-2">
+            <button className="border border-[#998100] text-[#998100] hover:bg-[#998100] hover:text-black text-xs font-bold uppercase tracking-widest px-6 py-3 transition flex items-center gap-2">
               View All Projects
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
             </button>
@@ -636,7 +638,7 @@ export default function Home() {
             <div key={i} className="relative group overflow-hidden aspect-square">
               <img src={src} alt={`Portfolio ${i + 1}`} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
-                <span className="w-10 h-10 rounded-full bg-yellow-500 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="w-10 h-10 rounded-full bg-[#998100] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></svg>
                 </span>
               </div>
@@ -648,7 +650,7 @@ export default function Home() {
       {/* ── Testimonials Section ── */}
       <section className="bg-gray-100 py-20">
         <div className="max-w-7xl mx-auto px-8">
-          <p className="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Testimonial</p>
+          <p className="text-[#998100] text-xs font-bold uppercase tracking-widest mb-2">Testimonial</p>
           <h2 className="text-4xl font-black text-black uppercase leading-tight mb-12">
             People Say<br />About Our Works
           </h2>
@@ -664,12 +666,12 @@ export default function Home() {
                   Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
                 </p>
                 <div>
-                  <div className="flex text-yellow-500 mb-3">{"★★★★★".split("").map((s, j) => <span key={j}>{s}</span>)}</div>
+                  <div className="flex text-[#998100] mb-3">{"★★★★★".split("").map((s, j) => <span key={j}>{s}</span>)}</div>
                   <div className="flex items-center gap-3">
                     <img src={img} alt="Reviewer" className="w-10 h-10 rounded-full object-cover" />
                     <div>
                       <p className="font-black text-black text-sm">Roger Scott</p>
-                      <p className="text-yellow-500 text-xs uppercase tracking-wider">Marketing Manager</p>
+                      <p className="text-[#998100] text-xs uppercase tracking-wider">Marketing Manager</p>
                     </div>
                   </div>
                 </div>
@@ -677,7 +679,7 @@ export default function Home() {
             ))}
           </div>
           <div className="flex justify-center gap-2 mt-8">
-            <span className="w-3 h-3 rounded-full bg-yellow-500 inline-block" />
+            <span className="w-3 h-3 rounded-full bg-[#998100] inline-block" />
             <span className="w-3 h-3 rounded-full bg-gray-300 inline-block" />
           </div>
         </div>
@@ -688,7 +690,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-8">
           <div className="relative overflow-hidden rounded-sm">
             <img src="/newsletter-bg.jpg" alt="Newsletter" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-yellow-500/85" />
+            <div className="absolute inset-0 bg-[#998100]/85" />
             <div className="relative z-10 py-14 px-10 text-center">
               <h3 className="text-2xl font-black text-white uppercase tracking-wider mb-2">Join Us Newsletter</h3>
               <p className="text-white/80 text-sm mb-6">Sign Up to our Newsletter and get our latest news update</p>
@@ -711,7 +713,7 @@ export default function Home() {
               <p className="text-gray-400 text-sm leading-relaxed mb-6">Far far away, behind the word mountains, far from the countries.</p>
               <div className="flex gap-3">
                 {["twitter", "facebook", "instagram"].map((s) => (
-                  <a key={s} href="#" className="w-9 h-9 rounded-full bg-yellow-500 flex items-center justify-center hover:bg-yellow-400 transition">
+                  <a key={s} href="#" className="w-9 h-9 rounded-full bg-[#998100] flex items-center justify-center hover:bg-[#998100] transition">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       {s === "twitter" && <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />}
                       {s === "facebook" && <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />}
@@ -753,19 +755,19 @@ export default function Home() {
               <p className="text-white font-black text-sm uppercase tracking-widest mb-5">Have A Questions?</p>
               <ul className="space-y-4 text-gray-400 text-sm">
                 <li className="flex gap-3">
-                  <span className="text-yellow-500 mt-0.5">
+                  <span className="text-[#998100] mt-0.5">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
                   </span>
                   <span>203 Fake St. Mountain View, San Francisco, California, USA</span>
                 </li>
                 <li className="flex gap-3">
-                  <span className="text-yellow-500 mt-0.5">
+                  <span className="text-[#998100] mt-0.5">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
                   </span>
                   <span>+2 392 3929 210</span>
                 </li>
                 <li className="flex gap-3">
-                  <span className="text-yellow-500 mt-0.5">
+                  <span className="text-[#998100] mt-0.5">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="22" y1="2" x2="11" y2="13" /><polygon points="22 2 15 22 11 13 2 9 22 2" /></svg>
                   </span>
                   <span>info@yourdomain.com</span>
