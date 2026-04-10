@@ -169,78 +169,78 @@ export default function Home() {
 
         {/* Navbars overlay */}
         <div className="absolute top-0 left-0 right-0 z-20">
-  {/* Top info bar */}
-  <div className="bg-transparent text-gray-200 text-sm py-2">
-    <div className="max-w-7xl mx-auto px-8 flex items-center">
-      <div className="flex-1">
-        Phone no:{" "}
-        <a href="tel:+921234567" className="text-white font-semibold hover:text-[#998100] transition-colors">
-          +92 123 4567
-        </a>{" "}
-        or email us:{" "}
-        <a href="mailto:maverick@email.com" className="text-white font-semibold hover:text-[#998100] transition-colors">
-          maverick@email.com
-        </a>
-      </div>
-      <div className="flex items-center gap-4 text-white">
-        <a href="#" aria-label="Facebook" className="hover:text-[#998100] transition-colors"><FacebookIcon /></a>
-        <a href="#" aria-label="Twitter" className="hover:text-[#998100] transition-colors"><TwitterIcon /></a>
-        <a href="#" aria-label="Instagram" className="hover:text-[#998100] transition-colors"><InstagramIcon /></a>
-      </div>
-    </div>
-  </div>
+          {/* Top info bar */}
+          <div className="bg-transparent text-gray-200 text-sm py-2">
+            <div className="max-w-7xl mx-auto px-8 flex items-center">
+              <div className="flex-1">
+                Phone no:{" "}
+                <a href="tel:+921234567" className="text-white font-semibold hover:text-[#998100] transition-colors">
+                  +92 123 4567
+                </a>{" "}
+                or email us:{" "}
+                <a href="mailto:maverick@email.com" className="text-white font-semibold hover:text-[#998100] transition-colors">
+                  maverick@email.com
+                </a>
+              </div>
+              <div className="flex items-center gap-4 text-white">
+                <a href="#" aria-label="Facebook" className="hover:text-[#998100] transition-colors"><FacebookIcon /></a>
+                <a href="#" aria-label="Twitter" className="hover:text-[#998100] transition-colors"><TwitterIcon /></a>
+                <a href="#" aria-label="Instagram" className="hover:text-[#998100] transition-colors"><InstagramIcon /></a>
+              </div>
+            </div>
+          </div>
 
-  {/* Main navbar */}
-  <nav className="bg-white/10">
-    <div className="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
-      <span className="text-2xl font-bold tracking-widest text-white">Maverick Engineers</span>
-      
-      {/* Desktop Menu */}
-      <ul className="hidden md:flex items-center gap-8">
-        {navLinks.map((link) => (
-          <li key={link}>
-            <a
-              href={`#${link.toLowerCase()}`}
-              className="text-sm font-semibold tracking-wide text-white hover:text-[#998100] transition-colors"
-            >
-              {link}
-            </a>
-          </li>
-        ))}
-      </ul>
+          {/* Main navbar */}
+          <nav className="bg-white/10">
+            <div className="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
+              <span className="text-2xl font-bold tracking-widest text-white">Maverick Engineers</span>
 
-      {/* Mobile Menu Toggle */}
-      <button
-        className="md:hidden flex flex-col gap-1.5 p-2"
-        onClick={() => setMenuOpen((o) => !o)}
-        aria-label="Toggle menu"
-      >
-        <span className={`block w-6 h-0.5 bg-white transition-transform ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
-        <span className={`block w-6 h-0.5 bg-white transition-opacity ${menuOpen ? "opacity-0" : ""}`} />
-        <span className={`block w-6 h-0.5 bg-white transition-transform ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
-      </button>
-    </div>
+              {/* Desktop Menu */}
+              <ul className="hidden md:flex items-center gap-8">
+                {navLinks.map((link) => (
+                  <li key={link}>
+                    <a
+                      href={`#${link.toLowerCase()}`}
+                      className="text-sm font-semibold tracking-wide text-white hover:text-[#998100] transition-colors"
+                    >
+                      {link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
 
-    {/* Mobile Menu Dropdown */}
-    {menuOpen && (
-      <div className="md:hidden bg-black/80 px-8 pb-4">
-        <ul className="flex flex-col gap-3 pt-3">
-          {navLinks.map((link) => (
-            <li key={link}>
-              <a
-                href={`#${link.toLowerCase()}`}
-                onClick={() => setMenuOpen(false)}
-                className="text-sm font-semibold tracking-wide text-white hover:text-[#998100] transition-colors"
+              {/* Mobile Menu Toggle */}
+              <button
+                className="md:hidden flex flex-col gap-1.5 p-2"
+                onClick={() => setMenuOpen((o) => !o)}
+                aria-label="Toggle menu"
               >
-                {link}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-    )}
-  </nav>
-</div>
+                <span className={`block w-6 h-0.5 bg-white transition-transform ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
+                <span className={`block w-6 h-0.5 bg-white transition-opacity ${menuOpen ? "opacity-0" : ""}`} />
+                <span className={`block w-6 h-0.5 bg-white transition-transform ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+              </button>
+            </div>
+
+            {/* Mobile Menu Dropdown */}
+            {menuOpen && (
+              <div className="md:hidden bg-black/80 px-8 pb-4">
+                <ul className="flex flex-col gap-3 pt-3">
+                  {navLinks.map((link) => (
+                    <li key={link}>
+                      <a
+                        href={`#${link.toLowerCase()}`}
+                        onClick={() => setMenuOpen(false)}
+                        className="text-sm font-semibold tracking-wide text-white hover:text-[#998100] transition-colors"
+                      >
+                        {link}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </nav>
+        </div>
 
         {/* Hero content */}
         <div className="relative z-10 flex flex-col justify-center h-full">
@@ -327,19 +327,19 @@ export default function Home() {
 
             {/* Graphic Design (Highlighted) */}
             <div className="group bg-[#998100] p-8 flex flex-col justify-between min-h-[220px] relative overflow-hidden cursor-pointer">
-  <div className="text-black">
-    <GraphicDesignIcon />
-  </div>
-  <h3 className="text-black text-sm font-black uppercase tracking-wider leading-snug mt-6">
-    Graphic<br />Design
-  </h3>
-  <span className="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-black/80 flex items-center justify-center">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-      <line x1="5" y1="12" x2="19" y2="12" />
-      <polyline points="12 5 19 12 12 19" />
-    </svg>
-  </span>
-</div>
+              <div className="text-black">
+                <GraphicDesignIcon />
+              </div>
+              <h3 className="text-black text-sm font-black uppercase tracking-wider leading-snug mt-6">
+                Graphic<br />Design
+              </h3>
+              <span className="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-black/80 flex items-center justify-center">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </span>
+            </div>
 
             {/* Application Development */}
             <div className="group bg-[#252525]/90 backdrop-blur-sm p-8 flex flex-col justify-between min-h-[220px] relative overflow-hidden cursor-pointer transition-all duration-300 hover:bg-[#998100]">
@@ -407,9 +407,9 @@ export default function Home() {
             {/* Right: text */}
             <div className="flex-1">
               <p className="text-[#998100] text-xs font-bold uppercase tracking-widest mb-3">Welcome To Maverick</p>
-             <h2 className="text-4xl md:text-5xl font-medium text-black uppercase leading-tight mb-6">
-  Highest<br />Creative Standards
-</h2>
+              <h2 className="text-4xl md:text-5xl font-medium text-black uppercase leading-tight mb-6">
+                Highest<br />Creative Standards
+              </h2>
               <p className="text-gray-500 text-sm leading-relaxed mb-8">
                 Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.
               </p>
@@ -427,70 +427,70 @@ export default function Home() {
       </section>
 
       {/* ── Stats Section ── */}
-<section className="relative py-28 md:py-32 bg-[url('/bg.jpg')] bg-cover bg-center bg-no-repeat md:bg-fixed">
+      <section className="relative py-28 md:py-32 bg-[url('/bg.jpg')] bg-cover bg-center bg-no-repeat md:bg-fixed">
 
-  {/* Overlay */}
-  <div className="absolute inset-0 bg-black/40"></div>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/40"></div>
 
-  <div className="relative z-10 max-w-7xl mx-auto px-8">
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+        <div className="relative z-10 max-w-7xl mx-auto px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
 
-      {[
-        {
-          icon: "M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m-6 9l2 2 4-4",
-          num: "4,800",
-          label: "Project Completed"
-        },
-        {
-          icon: "M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z",
-          num: "1,000",
-          label: "Our Staff"
-        },
-        {
-          icon: "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z",
-          num: "350",
-          label: "Services Provide"
-        },
-        {
-          icon: "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z",
-          num: "7,650",
-          label: "Happy Customers"
-        },
-      ].map(({ icon, num, label }) => (
-        <div key={label} className="flex items-center gap-5">
+            {[
+              {
+                icon: "M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m-6 9l2 2 4-4",
+                num: "4,800",
+                label: "Project Completed"
+              },
+              {
+                icon: "M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z",
+                num: "1,000",
+                label: "Our Staff"
+              },
+              {
+                icon: "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z",
+                num: "350",
+                label: "Services Provide"
+              },
+              {
+                icon: "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z",
+                num: "7,650",
+                label: "Happy Customers"
+              },
+            ].map(({ icon, num, label }) => (
+              <div key={label} className="flex items-center gap-5">
 
-          {/* Icon */}
-          <span className="w-16 h-16 flex-shrink-0 bg-[#998100] flex items-center justify-center rounded">
-            <svg
-              width="28"
-              height="28"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="white"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d={icon} />
-            </svg>
-          </span>
+                {/* Icon */}
+                <span className="w-16 h-16 flex-shrink-0 bg-[#998100] flex items-center justify-center rounded">
+                  <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d={icon} />
+                  </svg>
+                </span>
 
-          {/* Text */}
-          <div>
-            <p className="text-4xl font-black text-white leading-none">
-              {num}
-            </p>
-            <p className="text-xs font-bold uppercase tracking-wider text-white/80 mt-2">
-              {label}
-            </p>
+                {/* Text */}
+                <div>
+                  <p className="text-4xl font-black text-white leading-none">
+                    {num}
+                  </p>
+                  <p className="text-xs font-bold uppercase tracking-wider text-white/80 mt-2">
+                    {label}
+                  </p>
+                </div>
+
+              </div>
+            ))}
+
           </div>
-
         </div>
-      ))}
-
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* ── FAQ + Skills Section ── */}
       <section className="bg-gray-100 py-24">
@@ -551,11 +551,10 @@ export default function Home() {
                     <div key={q} className="overflow-hidden">
                       <button
                         onClick={() => setOpenFaq(isOpen ? -1 : idx)}
-                        className={`w-full flex items-center justify-between px-6 py-4 text-left transition-colors duration-200 ${
-                          isOpen
+                        className={`w-full flex items-center justify-between px-6 py-4 text-left transition-colors duration-200 ${isOpen
                             ? "bg-[#998100] text-white"
                             : "bg-white text-black border border-gray-200 hover:border-[#998100]"
-                        }`}
+                          }`}
                       >
                         <span className="text-[11px] font-black uppercase tracking-[0.12em] leading-relaxed pr-4">
                           {q}
