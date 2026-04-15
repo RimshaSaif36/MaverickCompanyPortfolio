@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 // Social icons as inline SVGs
@@ -146,7 +147,14 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  const navLinks = ["Home", "About", "Pricing", "Portfolio", "Blog", "Contact"];
+  const navLinks = [
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Pricing", href: "/pricing" },
+    { label: "Portfolio", href: "/portfolio" },
+    { label: "Blog", href: "/blog" },
+    { label: "Contact", href: "/contact" },
+  ];
 
   return (
     <div>
@@ -198,14 +206,14 @@ export default function Home() {
 
               {/* Desktop Menu */}
               <ul className="hidden md:flex items-center gap-8">
-                {navLinks.map((link) => (
-                  <li key={link}>
-                    <a
-                      href={`#${link.toLowerCase()}`}
+                {navLinks.map(({ label, href }) => (
+                  <li key={label}>
+                    <Link
+                      href={href}
                       className="text-sm font-semibold tracking-wide text-white hover:text-[#998100] transition-colors"
                     >
-                      {link}
-                    </a>
+                      {label}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -226,15 +234,15 @@ export default function Home() {
             {menuOpen && (
               <div className="md:hidden bg-black/80 px-8 pb-4">
                 <ul className="flex flex-col gap-3 pt-3">
-                  {navLinks.map((link) => (
-                    <li key={link}>
-                      <a
-                        href={`#${link.toLowerCase()}`}
+                  {navLinks.map(({ label, href }) => (
+                    <li key={label}>
+                      <Link
+                        href={href}
                         onClick={() => setMenuOpen(false)}
                         className="text-sm font-semibold tracking-wide text-white hover:text-[#998100] transition-colors"
                       >
-                        {link}
-                      </a>
+                        {label}
+                      </Link>
                     </li>
                   ))}
                 </ul>
