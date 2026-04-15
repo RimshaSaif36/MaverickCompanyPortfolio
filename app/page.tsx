@@ -561,8 +561,8 @@ export default function Home() {
                       <button
                         onClick={() => setOpenFaq(isOpen ? -1 : idx)}
                         className={`w-full flex items-center justify-between px-6 py-4 text-left transition-colors duration-200 ${isOpen
-                            ? "bg-[#998100] text-white"
-                            : "bg-white text-black border border-gray-200 hover:border-[#998100]"
+                          ? "bg-[#998100] text-white"
+                          : "bg-white text-black border border-gray-200 hover:border-[#998100]"
                           }`}
                       >
                         <span className="text-[11px] font-black uppercase tracking-[0.12em] leading-relaxed pr-4">
@@ -700,194 +700,194 @@ export default function Home() {
       </section>
 
       {/* ── Portfolio Section ── */}
-<section className="bg-[#1e1e1e] pt-20 pb-16">
-  <div className="max-w-7xl mx-auto px-8 mb-12">
-    <div className="flex items-end justify-between">
-      <div>
-        <p className="text-[#998100] text-xs font-bold uppercase tracking-widest mb-2">
-          Recent Portfolio
-        </p>
-        <h2 className="text-4xl font-black text-white uppercase leading-tight">
-          We Have Done<br />Many Latest Projects
-        </h2>
-      </div>
+      <section className="bg-[#1e1e1e] pt-20 pb-16">
+        <div className="max-w-7xl mx-auto px-8 mb-12">
+          <div className="flex items-end justify-between">
+            <div>
+              <p className="text-[#998100] text-xs font-bold uppercase tracking-widest mb-2">
+                Recent Portfolio
+              </p>
+              <h2 className="text-4xl font-black text-white uppercase leading-tight">
+                We Have Done<br />Many Latest Projects
+              </h2>
+            </div>
 
-      <button
-        onClick={() => setShowAllProjects((p) => !p)}
-        className="border border-[#998100] text-[#998100] hover:bg-[#998100] hover:text-black text-xs font-bold uppercase tracking-widest px-6 py-3 transition flex items-center gap-2"
-      >
-        {showAllProjects ? "Show Less" : "View All Projects"}
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-          <line x1="5" y1="12" x2="19" y2="12" />
-          <polyline points="12 5 19 12 12 19" />
-        </svg>
-      </button>
-    </div>
-  </div>
-
-  <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-    {[
-      { src: "/1.jpg", title: "E-Commerce Platform", category: "Web Development", link: "www.theclassicdecor.com" },
-      { src: "/2.jpg", title: "Fashion Store", category: "UI/UX Design", link: "www.theflexleather.com" },
-      { src: "/3.jpg", title: "Corporate Website", category: "Branding", link: "www.ataarabia.com" },
-      { src: "/4.jpg", title: "Portfolio Showcase", category: "Graphic Design", link: "www.portfolio.com" },
-      { src: "/5.jpg", title: "WoodenHive Online Store", category: "Web Development", link: "www.woodenhive.com" },
-      { src: "/6.jpg", title: "Creative Social Media Posts", category: "Social Media Marketing", link: "www.mobileapp.com" },
-      { src: "/7.jpg", title: "Inventory Management System", category: "Business Software", link: "www.khtabinventorysystem.com" },
-    ].slice(0, showAllProjects ? undefined : 6).map(({ src, title, category, link }, i) => (
-
-      <div key={i} className="group relative overflow-hidden rounded-sm shadow-lg">
-
-        {/* Browser bar */}
-        <div className="bg-[#2d2d2d] px-4 py-2.5 flex items-center gap-2">
-          <span className="w-3 h-3 rounded-full bg-red-500" />
-          <span className="w-3 h-3 rounded-full bg-yellow-400" />
-          <span className="w-3 h-3 rounded-full bg-green-500" />
-
-          <div className="flex-1 mx-3 bg-[#3d3d3d] rounded-sm px-3 py-1">
-            <a
-              href={`https://${link}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[10px] text-gray-400 font-mono hover:text-white transition"
+            <button
+              onClick={() => setShowAllProjects((p) => !p)}
+              className="border border-[#998100] text-[#998100] hover:bg-[#998100] hover:text-black text-xs font-bold uppercase tracking-widest px-6 py-3 transition flex items-center gap-2"
             >
-              {link}
-            </a>
-          </div>
-        </div>
-
-        {/* Image */}
-        <div className="relative overflow-hidden h-[300px]">
-          <img
-            src={src}
-            alt={title}
-            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-          />
-
-          {/* Hover overlay */}
-          <div className="absolute inset-0 bg-[#998100]/85 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <span className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center mb-4">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
-                <path d="M1 12S5 4 12 4s11 8 11 8-4 8-11 8S1 12 1 12z" />
-                <circle cx="12" cy="12" r="3" />
+              {showAllProjects ? "Show Less" : "View All Projects"}
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
               </svg>
-            </span>
-
-            <p className="text-white font-black uppercase tracking-wider text-sm">
-              {title}
-            </p>
-            <p className="text-white/80 text-[11px] uppercase tracking-widest mt-1">
-              {category}
-            </p>
+            </button>
           </div>
         </div>
 
-        {/* Footer */}
-        <div className="bg-[#252525] px-5 py-3 flex items-center justify-between">
-          <div>
-            <p className="text-white text-[12px] font-bold uppercase tracking-wide">
-              {title}
-            </p>
-            <p className="text-[#998100] text-[10px] uppercase tracking-widest mt-0.5">
-              {category}
-            </p>
-          </div>
+        <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            { src: "/1.jpg", title: "E-Commerce Platform", category: "Web Development", link: "www.theclassicdecor.com" },
+            { src: "/2.jpg", title: "Fashion Store", category: "UI/UX Design", link: "www.theflexleather.com" },
+            { src: "/3.jpg", title: "Corporate Website", category: "Branding", link: "www.ataarabia.com" },
+            { src: "/4.jpg", title: "Portfolio Showcase", category: "Graphic Design", link: "www.portfolio.com" },
+            { src: "/5.jpg", title: "WoodenHive Online Store", category: "Web Development", link: "www.woodenhive.com" },
+            { src: "/6.jpg", title: "Creative Social Media Posts", category: "Social Media Marketing", link: "www.mobileapp.com" },
+            { src: "/7.jpg", title: "Inventory Management System", category: "Business Software", link: "www.khtabinventorysystem.com" },
+          ].slice(0, showAllProjects ? undefined : 6).map(({ src, title, category, link }, i) => (
 
-          <a
-            href={`https://${link}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-7 h-7 rounded-full bg-[#998100] flex items-center justify-center"
-          >
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2.5">
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </a>
+            <div key={i} className="group relative overflow-hidden rounded-sm shadow-lg">
+
+              {/* Browser bar */}
+              <div className="bg-[#2d2d2d] px-4 py-2.5 flex items-center gap-2">
+                <span className="w-3 h-3 rounded-full bg-red-500" />
+                <span className="w-3 h-3 rounded-full bg-yellow-400" />
+                <span className="w-3 h-3 rounded-full bg-green-500" />
+
+                <div className="flex-1 mx-3 bg-[#3d3d3d] rounded-sm px-3 py-1">
+                  <a
+                    href={`https://${link}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[10px] text-gray-400 font-mono hover:text-white transition"
+                  >
+                    {link}
+                  </a>
+                </div>
+              </div>
+
+              {/* Image */}
+              <div className="relative overflow-hidden h-[300px]">
+                <img
+                  src={src}
+                  alt={title}
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                />
+
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-[#998100]/85 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center mb-4">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
+                      <path d="M1 12S5 4 12 4s11 8 11 8-4 8-11 8S1 12 1 12z" />
+                      <circle cx="12" cy="12" r="3" />
+                    </svg>
+                  </span>
+
+                  <p className="text-white font-black uppercase tracking-wider text-sm">
+                    {title}
+                  </p>
+                  <p className="text-white/80 text-[11px] uppercase tracking-widest mt-1">
+                    {category}
+                  </p>
+                </div>
+              </div>
+
+              {/* Footer */}
+              <div className="bg-[#252525] px-5 py-3 flex items-center justify-between">
+                <div>
+                  <p className="text-white text-[12px] font-bold uppercase tracking-wide">
+                    {title}
+                  </p>
+                  <p className="text-[#998100] text-[10px] uppercase tracking-widest mt-0.5">
+                    {category}
+                  </p>
+                </div>
+
+                <a
+                  href={`https://${link}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-7 h-7 rounded-full bg-[#998100] flex items-center justify-center"
+                >
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2.5">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </a>
+              </div>
+
+            </div>
+          ))}
         </div>
-
-      </div>
-    ))}
-  </div>
-</section>
+      </section>
 
       {/* ── Testimonials Section ── */}
-<section className="bg-gray-100 py-20">
-  <div className="max-w-7xl mx-auto px-8">
-    <p className="text-[#998100] text-xs font-bold uppercase tracking-widest mb-2">
-      Testimonial
-    </p>
-    <h2 className="text-4xl font-black text-black uppercase leading-tight mb-12">
-      People Say<br />About Our Works
-    </h2>
-
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-      {[
-        {
-          img: "/t1.jpg",
-          name: "Emily Carter",
-          role: "Interior Designer",
-          review:
-            "Working with this team was an absolute pleasure. Their attention to detail and commitment to quality exceeded our expectations. The final result was elegant, modern, and delivered on time.",
-        },
-        {
-          img: "/t2.jpg",
-          name: "Daniel Thompson",
-          role: "Project Manager",
-          review:
-            "Professional, reliable, and highly skilled. From planning to execution, everything was handled smoothly. Communication was clear and the craftsmanship was outstanding.",
-        },
-        {
-          img: "/t3.jpg",
-          name: "Sophia Martinez",
-          role: "Business Owner",
-          review:
-            "We trusted them with a major renovation project, and they delivered beyond what we imagined. The design creativity and structural precision were truly impressive.",
-        },
-        {
-          img: "/t4.jpg",
-          name: "Michael Reynolds",
-          role: "Real Estate Developer",
-          review:
-            "Exceptional service and top-tier quality. Their team brought our vision to life while staying within budget. I highly recommend them for any commercial or residential project.",
-        },
-      ].map(({ img, name, role, review }, i) => (
-        <div key={i} className="bg-white p-6 flex flex-col justify-between shadow-sm">
-          <p className="text-gray-500 text-sm leading-relaxed mb-6">
-            {review}
+      <section className="bg-gray-100 py-20">
+        <div className="max-w-7xl mx-auto px-8">
+          <p className="text-[#998100] text-xs font-bold uppercase tracking-widest mb-2">
+            Testimonial
           </p>
+          <h2 className="text-4xl font-black text-black uppercase leading-tight mb-12">
+            People Say<br />About Our Works
+          </h2>
 
-          <div>
-            <div className="flex text-[#998100] mb-3">
-              {"★★★★★".split("").map((s, j) => (
-                <span key={j}>{s}</span>
-              ))}
-            </div>
-
-            <div className="flex items-center gap-3">
-              <img
-                src={img}
-                alt={name}
-                className="w-10 h-10 rounded-full object-cover"
-              />
-              <div>
-                <p className="font-black text-black text-sm">{name}</p>
-                <p className="text-[#998100] text-xs uppercase tracking-wider">
-                  {role}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {[
+              {
+                img: "/t1.jpg",
+                name: "Emily Carter",
+                role: "Interior Designer",
+                review:
+                  "Working with this team was an absolute pleasure. Their attention to detail and commitment to quality exceeded our expectations. The final result was elegant, modern, and delivered on time.",
+              },
+              {
+                img: "/t2.jpg",
+                name: "Daniel Thompson",
+                role: "Project Manager",
+                review:
+                  "Professional, reliable, and highly skilled. From planning to execution, everything was handled smoothly. Communication was clear and the craftsmanship was outstanding.",
+              },
+              {
+                img: "/t3.jpg",
+                name: "Sophia Martinez",
+                role: "Business Owner",
+                review:
+                  "We trusted them with a major renovation project, and they delivered beyond what we imagined. The design creativity and structural precision were truly impressive.",
+              },
+              {
+                img: "/t4.jpg",
+                name: "Michael Reynolds",
+                role: "Real Estate Developer",
+                review:
+                  "Exceptional service and top-tier quality. Their team brought our vision to life while staying within budget. I highly recommend them for any commercial or residential project.",
+              },
+            ].map(({ img, name, role, review }, i) => (
+              <div key={i} className="bg-white p-6 flex flex-col justify-between shadow-sm">
+                <p className="text-gray-500 text-sm leading-relaxed mb-6">
+                  {review}
                 </p>
+
+                <div>
+                  <div className="flex text-[#998100] mb-3">
+                    {"★★★★★".split("").map((s, j) => (
+                      <span key={j}>{s}</span>
+                    ))}
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <img
+                      src={img}
+                      alt={name}
+                      className="w-10 h-10 rounded-full object-cover"
+                    />
+                    <div>
+                      <p className="font-black text-black text-sm">{name}</p>
+                      <p className="text-[#998100] text-xs uppercase tracking-wider">
+                        {role}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
+          </div>
+
+          <div className="flex justify-center gap-2 mt-8">
+            <span className="w-3 h-3 rounded-full bg-[#998100] inline-block" />
+            <span className="w-3 h-3 rounded-full bg-gray-300 inline-block" />
           </div>
         </div>
-      ))}
-    </div>
-
-    <div className="flex justify-center gap-2 mt-8">
-      <span className="w-3 h-3 rounded-full bg-[#998100] inline-block" />
-      <span className="w-3 h-3 rounded-full bg-gray-300 inline-block" />
-    </div>
-  </div>
-</section>
+      </section>
       {/* ── Newsletter ── */}
       <section className="bg-white py-16">
         <div className="max-w-4xl mx-auto px-8">
