@@ -9,9 +9,11 @@ const FacebookIcon = () => (
     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
   </svg>
 );
-const TwitterIcon = () => (
+const LinkedInIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect x="2" y="9" width="4" height="12" />
+    <circle cx="4" cy="4" r="2" />
   </svg>
 );
 const InstagramIcon = () => (
@@ -113,23 +115,23 @@ const slides = [
   {
     src: "/background1.jpg",
     alt: "Team working 1",
-    title: "Professional & Creative Design Solution",
+    title: "Empowering Your Digital Presence",
     description:
-      "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+      "We build stunning, high-performance websites that drive growth and deliver exceptional user experiences.",
   },
   {
     src: "/background2.jpg",
     alt: "Team working 2",
     title: "Innovative Strategies for Your Business",
     description:
-      "We provide innovative solutions to help your business grow and succeed in a competitive market.",
+      "Our data-driven marketing strategies are designed to elevate your brand and connect with your target audience.",
   },
   {
     src: "/background3.jpg",
     alt: "Team working 3",
-    title: "Crafting meaningful and impactful designs",
+    title: "Creative Solutions, Measurable Results",
     description:
-      "Our creative team crafts visually stunning designs that captivate your audience.",
+      "From concept to launch, we deliver creative solutions that produce tangible, measurable results for your business.",
   },
 
 ];
@@ -139,6 +141,7 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number>(0);
   const [showAllProjects, setShowAllProjects] = useState(false);
+  const [lightboxImg, setLightboxImg] = useState<{ src: string; title: string } | null>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -192,9 +195,9 @@ export default function Home() {
                 </a>
               </div>
               <div className="flex items-center gap-4 text-white">
-                <a href="#" aria-label="Facebook" className="hover:text-[#998100] transition-colors"><FacebookIcon /></a>
-                <a href="#" aria-label="Twitter" className="hover:text-[#998100] transition-colors"><TwitterIcon /></a>
-                <a href="#" aria-label="Instagram" className="hover:text-[#998100] transition-colors"><InstagramIcon /></a>
+                <a href="https://www.facebook.com/profile.php?id=61570729737437" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-[#998100] transition-colors"><FacebookIcon /></a>
+                <a href="https://www.linkedin.com/in/maverick-techstudio-833379403/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-[#998100] transition-colors"><LinkedInIcon /></a>
+                <a href="https://www.instagram.com/mavericktechstudio/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-[#998100] transition-colors"><InstagramIcon /></a>
               </div>
             </div>
           </div>
@@ -293,12 +296,10 @@ export default function Home() {
             {/* Text block */}
             <div className="col-span-2 flex flex-col justify-center py-6">
               <h2 className="text-3xl md:text-4xl font-black text-white uppercase leading-tight mb-5">
-                We Shape The<br />Perfect Solutions
+                Crafting Digital<br />Experiences That Inspire
               </h2>
               <p className="text-gray-300 text-sm leading-relaxed max-w-sm">
-                A small river named Duden flows by their place and supplies it with
-                the necessary regelialia. It is a paradisematic country, in which
-                roasted parts of sentences fly into your mouth.
+                At Maverick, we blend creativity with technology to build bespoke digital solutions. Our team is dedicated to crafting websites and marketing campaigns that not only look great but also perform exceptionally.
               </p>
             </div>
 
@@ -417,10 +418,10 @@ export default function Home() {
             <div className="flex-1">
               <p className="text-[#998100] text-xs font-bold uppercase tracking-widest mb-3">Welcome To Maverick</p>
               <h2 className="text-4xl md:text-5xl font-medium text-black uppercase leading-tight mb-6">
-                Highest<br />Creative Standards
+                Where Vision<br />Meets Innovation
               </h2>
               <p className="text-gray-500 text-sm leading-relaxed mb-8">
-                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                Maverick is a premier digital agency specializing in web development, UI/UX design, and strategic marketing. We are passionate about helping businesses thrive in the digital landscape by creating engaging online experiences that drive results and foster growth.
               </p>
               <div className="flex gap-4">
                 <button className="bg-[#998100] hover:bg-[#7a6700] text-black font-bold px-8 py-3 uppercase tracking-widest text-xs transition">
@@ -447,22 +448,22 @@ export default function Home() {
             {[
               {
                 icon: "M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m-6 9l2 2 4-4",
-                num: "4,800",
+                num: "28",
                 label: "Project Completed"
               },
               {
                 icon: "M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z",
-                num: "1,000",
+                num: "25",
                 label: "Our Staff"
               },
               {
                 icon: "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z",
-                num: "350",
+                num: "35",
                 label: "Services Provide"
               },
               {
                 icon: "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z",
-                num: "7,650",
+                num: "62",
                 label: "Happy Customers"
               },
             ].map(({ icon, num, label }) => (
@@ -518,40 +519,31 @@ export default function Home() {
               <div className="space-y-2 w-full text-left">
                 {[
                   {
-                    q: "How To Fixed A Problem?",
+                    q: "What services do you offer?",
                     items: [
-                      "Far far away, behind the word mountains",
-                      "Consonantia, there live the blind texts",
-                      "When she reached the first hills of the Italic Mountains",
-                      "Bookmarksgrove, the headline of Alphabet Village",
-                      "Separated they live in Bookmarksgrove right",
+                      "We specialize in web development, UI/UX design, e-commerce solutions, and digital marketing.",
+                      "Our team is proficient in a variety of technologies to suit your project needs.",
                     ],
                   },
                   {
-                    q: "How To Manage Your Website?",
+                    q: "How long does a website project take?",
                     items: [
-                      "Far far away, behind the word mountains",
-                      "Consonantia, there live the blind texts",
-                      "When she reached the first hills of the Italic Mountains",
-                      "Bookmarksgrove, the headline of Alphabet Village",
-                      "Separated they live in Bookmarksgrove right",
+                      "The timeline for a project varies depending on its complexity, but a typical website takes 4-8 weeks from start to finish.",
+                      "We work closely with you to establish a clear timeline and keep you updated on our progress.",
                     ],
                   },
                   {
-                    q: "How To Grow Your Investments Funds?",
+                    q: "Do you provide ongoing support?",
                     items: [
-                      "Far far away, behind the word mountains",
-                      "Consonantia, there live the blind texts",
-                      "When she reached the first hills of the Italic Mountains",
-                      "Bookmarksgrove, the headline of Alphabet Village",
-                      "Separated they live in Bookmarksgrove right",
+                      "Yes, we offer ongoing support and maintenance packages to ensure your website remains secure and up-to-date.",
+                      "Our support services include regular backups, security monitoring, and content updates.",
                     ],
                   },
                   {
-                    q: "What Are Those Requirements For Businesses?",
+                    q: "What is your design process like?",
                     items: [
-                      "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-                      "Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
+                      "Our design process is collaborative and iterative. We start with a discovery phase to understand your brand and goals, followed by wireframing, mockups, and development.",
+                      "We value your feedback at every stage to ensure the final product aligns with your vision.",
                     ],
                   },
                 ].map(({ q, items }, idx) => {
@@ -602,14 +594,14 @@ export default function Home() {
                 className="w-full h-[340px] object-cover mb-9"
               />
               <h3 className="text-[1.65rem] font-black text-black uppercase leading-tight tracking-tight mb-7">
-                We Are Very<br />Experienced &amp; Professionals
+                Our Core<br />Competencies
               </h3>
               <div className="space-y-5">
                 {[
-                  { label: "Creative Design", pct: 95 },
-                  { label: "Product Engineering", pct: 85 },
-                  { label: "Marketing Strategy", pct: 95 },
-                  { label: "Support Tips", pct: 90 },
+                  { label: "Web Development", pct: 95 },
+                  { label: "UI/UX Design", pct: 90 },
+                  { label: "Digital Marketing", pct: 85 },
+                  { label: "E-commerce Solutions", pct: 88 },
                 ].map(({ label, pct }) => (
                   <div key={label}>
                     <div className="flex justify-between items-center mb-2">
@@ -649,11 +641,11 @@ export default function Home() {
             </button>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
-            {[
-              { name: "Alex Carter", role: "UI Designer", img: "/woman.jpg", active: false },
-              { name: "James Miller", role: "Developer", img: "/man.jpg", active: false },
-              { name: "Liam Neil", role: "Graphic Designer", img: "/man1.jpg", active: false },
-              { name: "Noah Smith", role: "Marketing Lead", img: "/woman1.jpg", active: false },
+            {[  
+              { name: "Ehsan Ali", role: "CEO", img: "/ehsan.jpg", active: false },
+              { name: "Zunaira Yousaf", role: "Business Developer", img: "/zunaira.jpg", active: false },
+              { name: "Rimsha Eman", role: "Junior Web Developer", img: "/rimsha.jpg", active: false },
+              { name: "Saba Kausar", role: "Web Developer", img: "/saba.jpg", active: false },
             ].map(({ name, role, img, active }) => (
               <div key={name} className="relative group overflow-hidden">
                 <img src={img} alt={name} className="w-full h-72 object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
@@ -662,10 +654,10 @@ export default function Home() {
                     <p className="text-white font-black uppercase tracking-wider text-sm">{name}</p>
                     <p className="text-white/80 text-xs uppercase tracking-widest mt-1">{role}</p>
                     <div className="flex gap-3 mt-4">
-                      {["twitter", "facebook", "google", "instagram"].map((s) => (
+                      {["linkedin", "facebook", "google", "instagram"].map((s) => (
                         <a key={s} href="#" className="w-8 h-8 rounded-full bg-white/20 hover:bg-white/40 flex items-center justify-center transition">
                           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            {s === "twitter" && <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />}
+                            {s === "linkedin" && <><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></>}
                             {s === "facebook" && <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />}
                             {s === "google" && <><circle cx="12" cy="12" r="10" /><path d="M12 8v4l3 3" /></>}
                             {s === "instagram" && <><rect x="2" y="2" width="20" height="20" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="0.5" fill="white" stroke="none" /></>}
@@ -680,10 +672,10 @@ export default function Home() {
                     <p className="text-white font-black uppercase tracking-wider text-sm">{name}</p>
                     <p className="text-white/80 text-xs uppercase tracking-widest mt-1">{role}</p>
                     <div className="flex gap-3 mt-4">
-                      {["twitter", "facebook", "google", "instagram"].map((s) => (
+                      {["linkedin", "facebook", "google", "instagram"].map((s) => (
                         <a key={s} href="#" className="w-8 h-8 rounded-full bg-white/20 hover:bg-white/40 flex items-center justify-center transition">
                           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            {s === "twitter" && <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />}
+                            {s === "linkedin" && <><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></>}
                             {s === "facebook" && <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />}
                             {s === "google" && <><circle cx="12" cy="12" r="10" /><path d="M12 8v4l3 3" /></>}
                             {s === "instagram" && <><rect x="2" y="2" width="20" height="20" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="0.5" fill="white" stroke="none" /></>}
@@ -727,14 +719,14 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
-            { src: "/1.jpg", title: "E-Commerce Platform", category: "Web Development", link: "www.theclassicdecor.com" },
-            { src: "/2.jpg", title: "Fashion Store", category: "UI/UX Design", link: "www.theflexleather.com" },
-            { src: "/3.jpg", title: "Corporate Website", category: "Branding", link: "www.ataarabia.com" },
-            { src: "/4.jpg", title: "Portfolio Showcase", category: "Graphic Design", link: "www.portfolio.com" },
-            { src: "/5.jpg", title: "WoodenHive Online Store", category: "Web Development", link: "www.woodenhive.com" },
-            { src: "/6.jpg", title: "Creative Social Media Posts", category: "Social Media Marketing", link: "www.mobileapp.com" },
-            { src: "/7.jpg", title: "Inventory Management System", category: "Business Software", link: "www.khtabinventorysystem.com" },
-          ].slice(0, showAllProjects ? undefined : 6).map(({ src, title, category, link }, i) => (
+            { src: "/1.jpg", title: "E-Commerce Platform", category: "Web Development", link: "www.theclassicdecor.com", lightbox: false },
+            { src: "/2.jpg", title: "Fashion Store", category: "UI/UX Design", link: "www.theflexleather.com", lightbox: false },
+            { src: "/3.jpg", title: "Corporate Website", category: "Branding", link: "www.ataarabia.com", lightbox: false },
+            { src: "/4.jpg", title: "Portfolio Showcase", category: "Graphic Design", link: "www.portfolio.com", lightbox: true },
+            { src: "/5.jpg", title: "WoodenHive Online Store", category: "Web Development", link: "www.woodenhive.com", lightbox: false },
+            { src: "/6.jpg", title: "Creative Social Media Posts", category: "Social Media Marketing", link: "www.mobileapp.com", lightbox: true },
+            { src: "/7.jpg", title: "Inventory Management System", category: "Business Software", link: "www.khtabinventorysystem.com", lightbox: false },
+          ].slice(0, showAllProjects ? undefined : 6).map(({ src, title, category, link, lightbox }, i) => (
 
             <div key={i} className="group relative overflow-hidden rounded-sm shadow-lg">
 
@@ -745,19 +737,26 @@ export default function Home() {
                 <span className="w-3 h-3 rounded-full bg-green-500" />
 
                 <div className="flex-1 mx-3 bg-[#3d3d3d] rounded-sm px-3 py-1">
-                  <a
-                    href={`https://${link}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[10px] text-gray-400 font-mono hover:text-white transition"
-                  >
-                    {link}
-                  </a>
+                  {lightbox ? (
+                    <span className="text-[10px] text-gray-400 font-mono">{link}</span>
+                  ) : (
+                    <a
+                      href={`https://${link}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[10px] text-gray-400 font-mono hover:text-white transition"
+                    >
+                      {link}
+                    </a>
+                  )}
                 </div>
               </div>
 
               {/* Image */}
-              <div className="relative overflow-hidden h-[300px]">
+              <div
+                className={`relative overflow-hidden h-[300px] ${lightbox ? "cursor-zoom-in" : ""}`}
+                onClick={() => lightbox && setLightboxImg({ src, title })}
+              >
                 <img
                   src={src}
                   alt={title}
@@ -767,17 +766,26 @@ export default function Home() {
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-[#998100]/85 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center mb-4">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
-                      <path d="M1 12S5 4 12 4s11 8 11 8-4 8-11 8S1 12 1 12z" />
-                      <circle cx="12" cy="12" r="3" />
-                    </svg>
+                    {lightbox ? (
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
+                        <circle cx="11" cy="11" r="8" />
+                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        <line x1="11" y1="8" x2="11" y2="14" />
+                        <line x1="8" y1="11" x2="14" y2="11" />
+                      </svg>
+                    ) : (
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
+                        <path d="M1 12S5 4 12 4s11 8 11 8-4 8-11 8S1 12 1 12z" />
+                        <circle cx="12" cy="12" r="3" />
+                      </svg>
+                    )}
                   </span>
 
                   <p className="text-white font-black uppercase tracking-wider text-sm">
                     {title}
                   </p>
                   <p className="text-white/80 text-[11px] uppercase tracking-widest mt-1">
-                    {category}
+                    {lightbox ? "Click to view full image" : category}
                   </p>
                 </div>
               </div>
@@ -793,23 +801,71 @@ export default function Home() {
                   </p>
                 </div>
 
-                <a
-                  href={`https://${link}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-7 h-7 rounded-full bg-[#998100] flex items-center justify-center"
-                >
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2.5">
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
-                  </svg>
-                </a>
+                {lightbox ? (
+                  <button
+                    onClick={() => setLightboxImg({ src, title })}
+                    className="w-7 h-7 rounded-full bg-[#998100] flex items-center justify-center hover:bg-[#7a6700] transition"
+                  >
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2.5">
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                      <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                  </button>
+                ) : (
+                  <a
+                    href={`https://${link}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-7 h-7 rounded-full bg-[#998100] flex items-center justify-center hover:bg-[#7a6700] transition"
+                  >
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2.5">
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                      <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                  </a>
+                )}
               </div>
 
             </div>
           ))}
         </div>
       </section>
+
+      {/* ── Lightbox Modal ── */}
+      {lightboxImg && (
+        <div
+          className="fixed inset-0 z-[9999] bg-black/90 flex items-center justify-center p-4"
+          onClick={() => setLightboxImg(null)}
+        >
+          <div
+            className="relative max-w-5xl w-full max-h-[90vh]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              onClick={() => setLightboxImg(null)}
+              className="absolute -top-10 right-0 text-white hover:text-[#998100] transition-colors flex items-center gap-2 text-xs font-black uppercase tracking-widest"
+            >
+              Close
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+            {/* Full image */}
+            <img
+              src={lightboxImg.src}
+              alt={lightboxImg.title}
+              className="w-full h-auto max-h-[85vh] object-contain"
+            />
+            {/* Caption */}
+            <div className="bg-[#1a1a1a] px-6 py-3 flex items-center justify-between">
+              <span className="text-white text-sm font-black uppercase tracking-wider">{lightboxImg.title}</span>
+              <span className="text-[#998100] text-[10px] uppercase tracking-widest">Click outside to close</span>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* ── Testimonials Section ── */}
       <section className="bg-gray-100 py-20">
@@ -825,31 +881,31 @@ export default function Home() {
             {[
               {
                 img: "/t1.jpg",
-                name: "Emily Carter",
-                role: "Interior Designer",
+                name: "John Doe",
+                role: "CEO of Innovate Inc.",
                 review:
-                  "Working with this team was an absolute pleasure. Their attention to detail and commitment to quality exceeded our expectations. The final result was elegant, modern, and delivered on time.",
+                  "Maverick transformed our online presence with a stunning new website. Their team was professional, creative, and delivered results that exceeded our expectations. We've seen a significant increase in engagement since the launch.",
               },
               {
                 img: "/t2.jpg",
-                name: "Daniel Thompson",
-                role: "Project Manager",
+                name: "Jane Smith",
+                role: "Marketing Director",
                 review:
-                  "Professional, reliable, and highly skilled. From planning to execution, everything was handled smoothly. Communication was clear and the craftsmanship was outstanding.",
+                  "The digital marketing campaign Maverick developed for us was a game-changer. Their strategic approach and data-driven insights helped us reach a wider audience and achieve our goals.",
               },
               {
                 img: "/t3.jpg",
-                name: "Sophia Martinez",
-                role: "Business Owner",
+                name: "Samuel Green",
+                role: "E-commerce Manager",
                 review:
-                  "We trusted them with a major renovation project, and they delivered beyond what we imagined. The design creativity and structural precision were truly impressive.",
+                  "Working with Maverick on our new e-commerce platform was a seamless experience. They understood our needs and delivered a high-performing, user-friendly store that has boosted our sales.",
               },
               {
                 img: "/t4.jpg",
-                name: "Michael Reynolds",
-                role: "Real Estate Developer",
+                name: "Emily White",
+                role: "Startup Founder",
                 review:
-                  "Exceptional service and top-tier quality. Their team brought our vision to life while staying within budget. I highly recommend them for any commercial or residential project.",
+                  "As a new business, we needed a strong digital foundation. Maverick provided just that with a beautiful website and a solid marketing strategy. Their guidance and expertise have been invaluable.",
               },
             ].map(({ img, name, role, review }, i) => (
               <div key={i} className="bg-white p-6 flex flex-col justify-between shadow-sm">
@@ -907,82 +963,215 @@ export default function Home() {
       </section>
 
       {/* ── Footer ── */}
-      <footer className="bg-[#1a1a1a] pt-16 pb-8">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-10 mb-12">
-            {/* Brand */}
-            <div className="col-span-2 md:col-span-1">
-              <p className="text-white font-black text-lg uppercase tracking-widest mb-4">Maverick</p>
-              <p className="text-gray-400 text-sm leading-relaxed mb-6">Far far away, behind the word mountains, far from the countries.</p>
-              <div className="flex gap-3">
-                {["twitter", "facebook", "instagram"].map((s) => (
-                  <a key={s} href="#" className="w-9 h-9 rounded-full bg-[#998100] flex items-center justify-center hover:bg-[#998100] transition">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      {s === "twitter" && <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />}
-                      {s === "facebook" && <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />}
-                      {s === "instagram" && <><rect x="2" y="2" width="20" height="20" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="0.5" fill="white" stroke="none" /></>}
-                    </svg>
-                  </a>
-                ))}
-              </div>
-            </div>
-            {/* Explore */}
-            <div>
-              <p className="text-white font-black text-sm uppercase tracking-widest mb-5">Explore</p>
-              <ul className="space-y-2">
-                {["About", "Contact", "Portfolio", "Blog"].map((l) => (
-                  <li key={l}><a href="#" className="text-gray-400 text-sm hover:text-white transition flex items-center gap-2"><span className="text-white text-xs">›</span>{l}</a></li>
-                ))}
-              </ul>
-            </div>
-            {/* Info */}
-            <div>
-              <p className="text-white font-black text-sm uppercase tracking-widest mb-5">Info</p>
-              <ul className="space-y-2">
-                {["Join us", "Blog", "Privacy & Policy", "Term & Conditions"].map((l) => (
-                  <li key={l}><a href="#" className="text-gray-400 text-sm hover:text-white transition flex items-center gap-2"><span className="text-white text-xs">›</span>{l}</a></li>
-                ))}
-              </ul>
-            </div>
-            {/* Company */}
-            <div>
-              <p className="text-white font-black text-sm uppercase tracking-widest mb-5">Company</p>
-              <ul className="space-y-2">
-                {["About Us", "Blog", "Contact", "Careers"].map((l) => (
-                  <li key={l}><a href="#" className="text-gray-400 text-sm hover:text-white transition flex items-center gap-2"><span className="text-white text-xs">›</span>{l}</a></li>
-                ))}
-              </ul>
-            </div>
-            {/* Contact */}
-            <div>
-              <p className="text-white font-black text-sm uppercase tracking-widest mb-5">Have A Questions?</p>
-              <ul className="space-y-4 text-gray-400 text-sm">
-                <li className="flex gap-3">
-                  <span className="text-[#998100] mt-0.5">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
-                  </span>
-                  <span>Maverick engineers Innovista Rachna DHA Gujranwala Pakistan </span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[#998100] mt-0.5">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
-                  </span>
-                  <span>+923103395111</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-[#998100] mt-0.5">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="22" y1="2" x2="11" y2="13" /><polygon points="22 2 15 22 11 13 2 9 22 2" /></svg>
-                  </span>
-                  <span>info@mavericktechstudio.com</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-white/10 pt-6 text-center text-gray-500 text-xs">
-            © {new Date().getFullYear()} MaverickTechStudio. All rights reserved.
-          </div>
+<footer className="bg-[#1a1a1a] pt-16 pb-8">
+  <div className="max-w-7xl mx-auto px-8">
+    <div className="grid grid-cols-2 md:grid-cols-5 gap-10 mb-12">
+
+      {/* Brand */}
+      <div className="col-span-2 md:col-span-1">
+        <p className="text-white font-black text-lg uppercase tracking-widest mb-4">Maverick</p>
+        <p className="text-gray-400 text-sm leading-relaxed mb-6">
+          Your partner in digital excellence. We build stunning websites and deliver marketing strategies that drive growth.
+        </p>
+      </div>
+
+      {/* Explore */}
+      <div>
+        <p className="text-white font-black text-sm uppercase tracking-widest mb-5">Explore</p>
+        <ul className="space-y-2">
+          {["About", "Portfolio", "Contact"].map((l) => (
+            <li key={l}>
+              <a href="#" className="text-gray-400 text-sm hover:text-white transition flex items-center gap-2">
+                <span className="text-white text-xs">›</span>{l}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Info */}
+      <div>
+        <p className="text-white font-black text-sm uppercase tracking-widest mb-5">Info</p>
+        <ul className="space-y-2">
+          {["Join Us", "Privacy Policy", "Terms & Conditions"].map((l) => (
+            <li key={l}>
+              <a href="#" className="text-gray-400 text-sm hover:text-white transition flex items-center gap-2">
+                <span className="text-white text-xs">›</span>{l}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Company */}
+      <div>
+        <p className="text-white font-black text-sm uppercase tracking-widest mb-5">Company</p>
+        <ul className="space-y-2">
+          {["About Us", "Careers", "Blog"].map((l) => (
+            <li key={l}>
+              <a href="#" className="text-gray-400 text-sm hover:text-white transition flex items-center gap-2">
+                <span className="text-white text-xs">›</span>{l}
+              </a>
+            </li>
+          ))}
+        </ul>    
+      </div>
+
+      {/* Contact */}
+      <div>
+        <p className="text-white font-black text-sm uppercase tracking-widest mb-5">Contact</p>
+        <ul className="space-y-4 text-gray-400 text-sm">
+          <li className="flex gap-3">
+            <span className="text-[#998100] mt-0.5">📍</span>
+            <span>Maverick engineers Innovista Rachna DHA Gujranwala Pakistan</span>
+          </li>
+          <li className="flex gap-3">
+            <span className="text-[#998100] mt-0.5">📞</span>
+            <span>+923103395111</span>
+          </li>
+          <li className="flex gap-3">
+            <span className="text-[#998100] mt-0.5">✉️</span>
+            <span>info@mavericktechstudio.com</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div className="border-t border-white/10 pt-6 text-center text-gray-500 text-xs">
+      © {new Date().getFullYear()} MaverickTechStudio. All rights reserved.
+    </div>
+  </div>
+</footer>{/* ── Footer ── */}
+{/* ── Footer ── */}
+<footer className="bg-[#1a1a1a] pt-16 pb-8">
+  <div className="max-w-7xl mx-auto px-8">
+    <div className="grid grid-cols-2 md:grid-cols-5 gap-10 mb-12">
+
+      {/* Brand */}
+      <div className="col-span-2 md:col-span-1">
+        <p className="text-white font-black text-lg uppercase tracking-widest mb-4">
+          Maverick
+        </p>
+        <p className="text-gray-400 text-sm leading-relaxed mb-6">
+          Your partner in digital excellence. We build stunning websites and deliver marketing strategies that drive growth.
+        </p>
+
+        {/* Social Icons */}
+        <div className="flex gap-3">
+          {[
+            { key: "linkedin", href: "https://www.linkedin.com/company/mavericktechstudio" },
+            { key: "facebook", href: "https://www.facebook.com/profile.php?id=61570729737437" },
+            { key: "instagram", href: "https://www.instagram.com/mavericktechstudio/" },
+          ].map(({ key: s, href }) => (
+            <a
+              key={s}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-9 h-9 rounded-full bg-[#998100] flex items-center justify-center hover:bg-[#7a6700] transition"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                {s === "linkedin" && (
+                  <>
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                    <rect x="2" y="9" width="4" height="12" />
+                    <circle cx="4" cy="4" r="2" />
+                  </>
+                )}
+                {s === "facebook" && (
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                )}
+                {s === "instagram" && (
+                  <>
+                    <rect x="2" y="2" width="20" height="20" rx="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle cx="17.5" cy="6.5" r="0.5" fill="white" stroke="none" />
+                  </>
+                )}
+              </svg>
+            </a>
+          ))}
         </div>
-      </footer>
+      </div>
+
+      {/* Explore */}
+      <div>
+        <p className="text-white font-black text-sm uppercase tracking-widest mb-5">
+          Explore
+        </p>
+        <ul className="space-y-2">
+          {["Portfolio", "Contact"].map((l) => (
+            <li key={l}>
+              <a href="#" className="text-gray-400 text-sm hover:text-white transition flex items-center gap-2">
+                <span className="text-white text-xs">›</span>{l}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Info */}
+      <div>
+        <p className="text-white font-black text-sm uppercase tracking-widest mb-5">
+          Info
+        </p>
+        <ul className="space-y-2">
+          {["Join Us", "Privacy Policy", "Terms & Conditions"].map((l) => (
+            <li key={l}>
+              <a href="#" className="text-gray-400 text-sm hover:text-white transition flex items-center gap-2">
+                <span className="text-white text-xs">›</span>{l}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Company */}
+      <div>
+        <p className="text-white font-black text-sm uppercase tracking-widest mb-5">
+          Company
+        </p>
+        <ul className="space-y-2">
+          {["About Us", "Careers", "Blog"].map((l) => (
+            <li key={l}>
+              <a href="#" className="text-gray-400 text-sm hover:text-white transition flex items-center gap-2">
+                <span className="text-white text-xs">›</span>{l}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Contact */}
+      <div>
+        <p className="text-white font-black text-sm uppercase tracking-widest mb-5">
+          Contact
+        </p>
+        <ul className="space-y-4 text-gray-400 text-sm">
+          <li className="flex gap-3">
+            <span className="text-[#998100] mt-0.5">📍</span>
+            <span>Maverick engineers Innovista Rachna DHA Gujranwala Pakistan</span>
+          </li>
+          <li className="flex gap-3">
+            <span className="text-[#998100] mt-0.5">📞</span>
+            <span>+923103395111</span>
+          </li>
+          <li className="flex gap-3">
+            <span className="text-[#998100] mt-0.5">✉️</span>
+            <span>info@mavericktechstudio.com</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    {/* Bottom */}
+    <div className="border-t border-white/10 pt-6 text-center text-gray-500 text-xs">
+      © {new Date().getFullYear()} MaverickTechStudio. All rights reserved.
+    </div>
+  </div>
+</footer>
     </div>
   );
 }

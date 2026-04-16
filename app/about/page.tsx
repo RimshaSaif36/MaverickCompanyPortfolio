@@ -9,25 +9,25 @@ export const metadata = {
 };
 
 const teamMembers = [
-    { name: "Alex Carter", role: "UI Designer", img: "/woman.jpg" },
-    { name: "James Miller", role: "Lead Developer", img: "/man.jpg" },
-    { name: "Liam Neil", role: "Graphic Designer", img: "/man1.jpg" },
-    { name: "Noah Smith", role: "Marketing Lead", img: "/woman1.jpg" },
+    { name: "Ehsan Ali", role: "CEO", img: "/ehsan.jpg" },
+    { name: "Zunaira Yousaf", role: "Business Developer", img: "/zunaira.jpg" },
+    { name: "Rimsha Eman", role: "Junior Web Developer", img: "/rimsha.jpg" },
+    { name: "Saba Kausar", role: "Web Developer", img: "/saba.jpg" },
 ];
 
 const stats = [
-    { icon: "M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m-6 9l2 2 4-4", num: "4,800+", label: "Projects Completed" },
-    { icon: "M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z", num: "1,000+", label: "Team Members" },
-    { icon: "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z", num: "350+", label: "Services Provided" },
-    { icon: "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z", num: "7,650+", label: "Happy Customers" },
+    { icon: "M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m-6 9l2 2 4-4", num: "150+",label: "Projects Completed" },
+    { icon: "M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z", num: "20+",label: "Team Members" },
+    { icon: "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z", num: "50+", label: "Services Provided" },
+    { icon: "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z", num: "100+",label: "Happy Customers" },
 ];
 
 const skills = [
-    { label: "Creative Design", pct: 95 },
-    { label: "Product Engineering", pct: 85 },
-    { label: "Marketing Strategy", pct: 95 },
-    { label: "Support & Delivery", pct: 90 },
-    { label: "UX/UI Research", pct: 88 },
+    { label: "Web Development", pct: 95 },
+    { label: "UI/UX Design", pct: 90 },
+    { label: "Digital Marketing", pct: 85 },
+    { label: "E-commerce Solutions", pct: 88 },
+    { label: "Brand Strategy", pct: 92 },
 ];
 
 const values = [
@@ -89,10 +89,10 @@ export default function AboutPage() {
                                 Crafted With<br />Passion & Purpose
                             </h2>
                             <p className="text-gray-500 text-sm leading-relaxed mb-5">
-                                Maverick Tech Studio was founded with a single-minded goal: to help businesses grow through world-class digital solutions. What started as a small team of passionate developers and designers has evolved into a full-service studio trusted by hundreds of clients across the globe.
+                                Founded on a passion for innovation and a commitment to excellence, Maverick is a full-service digital agency that empowers brands to thrive in the digital age. Our journey began with a small team of creative minds and has since grown into a powerhouse of developers, designers, and strategists dedicated to delivering exceptional results.
                             </p>
                             <p className="text-gray-500 text-sm leading-relaxed mb-8">
-                                From elegant UI/UX designs to robust web and app development, we cover every pillar of the digital spectrum. Our team brings together expertise in design, engineering, marketing, and strategy — making us a true one-stop solution for your digital needs.
+                                We believe in the power of collaboration and work closely with our clients to bring their visions to life. From crafting stunning websites to executing data-driven marketing campaigns, we are your trusted partner in navigating the ever-evolving digital landscape.
                             </p>
                             <div className="flex gap-4">
                                 <Link
@@ -174,7 +174,7 @@ export default function AboutPage() {
                                 We Are Very<br />Experienced &amp; Professional
                             </h2>
                             <p className="text-gray-500 text-sm leading-relaxed mb-10">
-                                Our team brings decades of combined experience across design, development, and digital marketing. Every skill bar represents real-world proficiency — tested and proven on hundreds of successful projects.
+                                Our proficiency spans the entire digital spectrum, from intricate back-end development to captivating front-end design. Each skill we possess has been honed through years of hands-on experience and a relentless pursuit of perfection, ensuring we deliver nothing but the best.
                             </p>
                             <div className="space-y-5">
                                 {skills.map(({ label, pct }) => (
