@@ -962,7 +962,7 @@ export default function Home() {
         </div>
       </section>
 
-     
+
       {/* ── Footer ── */}
       <footer className="bg-[#1a1a1a] pt-16 pb-8">
         <div className="max-w-7xl mx-auto px-8">
