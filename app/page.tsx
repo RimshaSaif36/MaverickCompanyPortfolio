@@ -136,6 +136,13 @@ const slides = [
 
 ];
 
+const teamMembers = [
+  { name: "Ehsan Ali", role: "CEO & Founder", img: "/ehsan.jpg", bio: "The visionary leader steering Maverick towards innovation and excellence." },
+  { name: "Zunaira Yousaf", role: "Business Developer", img: "/zunaira.jpg", bio: "The strategic mind forging partnerships and driving growth." },
+  { name: "Rimsha Eman", role: "Web Developer", img: "/rimsha.jpg", bio: "A rising talent crafting clean code and seamless user experiences." },
+  { name: "Saba Kausar", role: "Web Developer", img: "/saba.jpg", bio: "An experienced developer architecting robust and scalable web solutions." },
+];
+
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -625,70 +632,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Team Section ── */}
-      <section className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="flex items-end justify-between mb-10">
-            <div>
-              <p className="text-[#998100] text-xs font-bold uppercase tracking-widest mb-2">Meet The Team</p>
-              <h2 className="text-4xl font-black text-black uppercase leading-tight">
-                Professional<br />Creative Team Members
+      {/* ── Meet The Team ── */}
+      <section className="bg-[#1e1e1e] py-20">
+          <div className="max-w-7xl mx-auto px-8 text-center">
+              <p className="text-[#998100] text-xs font-bold uppercase tracking-widest mb-3">Our Experts</p>
+              <h2 className="text-4xl font-black text-white uppercase leading-tight mb-12">
+                  The Minds Behind Maverick
               </h2>
-            </div>
-            <button className="border border-[#998100] text-[#998100] hover:bg-[#998100] hover:text-black text-xs font-bold uppercase tracking-widest px-6 py-3 transition flex items-center gap-2">
-              View All Members
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
-            </button>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
-            {[
-              { name: "Ehsan Ali", role: "CEO", img: "/ehsan.jpg", active: false },
-              { name: "Zunaira Yousaf", role: "Business Developer", img: "/zunaira.jpg", active: false },
-              { name: "Rimsha Eman", role: "Junior Web Developer", img: "/rimsha.jpg", active: false },
-              { name: "Saba Kausar", role: "Web Developer", img: "/saba.jpg", active: false },
-            ].map(({ name, role, img, active }) => (
-              <div key={name} className="relative group overflow-hidden">
-                <img src={img} alt={name} className="w-full h-72 object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
-                {active && (
-                  <div className="absolute inset-0 bg-[#998100]/80 flex flex-col items-center justify-center">
-                    <p className="text-white font-black uppercase tracking-wider text-sm">{name}</p>
-                    <p className="text-white/80 text-xs uppercase tracking-widest mt-1">{role}</p>
-                    <div className="flex gap-3 mt-4">
-                      {["linkedin", "facebook", "google", "instagram"].map((s) => (
-                        <a key={s} href="#" className="w-8 h-8 rounded-full bg-white/20 hover:bg-white/40 flex items-center justify-center transition">
-                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            {s === "linkedin" && <><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></>}
-                            {s === "facebook" && <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />}
-                            {s === "google" && <><circle cx="12" cy="12" r="10" /><path d="M12 8v4l3 3" /></>}
-                            {s === "instagram" && <><rect x="2" y="2" width="20" height="20" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="0.5" fill="white" stroke="none" /></>}
-                          </svg>
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                {!active && (
-                  <div className="absolute inset-0 bg-[#998100]/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <p className="text-white font-black uppercase tracking-wider text-sm">{name}</p>
-                    <p className="text-white/80 text-xs uppercase tracking-widest mt-1">{role}</p>
-                    <div className="flex gap-3 mt-4">
-                      {["linkedin", "facebook", "google", "instagram"].map((s) => (
-                        <a key={s} href="#" className="w-8 h-8 rounded-full bg-white/20 hover:bg-white/40 flex items-center justify-center transition">
-                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            {s === "linkedin" && <><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></>}
-                            {s === "facebook" && <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />}
-                            {s === "google" && <><circle cx="12" cy="12" r="10" /><path d="M12 8v4l3 3" /></>}
-                            {s === "instagram" && <><rect x="2" y="2" width="20" height="20" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="0.5" fill="white" stroke="none" /></>}
-                          </svg>
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                )}
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                  {teamMembers.map((member) => (
+                      <div key={member.name} className="bg-[#2d2d2d] p-6 text-center group">
+                          <div className="relative w-32 h-32 mx-auto mb-4">
+                              <img src={member.img} alt={member.name} className="w-full h-full object-cover rounded-full border-4 border-transparent group-hover:border-[#998100] transition-all duration-300" />
+                          </div>
+                          <h3 className="text-white font-bold text-lg">{member.name}</h3>
+                          <p className="text-[#998100] text-sm font-semibold mb-3">{member.role}</p>
+                          <p className="text-gray-400 text-xs leading-relaxed">{member.bio}</p>
+                      </div>
+                  ))}
               </div>
-            ))}
           </div>
-        </div>
       </section>
 
       {/* ── Portfolio Section ── */}
@@ -951,7 +914,7 @@ export default function Home() {
             <img src="/bg.jpg" alt="Newsletter" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-[#998100]/85" />
             <div className="relative z-10 py-14 px-10 text-center">
-              <h3 className="text-2xl font-black text-white uppercase tracking-wider mb-2">Join Us Newsletter</h3>
+              <h3 className="text-2xl font-black text-white uppercase tracking-widest mb-2">Join Us Newsletter</h3>
               <p className="text-white/80 text-sm mb-6">Sign Up to our Newsletter and get our latest news update</p>
               <div className="flex max-w-lg mx-auto">
                 <input type="email" placeholder="Enter email address" className="flex-1 px-5 py-3 text-sm outline-none bg-white text-gray-700 placeholder-gray-400" />
