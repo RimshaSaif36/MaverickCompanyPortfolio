@@ -11,8 +11,8 @@ export const metadata = {
 const teamMembers = [
     { name: "Ehsan Ali", role: "CEO & Founder", img: "/ehsan.jpg", bio: "The visionary leader steering Maverick towards innovation and excellence." },
     { name: "Zunaira Yousaf", role: "Business Developer", img: "/zunaira.jpg", bio: "The strategic mind forging partnerships and driving growth." },
-    { name: "Rimsha Eman", role: "Junior Web Developer", img: "/rimsha.jpg", bio: "A rising talent crafting clean code and seamless user experiences." },
-    { name: "Saba Kausar", role: "Senior Web Developer", img: "/saba.jpg", bio: "An experienced developer architecting robust and scalable web solutions." },
+    { name: "Rimsha Eman", role: "Web Developer", img: "/rimsha.jpg", bio: "A rising talent crafting clean code and seamless user experiences." },
+    { name: "Saba Kausar", role: "Web Developer", img: "/saba.jpg", bio: "An experienced developer architecting robust and scalable web solutions." },
 ];
 
 const values = [

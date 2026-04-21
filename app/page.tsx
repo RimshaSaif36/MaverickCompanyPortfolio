@@ -186,12 +186,12 @@ export default function Home() {
             <div className="max-w-7xl mx-auto px-8 flex items-center">
               <div className="flex-1">
                 Phone no:{" "}
-                <a href="tel:+921234567" className="text-white font-semibold hover:text-[#998100] transition-colors">
-                  +92 123 4567
+                <a href="tel:+923103395111" className="text-white font-semibold hover:text-[#998100] transition-colors">
+                  +92 3103395111
                 </a>{" "}
                 or email us:{" "}
-                <a href="mailto:maverick@email.com" className="text-white font-semibold hover:text-[#998100] transition-colors">
-                  maverick@email.com
+                <a href="mailto:info@mavericktechstudio.com" className="text-white font-semibold hover:text-[#998100] transition-colors">
+                  info@mavericktechstudio.com
                 </a>
               </div>
               <div className="flex items-center gap-4 text-white">
