@@ -113,14 +113,14 @@ const UxUiIcon = () => (
 // Define 3 slides with images and text content
 const slides = [
   {
-    src: "/background1.jpg",
+    src: "/background2.jpg",
     alt: "Team working 1",
     title: "Empowering Your Digital Presence",
     description:
       "We build stunning, high-performance websites that drive growth and deliver exceptional user experiences.",
   },
   {
-    src: "/background2.jpg",
+    src: "/background1.jpg",
     alt: "Team working 2",
     title: "Innovative Strategies for Your Business",
     description:
@@ -632,28 +632,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Meet The Team ── */}
-      <section className="bg-[#1e1e1e] py-20">
-        <div className="max-w-7xl mx-auto px-8 text-center">
-          <p className="text-[#998100] text-xs font-bold uppercase tracking-widest mb-3">Our Experts</p>
-          <h2 className="text-4xl font-black text-white uppercase leading-tight mb-12">
-            The Minds Behind Maverick
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-            {teamMembers.map((member) => (
-              <div key={member.name} className="bg-[#2d2d2d] p-6 text-center group">
-                <div className="relative w-32 h-32 mx-auto mb-4">
-                  <img src={member.img} alt={member.name} className="w-full h-full object-cover rounded-full border-4 border-transparent group-hover:border-[#998100] transition-all duration-300" />
-                </div>
-                <h3 className="text-white font-bold text-lg">{member.name}</h3>
-                <p className="text-[#998100] text-sm font-semibold mb-3">{member.role}</p>
-                <p className="text-gray-400 text-xs leading-relaxed">{member.bio}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── Portfolio Section ── */}
       <section className="bg-[#1e1e1e] pt-20 pb-16">
         <div className="max-w-7xl mx-auto px-8 mb-12">
@@ -907,6 +885,29 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ── Meet The Team ── */}
+      <section className="bg-[#1e1e1e] py-20">
+        <div className="max-w-7xl mx-auto px-8 text-center">
+          <p className="text-[#998100] text-xs font-bold uppercase tracking-widest mb-3">Our Experts</p>
+          <h2 className="text-4xl font-black text-white uppercase leading-tight mb-12">
+            The Minds Behind Maverick
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            {teamMembers.map((member) => (
+              <div key={member.name} className="bg-[#2d2d2d] p-6 text-center group">
+                <div className="relative w-32 h-32 mx-auto mb-4">
+                  <img src={member.img} alt={member.name} className="w-full h-full object-cover rounded-full border-4 border-transparent group-hover:border-[#998100] transition-all duration-300" />
+                </div>
+                <h3 className="text-white font-bold text-lg">{member.name}</h3>
+                <p className="text-[#998100] text-sm font-semibold mb-3">{member.role}</p>
+                <p className="text-gray-400 text-xs leading-relaxed">{member.bio}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Newsletter ── */}
       <section className="bg-white py-16">
         <div className="max-w-4xl mx-auto px-8">
