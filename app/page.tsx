@@ -128,7 +128,7 @@ const slides = [
       "Our data-driven marketing strategies are designed to elevate your brand and connect with your target audience.",
   },
   {
-    src: "/background3.jpg",
+    src: "/bg3.jpg",
     alt: "Team working 3",
     title: "Creative Solutions, Measurable Results",
     description:

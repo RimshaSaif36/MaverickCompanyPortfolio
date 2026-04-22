@@ -8,8 +8,8 @@ interface PageHeaderProps {
 
 export default function PageHeader({ title, subtitle, breadcrumb }: PageHeaderProps) {
     return (
-        <section className="relative py-24 bg-[url('/bg1.jpg')] bg-cover bg-center bg-fixed">
-            <div className="absolute inset-0 bg-black/70" />
+        <section className="relative py-24 bg-[url('/com.jpg')] bg-cover bg-center bg-fixed">
+            <div className="absolute inset-0 bg-black/30" />
             <div className="relative z-10 max-w-7xl mx-auto px-8 text-center">
                 {subtitle && (
                     <p className="text-[#998100] text-xs font-bold uppercase tracking-[0.3em] mb-3">
