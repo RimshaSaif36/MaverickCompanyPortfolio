@@ -232,7 +232,7 @@ export default function ContactPage() {
                                         Rachna DHA, Gujranwala, Pakistan
                                     </p>
                                     <a
-                                        href="https://maps.google.com/?q=Gujranwala+Pakistan"
+                                        href="https://www.google.com/maps/place/Innovista+Rachna/@32.2814578,74.1366351,17z/data=!3m1!4b1!4m6!3m5!1s0x391f27007d334e0d:0x55680c67bd5e63c0!8m2!3d32.2814533!4d74.13921!16s%2Fg%2F11x7c0fjvf?entry=ttu&g_ep=EgoyMDI2MDQyMC4wIKXMDSoASAFQAw%3D%3D"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="mt-4 text-[11px] font-black uppercase tracking-widest text-[#998100] hover:text-white transition flex items-center gap-2"
@@ -246,27 +246,54 @@ export default function ContactPage() {
                                 </div>
                             </div>
 
-                            {/* Social follow */}
-                            <div className="bg-[#1a1a1a] p-8">
-                                <p className="text-xs font-black uppercase tracking-widest text-white mb-5">Follow Us</p>
-                                <div className="space-y-3">
-                                    {[
-                                        { label: "Facebook", handle: "@MaverickTechStudio", color: "#1877F2" },
-                                        { label: "Instagram", handle: "@maverick.tech.studio", color: "#E1306C" },
-                                        { label: "LinkedIn", handle: "Maverick Tech Studio", color: "#0A66C2" },
-                                    ].map(({ label, handle, color }) => (
-                                        <a
-                                            key={label}
-                                            href="#"
-                                            className="flex items-center gap-3 group"
-                                        >
-                                            <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: color }} />
-                                            <span className="text-xs font-bold text-gray-400 group-hover:text-white transition">{label}</span>
-                                            <span className="text-[11px] text-gray-600 ml-auto group-hover:text-[#998100] transition">{handle}</span>
-                                        </a>
-                                    ))}
-                                </div>
-                            </div>
+                           {/* Social follow */}
+<div className="bg-[#1a1a1a] p-8">
+    <p className="text-xs font-black uppercase tracking-widest text-white mb-5">
+        Follow Us
+    </p>
+
+    <div className="space-y-3">
+        {[
+            {
+                label: "Facebook",
+                handle: "@MaverickTechStudio",
+                color: "#1877F2",
+                href: "https://www.facebook.com/profile.php?id=61570729737437",
+            },
+            {
+                label: "Instagram",
+                handle: "@maverick.tech.studio",
+                color: "#E1306C",
+                href: "https://www.instagram.com/mavericktechstudio/",
+            },
+            {
+                label: "LinkedIn",
+                handle: "Maverick Tech Studio",
+                color: "#0A66C2",
+                href: "https://www.linkedin.com/company/mavericktechstudio",
+            },
+        ].map(({ label, handle, color, href }) => (
+            <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 group"
+            >
+                <span
+                    className="w-2 h-2 rounded-full flex-shrink-0"
+                    style={{ backgroundColor: color }}
+                />
+                <span className="text-xs font-bold text-gray-400 group-hover:text-white transition">
+                    {label}
+                </span>
+                <span className="text-[11px] text-gray-600 ml-auto group-hover:text-[#998100] transition">
+                    {handle}
+                </span>
+            </a>
+        ))}
+    </div>
+</div>
   
                             {/* Quick response promise */}
                             <div className="bg-[#998100] p-6 flex items-center gap-5">
@@ -286,23 +313,7 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            {/* ── FAQ Strip ── */}
-            <section className="bg-[#1a1a1a] py-16">
-                <div className="max-w-7xl mx-auto px-8">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {[
-                            { q: "How long does a project take?", a: "Most websites are delivered within 2–4 weeks depending on complexity. Enterprise projects may take 6–12 weeks." },
-                            { q: "Do you work with clients internationally?", a: "Absolutely. We work with clients across the globe and have flexible communication options to fit any timezone." },
-                            { q: "What information do you need to get started?", a: "A brief overview of your goals, industry, target audience, and examples of sites or designs you admire is a great starting point." },
-                        ].map(({ q, a }) => (
-                            <div key={q} className="border-l-4 border-[#998100] pl-6">
-                                <h3 className="text-sm font-black uppercase tracking-wide text-white mb-3">{q}</h3>
-                                <p className="text-gray-400 text-sm leading-relaxed">{a}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+            
 
             <Footer />
         </>

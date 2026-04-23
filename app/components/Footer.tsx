@@ -120,7 +120,7 @@ export default function Footer() {
                         <ul className="space-y-4 text-gray-400 text-sm">
                             <li className="flex gap-3">
                                 <span className="text-[#998100] mt-0.5">📍</span>
-                                <span>Maverick engineers Innovista Rachna DHA Gujranwala Pakistan</span>
+                                <span>Maverick Engineers Innovista Rachna DHA Gujranwala Pakistan</span>
                             </li>
                             <li className="flex gap-3">
                                 <span className="text-[#998100] mt-0.5">📞</span>
