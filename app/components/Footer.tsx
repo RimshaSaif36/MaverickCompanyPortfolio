@@ -8,11 +8,11 @@ const footerGroups = {
     info: [
         { label: "Join Us", href: "/contact" },
         { label: "Pricing", href: "/pricing" },
-        { label: "Blog", href: "/blog" },
+       
     ],
     company: [
         { label: "About Us", href: "/about" },
-        { label: "Portfolio", href: "/portfolio" },
+       
         { label: "Blog", href: "/blog" },
     ],
 };

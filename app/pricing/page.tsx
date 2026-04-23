@@ -23,7 +23,7 @@ const plans = [
             "Monthly Performance Report",
             "Social Media Integration",
             "Contact Form",
-            "— App Development",
+            
             "— Custom Branding Package",
             "— Priority Support",
         ],
@@ -44,7 +44,7 @@ const plans = [
             "Weekly Performance Reports",
             "Social Media Marketing",
             "E-Commerce Integration",
-            "Mobile App (Basic)",
+           
             "Custom Branding Package",
             "— Dedicated Account Manager",
         ],
@@ -65,7 +65,6 @@ const plans = [
             "Real-Time Analytics Dashboard",
             "Full Social Media Management",
             "Advanced E-Commerce System",
-            "iOS & Android App Development",
             "Enterprise Branding Package",
             "Dedicated Account Manager",
         ],
@@ -219,25 +218,7 @@ export default function PricingPage() {
                 </div>
             </section>
 
-            {/* ── FAQ ── */}
-            <section className="bg-gray-100 py-20">
-                <div className="max-w-4xl mx-auto px-8">
-                    <div className="text-center mb-12">
-                        <p className="text-[#998100] text-xs font-bold uppercase tracking-widest mb-3">Got Questions?</p>
-                        <h2 className="text-4xl font-black text-black uppercase leading-tight">
-                            Pricing FAQ
-                        </h2>
-                    </div>
-                    <div className="space-y-4">
-                        {faqs.map(({ q, a }) => (
-                            <div key={q} className="bg-white p-8 border-l-4 border-[#998100]">
-                                <h3 className="text-sm font-black uppercase tracking-wide text-black mb-3">{q}</h3>
-                                <p className="text-gray-500 text-sm leading-relaxed">{a}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+           
 
             {/* ── CTA ── */}
             <section className="relative py-20 bg-[#1a1a1a]">
