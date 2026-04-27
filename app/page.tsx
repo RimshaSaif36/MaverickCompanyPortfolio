@@ -114,7 +114,7 @@ const UxUiIcon = () => (
 // Define 3 slides with images and text content
 const slides = [
   {
-    src: "/background2.jpg",
+    src: "/bg2.jpg",
     alt: "Team working 1",
     title: "Empowering Your Digital Presence",
     description:

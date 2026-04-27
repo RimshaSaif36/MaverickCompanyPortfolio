@@ -37,7 +37,7 @@ export default function InnerNavbar() {
     const pathname = usePathname();
 
     return (
-        <header className="bg-black/40 absolute top-0 left-0 right-0 z-50">
+        <header className="absolute top-0 left-0 right-0 z-50">
             {/* Top info bar */}
             <div className="hidden md:block border-b border-white/10 text-gray-200 text-sm py-2">
                 <div className="max-w-7xl mx-auto px-8 flex items-center">
@@ -60,7 +60,7 @@ export default function InnerNavbar() {
             </div>
 
             {/* Main nav */}
-            <nav>
+            <nav className="bg-white/10">
                 <div className="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
                     <Link href="/" className="text-2xl font-bold tracking-widest text-white hover:text-[#998100] transition-colors">
                         Maverick Tech Studio
