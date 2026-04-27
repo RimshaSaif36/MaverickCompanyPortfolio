@@ -446,7 +446,7 @@ export default function Home() {
       </section>
 
       {/* ── Stats Section ── */}
-      <section className="relative py-28 md:py-32 bg-[url('/bg.jpg')] bg-cover bg-center bg-no-repeat md:bg-fixed">
+      <section className="relative py-28 md:py-32 bg-[url('/bgnew.jpg')] bg-cover bg-center bg-no-repeat md:bg-fixed">
 
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/40"></div>
