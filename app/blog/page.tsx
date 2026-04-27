@@ -110,8 +110,8 @@ export default function BlogPage() {
                             <span
                                 key={cat}
                                 className={`text-[11px] font-black uppercase tracking-widest px-5 py-2 cursor-default ${cat === "All Topics"
-                                        ? "bg-[#998100] text-black"
-                                        : "bg-white text-gray-600 border border-gray-200 hover:border-[#998100] hover:text-[#998100] transition"
+                                    ? "bg-[#998100] text-black"
+                                    : "bg-white text-gray-600 border border-gray-200 hover:border-[#998100] hover:text-[#998100] transition"
                                     }`}
                             >
                                 {cat}

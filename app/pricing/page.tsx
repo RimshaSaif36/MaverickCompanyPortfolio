@@ -22,7 +22,7 @@ const plans = [
             "Monthly Performance Report",
             "Social Media Integration",
             "Contact Form",
-            
+
             "— Custom Branding Package",
             "— Priority Support",
         ],
@@ -43,7 +43,7 @@ const plans = [
             "Weekly Performance Reports",
             "Social Media Marketing",
             "E-Commerce Integration",
-           
+
             "Custom Branding Package",
             "— Dedicated Account Manager",
         ],
@@ -128,8 +128,8 @@ export default function PricingPage() {
                             <div
                                 key={name}
                                 className={`flex flex-col ${highlight
-                                        ? "bg-[#998100] shadow-2xl scale-y-[1.02] z-10 relative"
-                                        : "bg-white border border-gray-200"
+                                    ? "bg-[#998100] shadow-2xl scale-y-[1.02] z-10 relative"
+                                    : "bg-white border border-gray-200"
                                     }`}
                             >
                                 {highlight && (
@@ -162,8 +162,8 @@ export default function PricingPage() {
                                         return (
                                             <li key={f} className={`flex items-center gap-3 text-sm ${isDisabled ? "opacity-35" : ""}`}>
                                                 <span className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center ${highlight
-                                                        ? isDisabled ? "bg-black/20 text-black/40" : "bg-black text-white"
-                                                        : isDisabled ? "bg-gray-200 text-gray-400" : "bg-[#998100] text-white"
+                                                    ? isDisabled ? "bg-black/20 text-black/40" : "bg-black text-white"
+                                                    : isDisabled ? "bg-gray-200 text-gray-400" : "bg-[#998100] text-white"
                                                     }`}>
                                                     {isDisabled ? (
                                                         <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
@@ -182,8 +182,8 @@ export default function PricingPage() {
                                     <Link
                                         href={ctaHref}
                                         className={`block text-center font-black text-xs uppercase tracking-widest py-3.5 transition ${highlight
-                                                ? "bg-black text-white hover:bg-gray-800"
-                                                : "bg-[#998100] text-black hover:bg-[#7a6700]"
+                                            ? "bg-black text-white hover:bg-gray-800"
+                                            : "bg-[#998100] text-black hover:bg-[#7a6700]"
                                             }`}
                                     >
                                         {cta} →
@@ -216,7 +216,7 @@ export default function PricingPage() {
                 </div>
             </section>
 
-           
+
 
             {/* ── CTA ── */}
             <section className="relative py-20 bg-[#1a1a1a]">

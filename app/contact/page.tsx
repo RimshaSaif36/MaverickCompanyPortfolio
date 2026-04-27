@@ -244,55 +244,55 @@ export default function ContactPage() {
                                 </div>
                             </div>
 
-                           {/* Social follow */}
-<div className="bg-[#1a1a1a] p-8">
-    <p className="text-xs font-black uppercase tracking-widest text-white mb-5">
-        Follow Us
-    </p>
+                            {/* Social follow */}
+                            <div className="bg-[#1a1a1a] p-8">
+                                <p className="text-xs font-black uppercase tracking-widest text-white mb-5">
+                                    Follow Us
+                                </p>
 
-    <div className="space-y-3">
-        {[
-            {
-                label: "Facebook",
-                handle: "@MaverickTechStudio",
-                color: "#1877F2",
-                href: "https://www.facebook.com/profile.php?id=61570729737437",
-            },
-            {
-                label: "Instagram",
-                handle: "@maverick.tech.studio",
-                color: "#E1306C",
-                href: "https://www.instagram.com/mavericktechstudio/",
-            },
-            {
-                label: "LinkedIn",
-                handle: "Maverick Tech Studio",
-                color: "#0A66C2",
-                href: "https://www.linkedin.com/company/mavericktechstudio",
-            },
-        ].map(({ label, handle, color, href }) => (
-            <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 group"
-            >
-                <span
-                    className="w-2 h-2 rounded-full flex-shrink-0"
-                    style={{ backgroundColor: color }}
-                />
-                <span className="text-xs font-bold text-gray-400 group-hover:text-white transition">
-                    {label}
-                </span>
-                <span className="text-[11px] text-gray-600 ml-auto group-hover:text-[#998100] transition">
-                    {handle}
-                </span>
-            </a>
-        ))}
-    </div>
-</div>
-  
+                                <div className="space-y-3">
+                                    {[
+                                        {
+                                            label: "Facebook",
+                                            handle: "@MaverickTechStudio",
+                                            color: "#1877F2",
+                                            href: "https://www.facebook.com/profile.php?id=61570729737437",
+                                        },
+                                        {
+                                            label: "Instagram",
+                                            handle: "@maverick.tech.studio",
+                                            color: "#E1306C",
+                                            href: "https://www.instagram.com/mavericktechstudio/",
+                                        },
+                                        {
+                                            label: "LinkedIn",
+                                            handle: "Maverick Tech Studio",
+                                            color: "#0A66C2",
+                                            href: "https://www.linkedin.com/company/mavericktechstudio",
+                                        },
+                                    ].map(({ label, handle, color, href }) => (
+                                        <a
+                                            key={label}
+                                            href={href}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-3 group"
+                                        >
+                                            <span
+                                                className="w-2 h-2 rounded-full flex-shrink-0"
+                                                style={{ backgroundColor: color }}
+                                            />
+                                            <span className="text-xs font-bold text-gray-400 group-hover:text-white transition">
+                                                {label}
+                                            </span>
+                                            <span className="text-[11px] text-gray-600 ml-auto group-hover:text-[#998100] transition">
+                                                {handle}
+                                            </span>
+                                        </a>
+                                    ))}
+                                </div>
+                            </div>
+
                             {/* Quick response promise */}
                             <div className="bg-[#998100] p-6 flex items-center gap-5">
                                 <div className="flex-shrink-0 w-12 h-12 bg-black/20 rounded flex items-center justify-center">
@@ -311,7 +311,7 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            
+
 
             <Footer />
         </>

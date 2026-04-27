@@ -53,8 +53,8 @@ export default function PortfolioPage() {
                                 key={cat}
                                 onClick={() => setActiveCategory(cat)}
                                 className={`text-[11px] font-black uppercase tracking-widest px-5 py-2.5 transition ${activeCategory === cat
-                                        ? "bg-[#998100] text-black"
-                                        : "bg-[#2d2d2d] text-gray-400 hover:bg-[#3d3d3d] hover:text-white"
+                                    ? "bg-[#998100] text-black"
+                                    : "bg-[#2d2d2d] text-gray-400 hover:bg-[#3d3d3d] hover:text-white"
                                     }`}
                             >
                                 {cat}

@@ -8,11 +8,11 @@ export const metadata = {
 };
 
 const teamMembers = [
-   { name: "Ehsan Ali", role: "CEO & Founder", img: "/ehsan.jpg", bio: "Visionary leader driving innovation at Maverick." },
-  { name: "Zunaira Yousaf", role: "Business Developer", img: "/zunaira.jpg", bio: "The strategic mind forging partnerships and driving growth." },
-  { name: "Waqas Javid", role: "Co-Founder & Marketing Manager", img: "/waqas.jpg", bio: "Leading marketing and brand innovation." },
-  { name: "Rimsha Eman", role: "Web Developer", img: "/rimsha.jpg", bio: "An experienced developer architecting robust and scalable web solutions." },
-  { name: "Saba Kausar", role: "Web Developer", img: "/saba.jpg", bio: "Building responsive and high-performance web solutions." },
+    { name: "Ehsan Ali", role: "CEO & Founder", img: "/ehsan.jpg", bio: "Visionary leader driving innovation at Maverick." },
+    { name: "Zunaira Yousaf", role: "Business Developer", img: "/zunaira.jpg", bio: "The strategic mind forging partnerships and driving growth." },
+    { name: "Waqas Javid", role: "Co-Founder & Marketing Manager", img: "/waqas.jpg", bio: "Leading marketing and brand innovation." },
+    { name: "Rimsha Eman", role: "Web Developer", img: "/rimsha.jpg", bio: "An experienced developer architecting robust and scalable web solutions." },
+    { name: "Saba Kausar", role: "Web Developer", img: "/saba.jpg", bio: "Building responsive and high-performance web solutions." },
 ];
 
 const values = [
