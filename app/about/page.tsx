@@ -1,4 +1,3 @@
-import InnerNavbar from "../components/InnerNavbar";
 import Footer from "../components/Footer";
 import PageHeader from "../components/PageHeader";
 import Link from "next/link";
@@ -42,7 +41,6 @@ const values = [
 export default function AboutPage() {
     return (
         <>
-            <InnerNavbar />
             <PageHeader
                 title="About Us"
                 subtitle="Who We Are"

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import InnerNavbar from "./InnerNavbar";
 
 interface PageHeaderProps {
     title: string;
@@ -8,7 +9,8 @@ interface PageHeaderProps {
 
 export default function PageHeader({ title, subtitle, breadcrumb }: PageHeaderProps) {
     return (
-        <section className="relative py-24 bg-[url('/com.jpg')] bg-cover bg-center bg-fixed">
+        <section className="relative pt-48 pb-24 bg-[url('/com.jpg')] bg-cover bg-center bg-fixed">
+            <InnerNavbar />
             <div className="absolute inset-0 bg-black/30" />
             <div className="relative z-10 max-w-7xl mx-auto px-8 text-center">
                 {subtitle && (

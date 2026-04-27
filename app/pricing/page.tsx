@@ -1,4 +1,3 @@
-import InnerNavbar from "../components/InnerNavbar";
 import Footer from "../components/Footer";
 import PageHeader from "../components/PageHeader";
 import Link from "next/link";
@@ -102,7 +101,6 @@ const addOns = [
 export default function PricingPage() {
     return (
         <>
-            <InnerNavbar />
             <PageHeader
                 title="Our Pricing Plans"
                 subtitle="Transparent Pricing"

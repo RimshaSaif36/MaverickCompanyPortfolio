@@ -1,5 +1,4 @@
 "use client";
-import InnerNavbar from "../components/InnerNavbar";
 import Footer from "../components/Footer";
 import PageHeader from "../components/PageHeader";
 import { useState } from "react";
@@ -64,7 +63,6 @@ export default function ContactPage() {
 
     return (
         <>
-            <InnerNavbar />
             <PageHeader
                 title="Contact Us"
                 subtitle="Get In Touch"

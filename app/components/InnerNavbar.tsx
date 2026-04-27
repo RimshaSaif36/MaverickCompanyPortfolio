@@ -37,7 +37,7 @@ export default function InnerNavbar() {
     const pathname = usePathname();
 
     return (
-        <header className="bg-[#1a1a1a] sticky top-0 z-50 shadow-lg">
+        <header className="bg-black/40 absolute top-0 left-0 right-0 z-50">
             {/* Top info bar */}
             <div className="hidden md:block border-b border-white/10 text-gray-200 text-sm py-2">
                 <div className="max-w-7xl mx-auto px-8 flex items-center">

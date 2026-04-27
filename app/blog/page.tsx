@@ -1,4 +1,3 @@
-import InnerNavbar from "../components/InnerNavbar";
 import Footer from "../components/Footer";
 import PageHeader from "../components/PageHeader";
 import Link from "next/link";
@@ -82,7 +81,6 @@ const categories = ["All Topics", "Web Development", "UI/UX Design", "Branding",
 export default function BlogPage() {
     return (
         <>
-            <InnerNavbar />
             <PageHeader
                 title="Our Blog"
                 subtitle="Insights & Ideas"

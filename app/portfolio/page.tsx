@@ -1,5 +1,4 @@
 "use client";
-import InnerNavbar from "../components/InnerNavbar";
 import Footer from "../components/Footer";
 import PageHeader from "../components/PageHeader";
 import { useState } from "react";
@@ -26,7 +25,6 @@ export default function PortfolioPage() {
 
     return (
         <>
-            <InnerNavbar />
             <PageHeader
                 title="Our Portfolio"
                 subtitle="Recent Projects"
