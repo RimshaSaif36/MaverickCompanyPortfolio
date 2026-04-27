@@ -11,6 +11,7 @@ export const metadata = {
 const teamMembers = [
     { name: "Ehsan Ali", role: "CEO & Founder", img: "/ehsan.jpg", bio: "The visionary leader steering Maverick towards innovation and excellence." },
     { name: "Zunaira Yousaf", role: "Business Developer", img: "/zunaira.jpg", bio: "The strategic mind forging partnerships and driving growth." },
+    { name: "Waqas Javid", role: "Marketing Manager & Co-Founder", img: "/waqas.jpg", bio: "The visionary leader steering Maverick towards innovation and excellence." },
     { name: "Rimsha Eman", role: "Web Developer", img: "/rimsha.jpg", bio: "A rising talent crafting clean code and seamless user experiences." },
     { name: "Saba Kausar", role: "Web Developer", img: "/saba.jpg", bio: "An experienced developer architecting robust and scalable web solutions." },
 ];
@@ -73,12 +74,12 @@ export default function AboutPage() {
 
             {/* ── Meet The Team ── */}
             <section className="bg-[#1e1e1e] py-20">
-                <div className="max-w-7xl mx-auto px-8 text-center">
+                <div className="max-w-screen-2xl mx-auto px-8 text-center">
                     <p className="text-[#998100] text-xs font-bold uppercase tracking-widest mb-3">Our Experts</p>
                     <h2 className="text-4xl font-black text-white uppercase leading-tight mb-12">
                         The Minds Behind Maverick
                     </h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
                         {teamMembers.map((member) => (
                             <div key={member.name} className="bg-[#2d2d2d] p-6 text-center group">
                                 <div className="relative w-32 h-32 mx-auto mb-4">
