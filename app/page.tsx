@@ -138,11 +138,11 @@ const slides = [
 ];
 
 const teamMembers = [
-  { name: "Ehsan Ali", role: "CEO & Founder", img: "/ehsan.jpg", bio: "The visionary leader steering Maverick towards innovation and excellence." },
+  { name: "Ehsan Ali", role: "CEO & Founder", img: "/ehsan.jpg", bio: "Visionary leader driving innovation at Maverick." },
   { name: "Zunaira Yousaf", role: "Business Developer", img: "/zunaira.jpg", bio: "The strategic mind forging partnerships and driving growth." },
-  { name: "Waqas Javid", role: "Marketing Manager & Co-Founder", img: "/waqas.jpg", bio: "The visionary leader steering Maverick towards innovation and excellence." },
-  { name: "Rimsha Eman", role: "Web Developer", img: "/rimsha.jpg", bio: "A rising talent crafting clean code and seamless user experiences." },
-  { name: "Saba Kausar", role: "Web Developer", img: "/saba.jpg", bio: "An experienced developer architecting robust and scalable web solutions." },
+  { name: "Waqas Javid", role: "Co-Founder & Marketing Manager", img: "/waqas.jpg", bio: "Leading marketing and brand innovation." },
+  { name: "Rimsha Eman", role: "Web Developer", img: "/rimsha.jpg", bio: "An experienced developer architecting robust and scalable web solutions." },
+  { name: "Saba Kausar", role: "Web Developer", img: "/saba.jpg", bio: "Building responsive and high-performance web solutions." },
 ];
 
 export default function Home() {
