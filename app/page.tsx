@@ -890,12 +890,12 @@ export default function Home() {
 
       {/* ── Meet The Team ── */}
       <section className="bg-[#1e1e1e] py-20">
-        <div className="max-w-7xl mx-auto px-8 text-center">
+        <div className="max-w-screen-2xl mx-auto px-8 text-center">
           <p className="text-[#998100] text-xs font-bold uppercase tracking-widest mb-3">Our Experts</p>
           <h2 className="text-4xl font-black text-white uppercase leading-tight mb-12">
             The Minds Behind Maverick
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
             {teamMembers.map((member) => (
               <div key={member.name} className="bg-[#2d2d2d] p-6 text-center group">
                 <div className="relative w-32 h-32 mx-auto mb-4">
