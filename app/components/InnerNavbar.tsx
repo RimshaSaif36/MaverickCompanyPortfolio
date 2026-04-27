@@ -8,9 +8,11 @@ const FacebookIcon = () => (
         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
     </svg>
 );
-const TwitterIcon = () => (
+const LinkedInIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+        <rect x="2" y="9" width="4" height="12" />
+        <circle cx="4" cy="4" r="2" />
     </svg>
 );
 const InstagramIcon = () => (
@@ -37,22 +39,22 @@ export default function InnerNavbar() {
     return (
         <header className="bg-[#1a1a1a] sticky top-0 z-50 shadow-lg">
             {/* Top info bar */}
-            <div className="hidden md:block border-b border-white/10 text-gray-400 text-xs py-2">
+            <div className="hidden md:block border-b border-white/10 text-gray-200 text-sm py-2">
                 <div className="max-w-7xl mx-auto px-8 flex items-center">
                     <div className="flex-1">
-                        Phone:{" "}
+                        Phone no:{" "}
                         <a href="tel:+923103395111" className="text-white font-semibold hover:text-[#998100] transition-colors">
-                            +92 310 3395111
-                        </a>
-                        &nbsp;|&nbsp; Email:{" "}
+                            +92 3103395111
+                        </a>{" "}
+                        or email us:{" "}
                         <a href="mailto:info@mavericktechstudio.com" className="text-white font-semibold hover:text-[#998100] transition-colors">
                             info@mavericktechstudio.com
                         </a>
                     </div>
                     <div className="flex items-center gap-4 text-white">
-                        <a href="#" aria-label="Facebook" className="hover:text-[#998100] transition-colors"><FacebookIcon /></a>
-                        <a href="#" aria-label="Twitter" className="hover:text-[#998100] transition-colors"><TwitterIcon /></a>
-                        <a href="#" aria-label="Instagram" className="hover:text-[#998100] transition-colors"><InstagramIcon /></a>
+                        <a href="https://www.facebook.com/profile.php?id=61570729737437" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-[#998100] transition-colors"><FacebookIcon /></a>
+                        <a href="https://www.linkedin.com/in/maverick-techstudio-833379403/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-[#998100] transition-colors"><LinkedInIcon /></a>
+                        <a href="https://www.instagram.com/mavericktechstudio/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-[#998100] transition-colors"><InstagramIcon /></a>
                     </div>
                 </div>
             </div>
@@ -60,7 +62,7 @@ export default function InnerNavbar() {
             {/* Main nav */}
             <nav>
                 <div className="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
-                    <Link href="/" className="text-xl font-black tracking-widest text-white hover:text-[#998100] transition-colors uppercase">
+                    <Link href="/" className="text-2xl font-bold tracking-widest text-white hover:text-[#998100] transition-colors">
                         Maverick Tech Studio
                     </Link>
 
