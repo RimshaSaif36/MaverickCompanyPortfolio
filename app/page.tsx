@@ -305,7 +305,7 @@ export default function Home() {
         </div>
       </section>
 
-      
+
       {/* ── About Section ── */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-8">
@@ -539,9 +539,8 @@ export default function Home() {
                 {laptopSlides.map((slide, i) => (
                   <div
                     key={i}
-                    className={`absolute inset-0 transition-opacity duration-700 ${
-                      i === laptopSlide ? "opacity-100" : "opacity-0"
-                    }`}
+                    className={`absolute inset-0 transition-opacity duration-700 ${i === laptopSlide ? "opacity-100" : "opacity-0"
+                      }`}
                   >
                     <img
                       src={slide.src}
@@ -570,9 +569,8 @@ export default function Home() {
                 key={i}
                 onClick={() => setLaptopSlide(i)}
                 aria-label={`Go to slide ${i + 1}`}
-                className={`h-[3px] rounded-full transition-all duration-300 ${
-                  i === laptopSlide ? "w-8 bg-[#998100]" : "w-3 bg-gray-600 hover:bg-gray-400"
-                }`}
+                className={`h-[3px] rounded-full transition-all duration-300 ${i === laptopSlide ? "w-8 bg-[#998100]" : "w-3 bg-gray-600 hover:bg-gray-400"
+                  }`}
               />
             ))}
           </div>
@@ -861,7 +859,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-         {/* ── FAQ + Skills Section ── */}
+      {/* ── FAQ + Skills Section ── */}
       <section className="bg-gray-100 py-24">
         <div className="max-w-7xl mx-auto px-8">
           <div className="flex flex-col md:flex-row gap-20">
@@ -940,7 +938,7 @@ export default function Home() {
                         </ol>
                       )}
                     </div>
-                  );    
+                  );
                 })}
               </div>
             </div>
