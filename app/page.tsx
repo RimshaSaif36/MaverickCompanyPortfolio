@@ -289,6 +289,40 @@ export default function Home() {
         </div>
       </section>
 
+      
+      {/* ── About Section ── */}
+      <section className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="flex flex-col md:flex-row gap-12 items-center">
+            {/* Left: image + badge */}
+            <div className="relative flex-shrink-0 w-full md:w-[420px]">
+              <img
+                src="/team.jpg"
+                alt="Team meeting"
+                className="w-full h-[480px] object-cover"
+              />
+            </div>
+            {/* Right: text */}
+            <div className="flex-1">
+              <p className="text-[#998100] text-xs font-bold uppercase tracking-widest mb-3">Welcome To Maverick</p>
+              <h2 className="text-4xl md:text-5xl font-medium text-black uppercase leading-tight mb-6">
+                Where Vision<br />Meets Innovation
+              </h2>
+              <p className="text-gray-500 text-sm leading-relaxed mb-8">
+                Maverick is a premier digital agency specializing in web development, UI/UX design, and strategic marketing. We are passionate about helping businesses thrive in the digital landscape by creating engaging online experiences that drive results and foster growth.
+              </p>
+              <div className="flex gap-4">
+                <button className="bg-[#998100] hover:bg-[#7a6700] text-black font-bold px-8 py-3 uppercase tracking-widest text-xs transition">
+                  Read More
+                </button>
+                <button className="border border-gray-300 hover:border-[#998100] text-black font-bold px-8 py-3 uppercase tracking-widest text-xs transition">
+                  Our Work
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* ── Services Section ── */}
       <section className="relative py-20">
 
@@ -411,39 +445,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* ── About Section ── */}
-      <section className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="flex flex-col md:flex-row gap-12 items-center">
-            {/* Left: image + badge */}
-            <div className="relative flex-shrink-0 w-full md:w-[420px]">
-              <img
-                src="/team.jpg"
-                alt="Team meeting"
-                className="w-full h-[480px] object-cover"
-              />
-            </div>
-            {/* Right: text */}
-            <div className="flex-1">
-              <p className="text-[#998100] text-xs font-bold uppercase tracking-widest mb-3">Welcome To Maverick</p>
-              <h2 className="text-4xl md:text-5xl font-medium text-black uppercase leading-tight mb-6">
-                Where Vision<br />Meets Innovation
-              </h2>
-              <p className="text-gray-500 text-sm leading-relaxed mb-8">
-                Maverick is a premier digital agency specializing in web development, UI/UX design, and strategic marketing. We are passionate about helping businesses thrive in the digital landscape by creating engaging online experiences that drive results and foster growth.
-              </p>
-              <div className="flex gap-4">
-                <button className="bg-[#998100] hover:bg-[#7a6700] text-black font-bold px-8 py-3 uppercase tracking-widest text-xs transition">
-                  Read More
-                </button>
-                <button className="border border-gray-300 hover:border-[#998100] text-black font-bold px-8 py-3 uppercase tracking-widest text-xs transition">
-                  Our Work
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ── Stats Section ── */}
       <section className="relative py-28 md:py-32 bg-[url('/bgnew.jpg')] bg-cover bg-center bg-no-repeat md:bg-fixed">
@@ -511,128 +512,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── FAQ + Skills Section ── */}
-      <section className="bg-gray-100 py-24">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="flex flex-col md:flex-row gap-20">
-
-            {/* Left: FAQ */}
-            <div className="flex-1 flex flex-col items-center text-center justify-center">
-              <p className="text-[#998100] text-[11px] font-extrabold uppercase tracking-[0.2em] mb-3">
-                Frequently Ask Question
-              </p>
-              <h2 className="text-[2.6rem] font-black text-black uppercase leading-[1.15] mb-10 tracking-tight">
-                Frequently<br />Ask Question
-              </h2>
-
-              <div className="space-y-2 w-full text-left">
-                {[
-                  {
-                    q: "What services do you offer?",
-                    items: [
-                      "We specialize in web development, UI/UX design, e-commerce solutions, and digital marketing.",
-                      "Our team is proficient in a variety of technologies to suit your project needs.",
-                    ],
-                  },
-                  {
-                    q: "How long does a website project take?",
-                    items: [
-                      "The timeline for a project varies depending on its complexity, but a typical website takes 4-8 weeks from start to finish.",
-                      "We work closely with you to establish a clear timeline and keep you updated on our progress.",
-                    ],
-                  },
-                  {
-                    q: "Do you provide ongoing support?",
-                    items: [
-                      "Yes, we offer ongoing support and maintenance packages to ensure your website remains secure and up-to-date.",
-                      "Our support services include regular backups, security monitoring, and content updates.",
-                    ],
-                  },
-                  {
-                    q: "What is your design process like?",
-                    items: [
-                      "Our design process is collaborative and iterative. We start with a discovery phase to understand your brand and goals, followed by wireframing, mockups, and development.",
-                      "We value your feedback at every stage to ensure the final product aligns with your vision.",
-                    ],
-                  },
-                ].map(({ q, items }, idx) => {
-                  const isOpen = openFaq === idx;
-                  return (
-                    <div key={q} className="overflow-hidden">
-                      <button
-                        onClick={() => setOpenFaq(isOpen ? -1 : idx)}
-                        className={`w-full flex items-center justify-between px-6 py-4 text-left transition-colors duration-200 ${isOpen
-                          ? "bg-[#998100] text-white"
-                          : "bg-white text-black border border-gray-200 hover:border-[#998100]"
-                          }`}
-                      >
-                        <span className="text-[11px] font-black uppercase tracking-[0.12em] leading-relaxed pr-4">
-                          {q}
-                        </span>
-                        <svg
-                          className={`w-4 h-4 flex-shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : "rotate-0"}`}
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2.5"
-                        >
-                          <polyline points="6 9 12 15 18 9" />
-                        </svg>
-                      </button>
-
-                      {isOpen && items && items.length > 0 && (
-                        <ol className="bg-white border border-t-0 border-gray-200 px-7 py-5 space-y-2.5 list-decimal list-inside">
-                          {items.map((item) => (
-                            <li key={item} className="text-[13px] text-gray-500 leading-relaxed">
-                              {item}
-                            </li>
-                          ))}
-                        </ol>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Right: image + skills */}
-            <div className="flex-1">
-              <img
-                src="/fqa.jpg"
-                alt="Team working"
-                className="w-full h-[340px] object-cover mb-9"
-              />
-              <h3 className="text-[1.65rem] font-black text-black uppercase leading-tight tracking-tight mb-7">
-                Our Core<br />Competencies
-              </h3>
-              <div className="space-y-5">
-                {[
-                  { label: "Web Development", pct: 95 },
-                  { label: "UI/UX Design", pct: 90 },
-                  { label: "Digital Marketing", pct: 85 },
-                  { label: "E-commerce Solutions", pct: 88 },
-                ].map(({ label, pct }) => (
-                  <div key={label}>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-[11px] font-black uppercase tracking-[0.12em] text-black">
-                        {label}
-                      </span>
-                      <span className="text-[12px] font-black text-[#998100]">{pct}%</span>
-                    </div>
-                    <div className="h-[5px] bg-gray-300 w-full rounded-sm overflow-hidden">
-                      <div
-                        className="h-full bg-[#998100] rounded-sm"
-                        style={{ width: `${pct}%` }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
+     
 
       {/* ── Portfolio Section ── */}
       <section className="bg-[#1e1e1e] pt-20 pb-16">
@@ -909,7 +789,128 @@ export default function Home() {
           </div>
         </div>
       </section>
+         {/* ── FAQ + Skills Section ── */}
+      <section className="bg-gray-100 py-24">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="flex flex-col md:flex-row gap-20">
 
+            {/* Left: FAQ */}
+            <div className="flex-1 flex flex-col items-center text-center justify-center">
+              <p className="text-[#998100] text-[11px] font-extrabold uppercase tracking-[0.2em] mb-3">
+                Frequently Ask Question
+              </p>
+              <h2 className="text-[2.6rem] font-black text-black uppercase leading-[1.15] mb-10 tracking-tight">
+                Frequently<br />Ask Question
+              </h2>
+
+              <div className="space-y-2 w-full text-left">
+                {[
+                  {
+                    q: "What services do you offer?",
+                    items: [
+                      "We specialize in web development, UI/UX design, e-commerce solutions, and digital marketing.",
+                      "Our team is proficient in a variety of technologies to suit your project needs.",
+                    ],
+                  },
+                  {
+                    q: "How long does a website project take?",
+                    items: [
+                      "The timeline for a project varies depending on its complexity, but a typical website takes 4-8 weeks from start to finish.",
+                      "We work closely with you to establish a clear timeline and keep you updated on our progress.",
+                    ],
+                  },
+                  {
+                    q: "Do you provide ongoing support?",
+                    items: [
+                      "Yes, we offer ongoing support and maintenance packages to ensure your website remains secure and up-to-date.",
+                      "Our support services include regular backups, security monitoring, and content updates.",
+                    ],
+                  },
+                  {
+                    q: "What is your design process like?",
+                    items: [
+                      "Our design process is collaborative and iterative. We start with a discovery phase to understand your brand and goals, followed by wireframing, mockups, and development.",
+                      "We value your feedback at every stage to ensure the final product aligns with your vision.",
+                    ],
+                  },
+                ].map(({ q, items }, idx) => {
+                  const isOpen = openFaq === idx;
+                  return (
+                    <div key={q} className="overflow-hidden">
+                      <button
+                        onClick={() => setOpenFaq(isOpen ? -1 : idx)}
+                        className={`w-full flex items-center justify-between px-6 py-4 text-left transition-colors duration-200 ${isOpen
+                          ? "bg-[#998100] text-white"
+                          : "bg-white text-black border border-gray-200 hover:border-[#998100]"
+                          }`}
+                      >
+                        <span className="text-[11px] font-black uppercase tracking-[0.12em] leading-relaxed pr-4">
+                          {q}
+                        </span>
+                        <svg
+                          className={`w-4 h-4 flex-shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : "rotate-0"}`}
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2.5"
+                        >
+                          <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                      </button>
+
+                      {isOpen && items && items.length > 0 && (
+                        <ol className="bg-white border border-t-0 border-gray-200 px-7 py-5 space-y-2.5 list-decimal list-inside">
+                          {items.map((item) => (
+                            <li key={item} className="text-[13px] text-gray-500 leading-relaxed">
+                              {item}
+                            </li>
+                          ))}
+                        </ol>
+                      )}
+                    </div>
+                  );    
+                })}
+              </div>
+            </div>
+
+            {/* Right: image + skills */}
+            <div className="flex-1">
+              <img
+                src="/fqa.jpg"
+                alt="Team working"
+                className="w-full h-[340px] object-cover mb-9"
+              />
+              <h3 className="text-[1.65rem] font-black text-black uppercase leading-tight tracking-tight mb-7">
+                Our Core<br />Competencies
+              </h3>
+              <div className="space-y-5">
+                {[
+                  { label: "Web Development", pct: 95 },
+                  { label: "UI/UX Design", pct: 90 },
+                  { label: "Digital Marketing", pct: 85 },
+                  { label: "E-commerce Solutions", pct: 88 },
+                ].map(({ label, pct }) => (
+                  <div key={label}>
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-[11px] font-black uppercase tracking-[0.12em] text-black">
+                        {label}
+                      </span>
+                      <span className="text-[12px] font-black text-[#998100]">{pct}%</span>
+                    </div>
+                    <div className="h-[5px] bg-gray-300 w-full rounded-sm overflow-hidden">
+                      <div
+                        className="h-full bg-[#998100] rounded-sm"
+                        style={{ width: `${pct}%` }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
       {/* ── Newsletter ── */}
       <section className="bg-white py-16">
         <div className="max-w-4xl mx-auto px-8">
