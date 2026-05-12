@@ -549,7 +549,6 @@ export default function Home() {
       </section>
 
       {/* ── Laptop Showcase Section ── */}
-      {/* ── Laptop Showcase Section ── */}
       <section className="bg-white py-10 overflow-hidden">
         <div className="max-w-7xl mx-auto px-8">
 
