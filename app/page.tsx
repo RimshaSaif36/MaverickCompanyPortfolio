@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import Footer from "./components/Footer";
+import { projects } from "./portfolio/projects-data";
 
 // Social icons as inline SVGs
 const FacebookIcon = () => (
@@ -178,7 +179,6 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number>(0);
   const [showAllProjects, setShowAllProjects] = useState(false);
-  const [lightboxImg, setLightboxImg] = useState<{ src: string; title: string } | null>(null);
   const [laptopSlide, setLaptopSlide] = useState(0);
 
   useEffect(() => {
@@ -691,17 +691,9 @@ export default function Home() {
         </div>
 
         <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            { src: "/1.jpg", title: "E-Commerce Platform", category: "Web Development", link: "www.theclassicdecor.com", lightbox: false },
-            { src: "/2.jpg", title: "Fashion Store", category: "UI/UX Design", link: "www.theflexleather.com", lightbox: false },
-            { src: "/3.jpg", title: "Corporate Website", category: "Branding", link: "www.ataarabia.com", lightbox: false },
-            { src: "/4.jpg", title: "Portfolio Showcase", category: "Graphic Design", link: "www.portfolio.com", lightbox: true },
-            { src: "/5.jpg", title: "WoodenHive Online Store", category: "Web Development", link: "www.woodenhive.com", lightbox: false },
-            { src: "/6.jpg", title: "Creative Social Media Posts", category: "Social Media Marketing", link: "www.mobileapp.com", lightbox: true },
-            { src: "/7.jpg", title: "Inventory Management System", category: "Business Software", link: "www.khtabinventorysystem.com", lightbox: false },
-          ].slice(0, showAllProjects ? undefined : 6).map(({ src, title, category, link, lightbox }, i) => (
+          {projects.slice(0, showAllProjects ? undefined : 6).map(({ slug, src, title, category, website }, i) => (
 
-            <div key={i} className="group relative overflow-hidden rounded-sm shadow-lg">
+            <Link key={slug} href={`/portfolio/${slug}`} className="group relative overflow-hidden rounded-sm shadow-lg">
 
               {/* Browser bar */}
               <div className="bg-[#2d2d2d] px-4 py-2.5 flex items-center gap-2">
@@ -710,26 +702,12 @@ export default function Home() {
                 <span className="w-3 h-3 rounded-full bg-green-500" />
 
                 <div className="flex-1 mx-3 bg-[#3d3d3d] rounded-sm px-3 py-1">
-                  {lightbox ? (
-                    <span className="text-[10px] text-gray-400 font-mono">{link}</span>
-                  ) : (
-                    <a
-                      href={`https://${link}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[10px] text-gray-400 font-mono hover:text-white transition"
-                    >
-                      {link}
-                    </a>
-                  )}
+                  <span className="text-[10px] text-gray-400 font-mono">{website}</span>
                 </div>
               </div>
 
               {/* Image */}
-              <div
-                className={`relative overflow-hidden h-[300px] ${lightbox ? "cursor-zoom-in" : ""}`}
-                onClick={() => lightbox && setLightboxImg({ src, title })}
-              >
+              <div className="relative overflow-hidden h-[300px]">
                 <img
                   src={src}
                   alt={title}
@@ -739,26 +717,17 @@ export default function Home() {
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-[#998100]/85 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center mb-4">
-                    {lightbox ? (
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
-                        <circle cx="11" cy="11" r="8" />
-                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                        <line x1="11" y1="8" x2="11" y2="14" />
-                        <line x1="8" y1="11" x2="14" y2="11" />
-                      </svg>
-                    ) : (
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
-                        <path d="M1 12S5 4 12 4s11 8 11 8-4 8-11 8S1 12 1 12z" />
-                        <circle cx="12" cy="12" r="3" />
-                      </svg>
-                    )}
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
+                      <path d="M1 12S5 4 12 4s11 8 11 8-4 8-11 8S1 12 1 12z" />
+                      <circle cx="12" cy="12" r="3" />
+                    </svg>
                   </span>
 
                   <p className="text-white font-black uppercase tracking-wider text-sm">
                     {title}
                   </p>
                   <p className="text-white/80 text-[11px] uppercase tracking-widest mt-1">
-                    {lightbox ? "Click to view full image" : category}
+                    {category}
                   </p>
                 </div>
               </div>
@@ -774,71 +743,18 @@ export default function Home() {
                   </p>
                 </div>
 
-                {lightbox ? (
-                  <button
-                    onClick={() => setLightboxImg({ src, title })}
-                    className="w-7 h-7 rounded-full bg-[#998100] flex items-center justify-center hover:bg-[#7a6700] transition"
-                  >
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2.5">
-                      <line x1="5" y1="12" x2="19" y2="12" />
-                      <polyline points="12 5 19 12 12 19" />
-                    </svg>
-                  </button>
-                ) : (
-                  <a
-                    href={`https://${link}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-7 h-7 rounded-full bg-[#998100] flex items-center justify-center hover:bg-[#7a6700] transition"
-                  >
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2.5">
-                      <line x1="5" y1="12" x2="19" y2="12" />
-                      <polyline points="12 5 19 12 12 19" />
-                    </svg>
-                  </a>
-                )}
+                <span className="w-7 h-7 rounded-full bg-[#998100] flex items-center justify-center group-hover:bg-[#7a6700] transition">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2.5">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </span>
               </div>
 
-            </div>
+            </Link>
           ))}
         </div>
       </section>
-
-      {/* ── Lightbox Modal ── */}
-      {lightboxImg && (
-        <div
-          className="fixed inset-0 z-[9999] bg-black/90 flex items-center justify-center p-4"
-          onClick={() => setLightboxImg(null)}
-        >
-          <div
-            className="relative max-w-5xl w-full max-h-[90vh]"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Close button */}
-            <button
-              onClick={() => setLightboxImg(null)}
-              className="absolute -top-10 right-0 text-white hover:text-[#998100] transition-colors flex items-center gap-2 text-xs font-black uppercase tracking-widest"
-            >
-              Close
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <line x1="18" y1="6" x2="6" y2="18" />
-                <line x1="6" y1="6" x2="18" y2="18" />
-              </svg>
-            </button>
-            {/* Full image */}
-            <img
-              src={lightboxImg.src}
-              alt={lightboxImg.title}
-              className="w-full h-auto max-h-[85vh] object-contain"
-            />
-            {/* Caption */}
-            <div className="bg-[#1a1a1a] px-6 py-3 flex items-center justify-between">
-              <span className="text-white text-sm font-black uppercase tracking-wider">{lightboxImg.title}</span>
-              <span className="text-[#998100] text-[10px] uppercase tracking-widest">Click outside to close</span>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* ── Testimonials Section ── */}
       <section className="bg-gray-100 py-20">

@@ -3,16 +3,7 @@ import Footer from "../components/Footer";
 import PageHeader from "../components/PageHeader";
 import { useState } from "react";
 import Link from "next/link";
-
-const projects = [
-    { src: "/1.jpg", title: "E-Commerce Platform", category: "Web Development", link: "www.theclassicdecor.com", desc: "A full-featured e-commerce store with product management, cart, and secure checkout." },
-    { src: "/2.jpg", title: "Fashion Store", category: "UI/UX Design", link: "www.theflexleather.com", desc: "Elegant fashion brand storefront with immersive browsing experience and mobile-first design." },
-    { src: "/3.jpg", title: "Corporate Website", category: "Branding", link: "www.ataarabia.com", desc: "Professional corporate identity and website for a leading regional business." },
-    { src: "/4.jpg", title: "Portfolio Showcase", category: "Graphic Design", link: "www.portfolio.com", desc: "Creative designer portfolio with dynamic project galleries and smooth interactions." },
-    { src: "/5.jpg", title: "WoodenHive Online Store", category: "Web Development", link: "www.woodenhive.com", desc: "Handcrafted furniture store with rich product photography and streamlined checkout." },
-    { src: "/6.jpg", title: "Social Media Campaign", category: "Social Media Marketing", link: "www.mobileapp.com", desc: "Comprehensive social media creatives and ad campaigns driving strong engagement." },
-    { src: "/7.jpg", title: "Inventory Management System", category: "Business Software", link: "www.khtabinventorysystem.com", desc: "Custom-built inventory and reporting system for wholesale and retail businesses." },
-];
+import { projects } from "./projects-data";
 
 const categories = ["All", "Web Development", "UI/UX Design", "Branding", "Graphic Design", "Social Media Marketing", "Business Software"];
 
@@ -71,8 +62,8 @@ export default function PortfolioPage() {
                         <div className="text-center py-20 text-gray-500">No projects found in this category.</div>
                     ) : (
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            {filtered.map(({ src, title, category, link, desc }, i) => (
-                                <div key={i} className="group relative overflow-hidden rounded-sm shadow-lg flex flex-col">
+                            {filtered.map(({ slug, src, title, category, website, summary }, i) => (
+                                <Link key={slug} href={`/portfolio/${slug}`} className="group relative overflow-hidden rounded-sm shadow-lg flex flex-col">
 
                                     {/* Browser bar */}
                                     <div className="bg-[#2d2d2d] px-4 py-2.5 flex items-center gap-2 flex-shrink-0">
@@ -80,14 +71,9 @@ export default function PortfolioPage() {
                                         <span className="w-3 h-3 rounded-full bg-yellow-400" />
                                         <span className="w-3 h-3 rounded-full bg-green-500" />
                                         <div className="flex-1 mx-3 bg-[#3d3d3d] rounded-sm px-3 py-1">
-                                            <a
-                                                href={`https://${link}`}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="text-[10px] text-gray-400 font-mono hover:text-white transition"
-                                            >
-                                                {link}
-                                            </a>
+                                            <span className="text-[10px] text-gray-400 font-mono">
+                                                {website}
+                                            </span>
                                         </div>
                                     </div>
 
@@ -108,7 +94,7 @@ export default function PortfolioPage() {
                                             </span>
                                             <p className="text-black font-black uppercase tracking-wider text-sm mb-2">{title}</p>
                                             <p className="text-black/70 text-[11px] uppercase tracking-widest mb-3">{category}</p>
-                                            <p className="text-black/80 text-xs leading-relaxed">{desc}</p>
+                                            <p className="text-black/80 text-xs leading-relaxed">{summary}</p>
                                         </div>
                                     </div>
 
@@ -118,19 +104,14 @@ export default function PortfolioPage() {
                                             <p className="text-white text-[12px] font-bold uppercase tracking-wide">{title}</p>
                                             <p className="text-[#998100] text-[10px] uppercase tracking-widest mt-0.5">{category}</p>
                                         </div>
-                                        <a
-                                            href={`https://${link}`}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="w-7 h-7 rounded-full bg-[#998100] flex items-center justify-center hover:bg-[#7a6700] transition"
-                                        >
+                                        <span className="w-7 h-7 rounded-full bg-[#998100] flex items-center justify-center group-hover:bg-[#7a6700] transition">
                                             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2.5">
                                                 <line x1="5" y1="12" x2="19" y2="12" />
                                                 <polyline points="12 5 19 12 12 19" />
                                             </svg>
-                                        </a>
+                                        </span>
                                     </div>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                     )}
