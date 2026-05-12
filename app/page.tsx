@@ -550,13 +550,13 @@ export default function Home() {
 
       {/* ── Laptop Showcase Section ── */}
       {/* ── Laptop Showcase Section ── */}
-      <section className="bg-white py-24 overflow-hidden">
+      <section className="bg-white py-10 overflow-hidden">
         <div className="max-w-7xl mx-auto px-8">
 
           {/* Laptop centered */}
           <div className="flex justify-center">
 
-            <div className="relative w-full max-w-[920px]">
+            <div className="relative w-full max-w-[1200px]">
 
               {/* SCREEN AREA */}
               <div
@@ -565,8 +565,8 @@ export default function Home() {
             left-[23.7%]
             top-[10.8%]
             z-10
-            h-[56%]
-            w-[51.9%]
+            h-[62%]
+            w-[51.0%]
             overflow-hidden
             rounded-[8px]
             bg-black
