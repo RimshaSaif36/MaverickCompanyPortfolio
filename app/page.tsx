@@ -167,7 +167,7 @@ const laptopSlides = [
     category: "Web Development",
   },
   {
-    src: "/7.jpg",
+    src: "/p6.jpg",
     title: "Inventory Management System",
     category: "Business Software",
   },
