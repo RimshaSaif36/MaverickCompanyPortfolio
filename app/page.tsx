@@ -546,21 +546,21 @@ export default function Home() {
 
           </div>
         </div>
-      </section> 
+      </section>
 
       {/* ── Laptop Showcase Section ── */}
-    {/* ── Laptop Showcase Section ── */}
-<section className="bg-white py-24 overflow-hidden">
-  <div className="max-w-7xl mx-auto px-8">
+      {/* ── Laptop Showcase Section ── */}
+      <section className="bg-white py-24 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-8">
 
-    {/* Laptop centered */}
-    <div className="flex justify-center">
+          {/* Laptop centered */}
+          <div className="flex justify-center">
 
-      <div className="relative w-full max-w-[920px]">
+            <div className="relative w-full max-w-[920px]">
 
-        {/* SCREEN AREA */}
-        <div
-          className="
+              {/* SCREEN AREA */}
+              <div
+                className="
             absolute
             left-[23.7%]
             top-[10.8%]
@@ -571,26 +571,25 @@ export default function Home() {
             rounded-[8px]
             bg-black
           "
-        >
+              >
 
-          {laptopSlides.map((slide, i) => (
-            <div
-              key={i}
-              className={`
+                {laptopSlides.map((slide, i) => (
+                  <div
+                    key={i}
+                    className={`
                 absolute inset-0
                 transition-opacity duration-700
-                ${
-                  i === laptopSlide
-                    ? "opacity-100"
-                    : "opacity-0"
-                }
+                ${i === laptopSlide
+                        ? "opacity-100"
+                        : "opacity-0"
+                      }
               `}
-            >
+                  >
 
-              <img
-                src={slide.src}
-                alt={slide.title}
-                className="
+                    <img
+                      src={slide.src}
+                      alt={slide.title}
+                      className="
                   absolute inset-0
                   w-full
                   h-full
@@ -600,73 +599,72 @@ export default function Home() {
                   -translate-y-[2%]
                   transition-transform duration-700
                 "
-              />
+                    />
 
-            </div>
-          ))}
+                  </div>
+                ))}
 
-        </div>
+              </div>
 
-        {/* LAPTOP FRAME */}
-        <Image
-          src="/laptop.png"
-          alt="Laptop showcase"
-          width={1600}
-          height={1067}
-          className="
+              {/* LAPTOP FRAME */}
+              <Image
+                src="/laptop.png"
+                alt="Laptop showcase"
+                width={1600}
+                height={1067}
+                className="
             relative z-20
             w-full
             h-auto
             pointer-events-none
             drop-shadow-[0_24px_70px_rgba(0,0,0,0.45)]
           "
-        />
+              />
 
-      </div>
+            </div>
 
-    </div>
+          </div>
 
-    {/* DOT INDICATORS */}
-    <div className="flex items-center justify-center gap-2 mt-8">
+          {/* DOT INDICATORS */}
+          <div className="flex items-center justify-center gap-2 mt-8">
 
-      {laptopSlides.map((_, i) => (
+            {laptopSlides.map((_, i) => (
 
-        <button
-          key={i}
-          onClick={() => setLaptopSlide(i)}
-          aria-label={`Go to slide ${i + 1}`}
-          className={`
+              <button
+                key={i}
+                onClick={() => setLaptopSlide(i)}
+                aria-label={`Go to slide ${i + 1}`}
+                className={`
             h-[3px]
             rounded-full
             transition-all duration-300
 
-            ${
-              i === laptopSlide
-                ? "w-8 bg-[#998100]"
-                : "w-3 bg-gray-500 hover:bg-gray-400"
-            }
+            ${i === laptopSlide
+                    ? "w-8 bg-[#998100]"
+                    : "w-3 bg-gray-500 hover:bg-gray-400"
+                  }
           `}
-        />
+              />
 
-      ))}
+            ))}
 
-    </div>
+          </div>
 
-    {/* SLIDE LABEL */}
-    <div className="text-center mt-5">
+          {/* SLIDE LABEL */}
+          <div className="text-center mt-5">
 
-      <p className="text-black font-bold text-sm uppercase tracking-wider">
-        {laptopSlides[laptopSlide].title}
-      </p>
+            <p className="text-black font-bold text-sm uppercase tracking-wider">
+              {laptopSlides[laptopSlide].title}
+            </p>
 
-      <p className="text-[#998100] text-[10px] uppercase tracking-widest mt-1">
-        {laptopSlides[laptopSlide].category}
-      </p>
+            <p className="text-[#998100] text-[10px] uppercase tracking-widest mt-1">
+              {laptopSlides[laptopSlide].category}
+            </p>
 
-    </div>
+          </div>
 
-  </div>
-</section>
+        </div>
+      </section>
       {/* ── Portfolio Section ── */}
       <section className="bg-[#1e1e1e] pt-20 pb-16">
         <div className="max-w-7xl mx-auto px-8 mb-12">
