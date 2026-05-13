@@ -398,13 +398,13 @@ export default function Home() {
               </span>
             </div>
 
-            {/* Online Marketing */}
+            {/* Digital Marketing */}
             <div className="group bg-[#252525]/90 backdrop-blur-sm p-8 flex flex-col justify-between min-h-[220px] relative overflow-hidden cursor-pointer transition-all duration-300 hover:bg-[#998100]">
               <div className="text-[#998100] group-hover:text-black transition-colors duration-300">
                 <OnlineMarketingIcon />
               </div>
               <h3 className="text-white group-hover:text-black text-sm font-black uppercase tracking-wider leading-snug mt-6 transition-colors duration-300">
-                Online<br />Marketing
+                Digital<br />Marketing
               </h3>
               <span className="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-black/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -430,13 +430,13 @@ export default function Home() {
               </span>
             </div>
 
-            {/* Application Development */}
+            {/* Social Media Marketing */}
             <div className="group bg-[#252525]/90 backdrop-blur-sm p-8 flex flex-col justify-between min-h-[220px] relative overflow-hidden cursor-pointer transition-all duration-300 hover:bg-[#998100]">
               <div className="text-[#998100] group-hover:text-black transition-colors duration-300">
                 <AppDevIcon />
               </div>
               <h3 className="text-white group-hover:text-black text-sm font-black uppercase tracking-wider leading-snug mt-6 transition-colors duration-300">
-                Application<br />Development
+                Social Media<br />Marketing
               </h3>
               <span className="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-black/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
