@@ -46,9 +46,7 @@ export default async function ProjectDetailPage({
                             <p className="text-black text-2xl md:text-4xl font-black uppercase tracking-tight">
                                 {project.title}
                             </p>
-                            <h2 className="mt-5 text-[#5a55a3] text-3xl md:text-5xl font-black leading-tight">
-                                {project.headline}
-                            </h2>
+                            
                             <p className="mt-8 text-gray-500 text-base leading-8 max-w-3xl">
                                 {project.summary}
                             </p>
