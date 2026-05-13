@@ -482,10 +482,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Stats Section ── */}
+      {/* ── Stats Section 
       <section className="relative py-28 md:py-32 bg-[url('/bgnew.jpg')] bg-cover bg-center bg-no-repeat md:bg-fixed">
 
-        {/* Overlay */}
+       
         <div className="absolute inset-0 bg-black/40"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-8">
@@ -515,7 +515,7 @@ export default function Home() {
             ].map(({ icon, num, label }) => (
               <div key={label} className="flex items-center gap-5">
 
-                {/* Icon */}
+                
                 <span className="w-16 h-16 flex-shrink-0 bg-[#998100] flex items-center justify-center rounded">
                   <svg
                     width="28"
@@ -531,7 +531,7 @@ export default function Home() {
                   </svg>
                 </span>
 
-                {/* Text */}
+                
                 <div>
                   <p className="text-4xl font-black text-white leading-none">
                     {num}
@@ -546,7 +546,7 @@ export default function Home() {
 
           </div>
         </div>
-      </section>
+      </section>── */}
 
       {/* ── Laptop Showcase Section ── */}
       <section className="bg-white py-10 overflow-hidden">
@@ -977,7 +977,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* ── Newsletter ── */}
+      {/* ── Newsletter 
       <section className="bg-white py-16">
         <div className="max-w-4xl mx-auto px-8">
           <div className="relative overflow-hidden rounded-sm">
@@ -993,7 +993,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section>── */}
 
 
       <Footer />

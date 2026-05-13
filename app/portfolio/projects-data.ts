@@ -9,6 +9,7 @@ export type Project = {
     client: string;
     date: string;
     previewBackground: string;
+    previewVideoSrc?: string;
 };
 
 export const projects: Project[] = [
@@ -25,6 +26,7 @@ export const projects: Project[] = [
         client: "Classic Decor",
         date: "May 10, 2024",
         previewBackground: "linear-gradient(135deg, #f4f0d5 0%, #ece3b7 100%)",
+        previewVideoSrc: "/videos/The%20Classic%20Decor%20-%20Google%20Chrome%20-%2013%20May%202026.mp4",
     },
     {
         slug: "fashion-store",

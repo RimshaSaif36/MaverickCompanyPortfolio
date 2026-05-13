@@ -34,11 +34,23 @@ export default async function ProjectDetailPage({
                         className="overflow-hidden shadow-[0_30px_70px_rgba(0,0,0,0.12)]"
                         style={{ background: project.previewBackground }}
                     >
-                        <img
-                            src={project.src}
-                            alt={project.title}
-                            className="w-full h-auto object-cover"
-                        />
+                        {project.previewVideoSrc ? (
+                            <video
+                                src={project.previewVideoSrc}
+                                className="block h-auto w-full"
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                                controls
+                            />
+                        ) : (
+                            <img
+                                src={project.src}
+                                alt={project.title}
+                                className="w-full h-auto object-cover"
+                            />
+                        )}
                     </div>
 
                     <div className="grid gap-12 pt-12 md:grid-cols-[minmax(0,1fr)_280px] md:items-start">
