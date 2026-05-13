@@ -41,6 +41,7 @@ export const projects: Project[] = [
         client: "Flex Leather",
         date: "June 22, 2024",
         previewBackground: "linear-gradient(135deg, #4a312e 0%, #775149 100%)",
+        previewVideoSrc: "/videos/FlexLeather%20-%20Premium%20Leather%20Goods%20-%20Google%20Chrome%20-%2013%20May%202026.mp4",
     },
     {
         slug: "corporate-website",
@@ -55,6 +56,7 @@ export const projects: Project[] = [
         client: "ATA Arabia",
         date: "July 16, 2024",
         previewBackground: "linear-gradient(135deg, #6c72d9 0%, #99a0f4 100%)",
+        previewVideoSrc: "/videos/ata.mp4",
     },
     {
         slug: "portfolio-showcase",
@@ -83,6 +85,7 @@ export const projects: Project[] = [
         client: "WoodenHive",
         date: "September 02, 2024",
         previewBackground: "linear-gradient(135deg, #d8c4a2 0%, #f0e1c8 100%)",
+        previewVideoSrc: "/videos/WoodenHive%20-%20Google%20Chrome%20-%2013%20May%202026.mp4",
     },
     {
         slug: "creative-social-media-posts",
