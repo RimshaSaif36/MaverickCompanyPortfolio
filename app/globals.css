@@ -91,6 +91,7 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .testimonial-marquee,
   .testimonial-marquee-reverse,
   .testimonial-marquee-slower {
