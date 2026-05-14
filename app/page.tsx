@@ -174,6 +174,40 @@ const laptopSlides = [
   },
 ];
 
+const testimonials = [
+  {
+    img: "/t1.jpg",
+    name: "John Doe",
+    role: "CEO of Innovate Inc.",
+    review:
+      "Maverick transformed our online presence with a stunning new website. Their team was professional, creative, and delivered results that exceeded our expectations. We've seen a significant increase in engagement since the launch.",
+  },
+  {
+    img: "/t2.jpg",
+    name: "Jane Smith",
+    role: "Marketing Director",
+    review:
+      "The digital marketing campaign Maverick developed for us was a game-changer. Their strategic approach and data-driven insights helped us reach a wider audience and achieve our goals.",
+  },
+  {
+    img: "/t3.jpg",
+    name: "Samuel Green",
+    role: "E-commerce Manager",
+    review:
+      "Working with Maverick on our new e-commerce platform was a seamless experience. They understood our needs and delivered a high-performing, user-friendly store that has boosted our sales.",
+  },
+  {
+    img: "/t4.jpg",
+    name: "Emily White",
+    role: "Startup Founder",
+    review:
+      "As a new business, we needed a strong digital foundation. Maverick provided just that with a beautiful website and a solid marketing strategy. Their guidance and expertise have been invaluable.",
+  },
+];
+
+const marqueeTopRow = [...testimonials, ...testimonials];
+const marqueeBottomRow = [...testimonials].reverse().concat([...testimonials].reverse());
+
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -757,79 +791,83 @@ export default function Home() {
       </section>
 
       {/* ── Testimonials Section ── */}
-      <section className="bg-gray-100 py-20">
+      <section className="overflow-hidden bg-gray-100 py-20">
         <div className="max-w-7xl mx-auto px-8">
-          <p className="text-[#998100] text-xs font-bold uppercase tracking-widest mb-2">
-            Testimonial
-          </p>
-          <h2 className="text-4xl font-black text-black uppercase leading-tight mb-12">
-            People Say<br />About Our Works
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {[
-              {
-                img: "/t1.jpg",
-                name: "John Doe",
-                role: "CEO of Innovate Inc.",
-                review:
-                  "Maverick transformed our online presence with a stunning new website. Their team was professional, creative, and delivered results that exceeded our expectations. We've seen a significant increase in engagement since the launch.",
-              },
-              {
-                img: "/t2.jpg",
-                name: "Jane Smith",
-                role: "Marketing Director",
-                review:
-                  "The digital marketing campaign Maverick developed for us was a game-changer. Their strategic approach and data-driven insights helped us reach a wider audience and achieve our goals.",
-              },
-              {
-                img: "/t3.jpg",
-                name: "Samuel Green",
-                role: "E-commerce Manager",
-                review:
-                  "Working with Maverick on our new e-commerce platform was a seamless experience. They understood our needs and delivered a high-performing, user-friendly store that has boosted our sales.",
-              },
-              {
-                img: "/t4.jpg",
-                name: "Emily White",
-                role: "Startup Founder",
-                review:
-                  "As a new business, we needed a strong digital foundation. Maverick provided just that with a beautiful website and a solid marketing strategy. Their guidance and expertise have been invaluable.",
-              },
-            ].map(({ img, name, role, review }, i) => (
-              <div key={i} className="bg-white p-6 flex flex-col justify-between shadow-sm">
-                <p className="text-gray-500 text-sm leading-relaxed mb-6">
-                  {review}
-                </p>
-
-                <div>
-                  <div className="flex text-[#998100] mb-3">
-                    {"★★★★★".split("").map((s, j) => (
-                      <span key={j}>{s}</span>
-                    ))}
-                  </div>
-
-                  <div className="flex items-center gap-3">
-                    <img
-                      src={img}
-                      alt={name}
-                      className="w-10 h-10 rounded-full object-cover"
-                    />
-                    <div>
-                      <p className="font-black text-black text-sm">{name}</p>
-                      <p className="text-[#998100] text-xs uppercase tracking-wider">
-                        {role}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
+          <div className="mb-10 max-w-3xl">
+            <p className="mb-2 text-xs font-bold uppercase tracking-widest text-[#998100]">
+              Testimonial
+            </p>
+            <h2 className="text-4xl font-black leading-tight text-black uppercase md:text-5xl">
+              People Say<br />About Our Works
+            </h2>
           </div>
 
-          <div className="flex justify-center gap-2 mt-8">
-            <span className="w-3 h-3 rounded-full bg-[#998100] inline-block" />
-            <span className="w-3 h-3 rounded-full bg-gray-300 inline-block" />
+          <div className="space-y-5">
+            <div className="testimonial-marquee-mask">
+              <div className="testimonial-marquee">
+                {marqueeTopRow.map(({ img, name, role, review }, index) => (
+                  <article
+                    key={`${name}-top-${index}`}
+                    className="testimonial-marquee-card min-h-[260px] bg-white p-6 shadow-[0_16px_45px_rgba(0,0,0,0.08)]"
+                  >
+                    <p className="mb-6 text-sm leading-7 text-gray-500">{review}</p>
+
+                    <div className="mt-auto">
+                      <div className="mb-3 flex text-[#998100]">
+                        {"★★★★★".split("").map((star, starIndex) => (
+                          <span key={starIndex}>{star}</span>
+                        ))}
+                      </div>
+
+                      <div className="flex items-center gap-3">
+                        <Image
+                          src={img}
+                          alt={name}
+                          width={44}
+                          height={44}
+                          className="h-11 w-11 rounded-full object-cover"
+                        />
+                        <div>
+                          <p className="text-sm font-black text-black">{name}</p>
+                          <p className="text-xs uppercase tracking-wider text-[#998100]">
+                            {role}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="testimonial-marquee-mask">
+              <div className="testimonial-marquee testimonial-marquee-reverse testimonial-marquee-slower">
+                {marqueeBottomRow.map(({ img, name, role, review }, index) => (
+                  <article
+                    key={`${name}-bottom-${index}`}
+                    className="testimonial-marquee-card min-h-[240px] bg-white p-6 shadow-[0_16px_45px_rgba(0,0,0,0.06)]"
+                  >
+                    <p className="mb-6 text-sm leading-7 text-gray-500">{review}</p>
+
+                    <div className="mt-auto flex items-center justify-between gap-4">
+                      <div>
+                        <p className="text-sm font-black uppercase text-black">{name}</p>
+                        <p className="mt-1 text-xs uppercase tracking-[0.24em] text-[#998100]">
+                          {role}
+                        </p>
+                      </div>
+                      <Image
+                        src={img}
+                        alt={name}
+                        width={48}
+                        height={48}
+                        className="h-12 w-12 rounded-full object-cover"
+                      />
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

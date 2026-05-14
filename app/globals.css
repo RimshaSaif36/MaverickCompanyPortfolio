@@ -24,3 +24,76 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes testimonial-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.testimonial-marquee-mask {
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-marquee-mask::before,
+.testimonial-marquee-mask::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: clamp(2rem, 6vw, 5rem);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.testimonial-marquee-mask::before {
+  left: 0;
+  background: linear-gradient(90deg, #f3f4f6 0%, rgba(243, 244, 246, 0) 100%);
+}
+
+.testimonial-marquee-mask::after {
+  right: 0;
+  background: linear-gradient(270deg, #f3f4f6 0%, rgba(243, 244, 246, 0) 100%);
+}
+
+.testimonial-marquee {
+  display: flex;
+  width: max-content;
+  gap: 1.25rem;
+  animation: testimonial-marquee 34s linear infinite;
+  will-change: transform;
+}
+
+.testimonial-marquee:hover {
+  animation-play-state: paused;
+}
+
+.testimonial-marquee-reverse {
+  animation-direction: reverse;
+}
+
+.testimonial-marquee-slower {
+  animation-duration: 40s;
+}
+
+.testimonial-marquee-card {
+  display: flex;
+  width: min(22rem, calc(100vw - 5rem));
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 1.5rem;
+  flex-shrink: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-marquee,
+  .testimonial-marquee-reverse,
+  .testimonial-marquee-slower {
+    animation: none;
+  }
+}
