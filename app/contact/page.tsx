@@ -223,7 +223,7 @@ export default function ContactPage() {
                                             <circle cx="12" cy="10" r="3" />
                                         </svg>
                                     </div>
-                                    <p className="text-white font-black text-sm uppercase tracking-wider mb-1">
+                                    <p className="text-black font-black text-sm uppercase tracking-wider mb-1">
                                         Maverick Tech Studio
                                     </p>
                                     <p className="text-gray-400 text-xs">
@@ -290,20 +290,6 @@ export default function ContactPage() {
                                             </span>
                                         </a>
                                     ))}
-                                </div>
-                            </div>
-
-                            {/* Quick response promise */}
-                            <div className="bg-[#998100] p-6 flex items-center gap-5">
-                                <div className="flex-shrink-0 w-12 h-12 bg-black/20 rounded flex items-center justify-center">
-                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                        <circle cx="12" cy="12" r="10" />
-                                        <polyline points="12 6 12 12 16 14" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p className="text-black font-black text-sm uppercase tracking-wider">24-Hour Response</p>
-                                    <p className="text-black/70 text-xs mt-1">We guarantee a reply within one business day.</p>
                                 </div>
                             </div>
                         </div>
