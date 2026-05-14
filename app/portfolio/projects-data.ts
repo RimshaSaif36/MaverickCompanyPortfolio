@@ -10,6 +10,7 @@ export type Project = {
     date: string;
     previewBackground: string;
     previewVideoSrc?: string;
+    previewContainImage?: boolean;
 };
 
 export const projects: Project[] = [
@@ -100,6 +101,7 @@ export const projects: Project[] = [
         client: "Knox",
         date: "October 11, 2024",
         previewBackground: "linear-gradient(135deg, #7b14a8 0%, #d24cff 100%)",
+        previewContainImage: true,
     },
     {
         slug: "inventory-management-system",

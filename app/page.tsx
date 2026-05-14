@@ -154,18 +154,18 @@ const laptopSlides = [
   },
   {
     src: "/p2.jpg",
-    title: "Fashion Store",
+    title: "Branding and Identity Design",
     category: "UI/UX Design",
   },
   {
     src: "/p3.jpg",
-    title: "Corporate Website",
-    category: "Branding",
+    title: "Digital Marketing Campaign",
+    category: "Digital Marketing Agency",
   },
   {
     src: "/p4.jpg",
-    title: "WoodenHive Online Store",
-    category: "Web Development",
+    title: "Engaging Social Media Campaigns",
+    category: "Social Media Marketing",
   },
   {
     src: "/p6.jpg",

@@ -20,6 +20,10 @@ export default async function ProjectDetailPage({
         notFound();
     }
 
+    const previewBackground = project.previewContainImage
+        ? "transparent"
+        : project.previewBackground;
+
     return (
         <>
             <PageHeader
@@ -31,8 +35,8 @@ export default async function ProjectDetailPage({
             <section className="bg-white py-14 md:py-20">
                 <div className="max-w-6xl mx-auto px-8">
                     <div
-                        className="overflow-hidden shadow-[0_30px_70px_rgba(0,0,0,0.12)]"
-                        style={{ background: project.previewBackground }}
+                            className={`overflow-hidden shadow-[0_30px_70px_rgba(0,0,0,0.12)] ${project.previewContainImage ? "flex items-center justify-center p-6 md:p-8" : ""}`}
+                        style={{ background: previewBackground }}
                     >
                         {project.previewVideoSrc ? (
                             <video
@@ -48,7 +52,7 @@ export default async function ProjectDetailPage({
                             <img
                                 src={project.src}
                                 alt={project.title}
-                                className="w-full h-auto object-cover"
+                                className={project.previewContainImage ? "block max-h-[720px] w-auto max-w-full" : "w-full h-auto object-cover"}
                             />
                         )}
                     </div>
