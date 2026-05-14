@@ -36,7 +36,7 @@ export default function PortfolioPage() {
             </section>
 
             {/* ── Filter Tabs ── */}
-            <section className="bg-[#1e1e1e] pt-10 pb-4 sticky top-[57px] z-40 shadow-lg">
+            <section className="sticky top-0 z-40 bg-[#1e1e1e] py-4 shadow-lg">
                 <div className="max-w-7xl mx-auto px-8">
                     <div className="flex flex-wrap gap-2 justify-center">
                         {categories.map((cat) => (

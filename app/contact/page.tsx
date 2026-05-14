@@ -215,7 +215,7 @@ export default function ContactPage() {
                         <div className="flex-shrink-0 w-full md:w-[420px] flex flex-col gap-6">
                             {/* Map placeholder */}
                             <div className="relative bg-[#252525] h-72 overflow-hidden">
-                                <div className="absolute inset-0 bg-[url('/bg1.jpg')] bg-cover bg-center opacity-30" />
+                                <div className="absolute inset-0 bg-[url('/location.jpg')] bg-cover bg-center " />
                                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-8">
                                     <div className="w-14 h-14 bg-[#998100] rounded-full flex items-center justify-center mb-4">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
