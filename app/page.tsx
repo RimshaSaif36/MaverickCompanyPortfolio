@@ -174,7 +174,7 @@ const laptopSlides = [
   },
 ];
 
-const testimonials = [
+const topRowTestimonials = [
   {
     img: "/t1.jpg",
     name: "John Doe",
@@ -205,8 +205,39 @@ const testimonials = [
   },
 ];
 
-const marqueeTopRow = [...testimonials, ...testimonials];
-const marqueeBottomRow = [...testimonials].reverse().concat([...testimonials].reverse());
+const bottomRowTestimonials = [
+  {
+    img: "/t2.jpg",
+    name: "Ayesha Khan",
+    role: "Brand Manager",
+    review:
+      "Maverick refreshed our brand identity and campaign visuals with a level of clarity we had been missing. The new direction immediately made our ads feel more premium and more consistent.",
+  },
+  {
+    img: "/t3.jpg",
+    name: "Hamza Malik",
+    role: "Operations Lead",
+    review:
+      "Their team handled our website rebuild with real structure and speed. Communication stayed clear throughout the project, and every milestone was delivered exactly when promised.",
+  },
+  {
+    img: "/t4.jpg",
+    name: "Sara Ahmed",
+    role: "Founder, Bloom Studio",
+    review:
+      "From strategy to execution, Maverick made the whole process easy for us. The final site looks polished, loads fast, and gives our clients a much stronger first impression.",
+  },
+  {
+    img: "/t1.jpg",
+    name: "Bilal Noor",
+    role: "Sales Director",
+    review:
+      "We were looking for measurable improvement, not just a nice design. Maverick delivered both, and within weeks we started seeing better lead quality and stronger conversion flow.",
+  },
+];
+
+const marqueeTopRow = [...topRowTestimonials, ...topRowTestimonials];
+const marqueeBottomRow = [...bottomRowTestimonials, ...bottomRowTestimonials];
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -808,12 +839,12 @@ export default function Home() {
                 {marqueeTopRow.map(({ img, name, role, review }, index) => (
                   <article
                     key={`${name}-top-${index}`}
-                    className="testimonial-marquee-card min-h-[260px] bg-white p-6 shadow-[0_16px_45px_rgba(0,0,0,0.08)]"
+                    className="testimonial-marquee-card min-h-[224px] bg-white p-5 shadow-[0_16px_45px_rgba(0,0,0,0.08)]"
                   >
-                    <p className="mb-6 text-sm leading-7 text-gray-500">{review}</p>
+                    <p className="testimonial-review mb-4 text-sm leading-6 text-gray-500">{review}</p>
 
-                    <div className="mt-auto">
-                      <div className="mb-3 flex text-[#998100]">
+                    <div>
+                      <div className="mb-2 flex text-[#998100]">
                         {"★★★★★".split("").map((star, starIndex) => (
                           <span key={starIndex}>{star}</span>
                         ))}
@@ -845,24 +876,32 @@ export default function Home() {
                 {marqueeBottomRow.map(({ img, name, role, review }, index) => (
                   <article
                     key={`${name}-bottom-${index}`}
-                    className="testimonial-marquee-card min-h-[240px] bg-white p-6 shadow-[0_16px_45px_rgba(0,0,0,0.06)]"
+                    className="testimonial-marquee-card min-h-[224px] bg-white p-5 shadow-[0_16px_45px_rgba(0,0,0,0.08)]"
                   >
-                    <p className="mb-6 text-sm leading-7 text-gray-500">{review}</p>
+                    <p className="testimonial-review mb-4 text-sm leading-6 text-gray-500">{review}</p>
 
-                    <div className="mt-auto flex items-center justify-between gap-4">
-                      <div>
-                        <p className="text-sm font-black uppercase text-black">{name}</p>
-                        <p className="mt-1 text-xs uppercase tracking-[0.24em] text-[#998100]">
-                          {role}
-                        </p>
+                    <div>
+                      <div className="mb-2 flex text-[#998100]">
+                        {"★★★★★".split("").map((star, starIndex) => (
+                          <span key={starIndex}>{star}</span>
+                        ))}
                       </div>
-                      <Image
-                        src={img}
-                        alt={name}
-                        width={48}
-                        height={48}
-                        className="h-12 w-12 rounded-full object-cover"
-                      />
+
+                      <div className="flex items-center gap-3">
+                        <Image
+                          src={img}
+                          alt={name}
+                          width={44}
+                          height={44}
+                          className="h-11 w-11 rounded-full object-cover"
+                        />
+                        <div>
+                          <p className="text-sm font-black text-black">{name}</p>
+                          <p className="text-xs uppercase tracking-wider text-[#998100]">
+                            {role}
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </article>
                 ))}

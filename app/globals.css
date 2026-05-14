@@ -83,11 +83,19 @@ body {
 
 .testimonial-marquee-card {
   display: flex;
-  width: min(22rem, calc(100vw - 5rem));
+  width: min(19rem, calc(100vw - 5.5rem));
   flex-direction: column;
   border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 1.5rem;
   flex-shrink: 0;
+}
+
+.testimonial-review {
+  line-clamp: 5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
 }
 
 @media (prefers-reduced-motion: reduce) {
